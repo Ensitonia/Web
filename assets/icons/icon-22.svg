@@ -1,0 +1,10 @@
+<svg width="80" height="81" viewBox="0 0 80 81" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<ellipse cx="40" cy="40.5" rx="40" ry="40.5" fill="#8B2CF5" fill-opacity="0.2"/>
+<rect x="19" y="16" width="47" height="45" fill="url(#pattern0_696_404)"/>
+<defs>
+<pattern id="pattern0_696_404" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_696_404" transform="matrix(0.0106383 0 0 0.0111111 0.0212766 0)"/>
+</pattern>
+<image id="image0_696_404" width="90" height="90" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWElEQVR4nO3YvWrEMBAA4SFd8vj54fKUSZqk3XBYRQioEMjWSpoPtluwPAdnbJAkSZKkRT0Bb8AXEIPmE3gFHlnY+8DA8W/uZ1nSA/CTIHCU+S5nWo6hN/3ruLGw+wPopTyQRgX+AJ5XfxhKkiSt8R0jdvgekullJFb9HpLt9TpWfU039IVW/Ou4kVCG7xix2/eQmHymMTpUGHqOmUbrDfS64Tj5uul+SENj6L8MjaFT3HCNoQ3NpaFnmRpDY+gpp8bQjA3da9/QhaEx9KUHimThDJ10v5mhD4buvN863RgaQ28RepapMTSGnnJqDM3Y0L32DV0YGkNfeqBIFs7QSfebGfpg6M77rdONoTH0FqFnmRpDY+gpp8bQjA3da9/QhaEx9KUHimThDJ10v5mhD4buvN863RgaQ28R+uwDxcnXNXRhaENjaAzdzNCG5pTQkiRJkiRJTOAXAoL9jvhYalYAAAAASUVORK5CYII="/>
+</defs>
+</svg>
