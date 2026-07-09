@@ -14,3 +14,23 @@
     --cor-secundaria:#f7efff;
     --cor-terciaria:#fbfaf8;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: var(--cor-terciaria);
+    border-radius: 100px;
+    margin-top: 14px;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}  
+
+nav a {
+    color: #000000;
+    font-size: 20px;
+}
