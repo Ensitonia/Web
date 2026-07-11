@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #FBFAF8;
+    color: #000;
+}
+
+.img-logo {
+    max-width: 174px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    max-width: 1394px;
+    margin: 0px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+}
+
+nav a {
+    color: #1A1A1A;
+    font-size: 20px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #8B2CF5;
+}
+
+.acoes-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icone-acessibilidade {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-acessibilidade img {
+    width: 52px;
+    height: 42px;
+
+}
+
+.btn-login {
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #000;
+    color: #000;
+    font-size: 13px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-login:hover {
+    border-color: #8B2CF5;
+    color: #8B2CF5;
+}
+
+.btn-cadastrar-se {
+    background: #8B2CF5;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    transition: background 0.2s ease;
+}
+
+.btn-cadastrar-se:hover {
+    background: #7420dd;
+
+}
+
+.banner {
+    max-width: 1343px;
+    width: 94%;
+    margin: 8px auto 40px;
+    padding: 4px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F5EDFF;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 41px;
+    overflow: visible;
+}
+
+.texto-banner {
+    width: 460px;
+}
+
+.subtitulo {
+    color: #8B2CF5;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+}
+
+.texto-banner h1 {
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.texto-banner h1 span {
+    color: #8B2CF5;
+}
+
+.texto-banner p {
+    color: #000;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.banner-imagem {
+    position: relative;
+    width: 331px;
+    height: 300px;
+    margin-top: 8px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.banner-imagem img {
+    position: relative;
+    width: 331px;
+    height: 311;
+    z-index: 1;
+    object-fit: contain;
+}
+
+section {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 43px;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.titulo img {
+    width: 61px;
+    height: 61px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.titulo2 {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 63px;
+    margin-bottom: 24px;
+}
+
+.titulo2 img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.titulo h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #000;
+}
+
+.titulo p {
+    color: #000;
+    font-size: 16px;
+}
+
+.cards {
+    display: flex;
+    gap: 13px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+.card,
+.card-corporativo,
+.card-destaque {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    background: #fff;
+    padding: 28px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-destaque {
+    padding-top: 0;
+    overflow: hidden;
+}
+
+.card,
+.card-corporativo {
+    padding-top: 55px;
+}
+
+.faixa {
+    width: 100%;
+    height: 34px;
+    background: #8B2CF5;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0 -24px 20px;
+    width: calc(100% + 48px);
+}
+
+.card h3,
+.card-destaque h3,
+.card-corporativo h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.card-destaque h3 {
+    color: #8B2CF5;
+}
+
+.descricao,
+.card-destaque p {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 19px;
+    color: #4A4A4A;
+    min-height: 38px;
+}
+
+.card-destaque .descricao {
+    margin-top: 0;
+}
+
+.preco-botao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0 4px;
+    gap: 16px;
+}
+
+.preco {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.preco span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.preco h1 {
+    font-size: 24px;
+    color: #8B2CF5;
+    font-weight: 700;
+}
+
+small {
+    display: block;
+    color: #575757;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+button {
+    width: fit-content;
+    min-width: 30px;
+    height: 38px;
+    padding: 0 16px;
+    border: 1.5px solid #8B2CF5;
+    border-radius: 8px;
+    background: #fff;
+    color: #8B2CF5;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+button:hover {
+    color: #fff;
+}
+
+.card-destaque button {
+    background: #8B2CF5;
+    color: #fff;
+}
+
+.card-destaque button:hover {
+    background: #7420dd;
+}
+
+ul {
+    list-style: none;
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 12px;
+}
+
+li {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 13px;
+    color: #000;
+    line-height: 17px;
+}
+
+li img {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cards-nav {
+    display: none;
+}
+
+.menu-mobile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px;
+    height: 14px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #1A1A1A;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 24px 0;
+    color: #000;
+    font-size: 17px;
+    border-top: 1px solid #B4B4B4;
+    margin-top: 15px;
+}
+
+
+@media (min-width:300px) and (max-width:1023px) {
+
+    header {
+        padding: 12px 18px;
+        position: relative;
+    }
+
+    .img-logo {
+        width: 120px;
+        max-width: 100%;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+        z-index: 9999;
+    }
+
+    .menu-mobile.aberto {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .acoes-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .icone-acessibilidade {
+        margin: 0;
+    }
+
+    .btn-login,
+    .btn-cadastrar-se {
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    .banner {
+        width: 92%;
+        margin: 15px auto;
+        padding: 22px;
+        border-radius: 18px;
+        display: block;
+    }
+
+    .banner-imagem {
+        display: none;
+    }
+
+    .texto-banner {
+        width: 100%;
+    }
+
+    .subtitulo {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .texto-banner h1 {
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 12px;
+    }
+
+    .texto-banner p {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+
+
+    section {
+        padding: 0 18px;
+    }
+
+
+
+    .titulo,
+    .titulo2 {
+        margin: 22px 0 16px;
+        gap: 10px;
+    }
+
+    .titulo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .titulo2 img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .titulo h2,
+    .titulo2 h2 {
+        font-size: 20px;
+    }
+
+    .titulo p,
+    .titulo2 p {
+        font-size: 13px;
+    }
+
+
+
+    .cards {
+        display: flex;
+        overflow-x: auto;
+        gap: 18px;
+        padding-bottom: 10px;
+
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card,
+    .card-corporativo,
+    .card-destaque {
+
+        flex: 0 0 92%;
+
+        padding: 22px;
+
+        border-radius: 14px;
+
+        scroll-snap-align: center;
+    }
+
+    .card,
+    .card-corporativo {
+        padding-top: 50px;
+    }
+
+    .faixa {
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .card h3,
+    .card-destaque h3,
+    .card-corporativo h3 {
+        font-size: 24px;
+    }
+
+    .descricao,
+    .card-destaque p {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .preco h1 {
+        font-size: 34px;
+    }
+
+    .preco span {
+        font-size: 16px;
+    }
+
+    small {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+
+
+    footer {
+        margin-top: 30px;
+        padding: 18px;
+        font-size: 13px;
+    }
+
+}
