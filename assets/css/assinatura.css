@@ -10,6 +10,7 @@
 body {
     background-color: #FBFAF8;
     color: #000;
+    padding-top: 90px;
 }
 
 .img-logo {
@@ -22,11 +23,20 @@ a {
 
 header {
     max-width: 1394px;
-    margin: 0px;
+    margin: 0 auto;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    background: #FBFAF8;
+    border-radius: 62px;
+    border: 1px solid #F1EBEB;
+    z-index: 100;
 }
 
 nav {
@@ -410,7 +420,12 @@ footer {
 
     header {
         padding: 12px 18px;
-        position: relative;
+        position: fixed;
+        height: auto;
+    }
+
+    body {
+        padding-top: 80px;
     }
 
     .img-logo {
