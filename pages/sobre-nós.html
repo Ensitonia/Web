@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSitonia | Sobre Nós</title>
+    <link rel="stylesheet" href="../assets/css/Sobre_nos.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a class="sobre" href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <h1 class="texto-banner">Sobre nós</h1>
+        <h2>Inclusão não é favor é oportunidade.</h2>
+
+        <p>A <span>EnSitonia</span> nasceu com o propósito de construir um mundo mais justo,
+            acessível e inclusivo. Acreditamos que todas as pessoas têm talentos,
+            sonhos e o direito de aprender, crescer e trabalhar em igualdade de
+            condições.</p>
+
+        <p>Aqui conectamos pessoas e oportunidades para transformar vidas
+            e organizações.</p>
+    </section>
+
+    <section class="cards">
+        <div class="card-inclusão">
+            <div>
+                <img src="../assets/icons/icone-Inclusão.png" alt="">
+            </div>
+            <h4>Inclusão</h4>
+            <p>Acolhemos e valorizamos
+                todas as pessoas</p>
+        </div>
+
+        <div class="card-respeito">
+            <div>
+                <img src="../assets/icons/icone-respeito.png" alt="">
+            </div>
+            <h4>Respeito</h4>
+            <p>Tratamos todos com empatia
+                dignidade e igualdade</p>
+        </div>
+
+        <div class="card-desenvolvimentos">
+            <div>
+                <img src="../assets/icons/icone-desenvolvimento.png" alt="">
+            </div>
+            <h4>Desenvolvimentos</h4>
+            <p>Promovemos educação e
+                crescimento continuo.</p>
+        </div>
+
+        <div class="card-oportunidade">
+            <div>
+                <img src="../assets/icons/icone-oportunidade.png" alt="">
+            </div>
+            <h4>Oportunidade</h4>
+            <p>Conectamos talentos a
+                oportunidades reais.</p>
+        </div>
+    </section>
+
+    <article>
+        <div class="missão">
+            <div>
+                <img src="../assets/icons/missao.png" alt="">
+            </div>
+            <div>
+                <h3>Nossa missão</h3>
+                <p>Promover inclusão, acessibilidade e desenvolvimento
+                    profissional por meio da educação, informação e
+                    conexões que geram oportunidades para pessoas
+                    com deficiência e para organizações comprometidas</p>
+            </div>
+        </div>
+        <div class="historia">
+            <h2>Nossa historia</h2>
+            <p>A EnSitonia surgiu da vontade de transformar realidades e abrir caminhos.
+                Percebemos que, apesar de tantos talentos, ainda existem muitas barreiras que
+                impedem pessoas com deficiência de acessarem a educação e o mercado de trabalho.
+                Assim, criamos uma plataforma completa que oferece cursos acessíveis, orientação
+                profissional, vagas inclusivas e apoio para empresas que desejam contratar com mais
+                consciência e preparo.</p>
+            <p>Juntos, vamos construir um futuro mais inclusivo para todos!</p>
+        </div>
+    </article>
+    
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+    </script>
+
+</body>
+
+</html>
