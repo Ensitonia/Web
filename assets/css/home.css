@@ -1,0 +1,363 @@
+/* Flattened and fixed CSS (was using nested/Sass syntax) */
+#hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#hero .content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 380px;
+}
+
+#hero .content h1{
+    width: 292px;
+    font-size: 36px;
+}
+
+#hero .content h1 span{
+    color: var(--cor-primaria);
+}
+
+#hero .content .btns{
+    margin-top: 10px;
+    display: flex;
+    gap: 25px;
+}
+
+#hero .content a{
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#hero .content a:last-child{
+    background-color: transparent;
+    border: 2px solid var(--cor-primaria);
+}
+
+#hero .content a:hover {
+    filter: brightness(0.9);
+}
+
+.botao-azul {
+    background-color: #8B2CF5;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-family: sans-serif;
+}
+
+.container-auth {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.container-auth a {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 0;
+    font-family: sans-serif;
+}
+
+.btn-entrar {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.cards-container {
+    display:flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.cards-container .card {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.cards-container .card h3 {
+    margin-top: 15px;
+}
+
+.cards-container .card a {
+    display: block;
+    margin-top: 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid {
+    display: flex;
+    gap: 60px;
+    align-items: stretch;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 span{
+    color: #8B2CF5;
+}
+
+.cards{
+    display:flex;
+    gap: 30px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+.card{
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 25px;
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.icone{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.azul{
+    background: #4f46e5;
+}
+
+.rosa{
+    background: #ec4899;
+}
+
+.roxo{
+    background: #8b2cf5;
+}
+
+.card h3{
+    margin-bottom: 15px;
+}
+
+.card p{
+    margin-bottom: 25px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card a{
+    text-decoration: none;
+    color:#4f46e5;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+}
+
+.btn-cadastrar{
+    background: #8B2CF5;
+    color:#ffffff
+}
+
+.como-funciona{
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.como-funciona h2{
+    font-size: 40px;
+    color: #4f46e5;
+    margin-bottom: 50px;
+}
+
+.como-funciona .passos{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.passo{
+    flex: 1;
+    text-align: center;
+}
+
+.passo div{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.roxo{
+    background: #d8c7ff;
+}
+
+.verde{
+    background: #d7f5d7;
+}
+
+.rosa{
+    background: #ffd2df;
+}
+
+.amarelo{
+    background: #ffe8a3;
+}
+
+.azul{
+    background: #cfe3ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+body{
+    background: #fff;
+}
+
+.empresa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px;
+}
+
+.texto{
+    width: 50%;
+}
+
+.texto h4{
+color: #8B2CF5;
+margin-bottom: 20px;
+}
+
+.texto h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.texto p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.texto ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.texto li{
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+button{
+    background: #8B2CF5;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.imagem img{
+    width: 550px;
+    max-width: 100%;
+}
+
+.footer{
+    background: #fff;
+    margin-top: 80px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-footer{
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.footer-col h3{
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.footer-col a{
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.footer-col a:hover{
+    color: #5b5bd6;
+}
+
+.footer-copy{
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
