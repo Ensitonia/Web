@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: #F4EEFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.container{
+
+    width:560px;
+
+    background:#FFFFFF;
+
+    border-radius:14px;
+
+    padding:35px 40px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.12);
+
+}
+
+h1{
+
+    text-align:center;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.subtitulo{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    font-size:16px;
+
+}
+
+label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.campo{
+
+    display:flex;
+
+    align-items:center;
+
+    height:45px;
+
+    border:1px solid #D8D8D8;
+
+    border-radius:8px;
+
+    padding:0 15px;
+
+    margin-bottom:18px;
+
+}
+
+.icone-input{
+
+    width:20px;
+
+    height:20px;
+
+    margin-right:10px;
+
+}
+
+.campo input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+}
+
+h3{
+
+    margin-top:15px;
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+.tipos{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.tipo{
+
+    flex:1;
+
+    border:1px solid #D8D8D8;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.tipo:hover{
+
+    border-color:#7A3FF2;
+
+}
+
+.radio{
+
+    width:18px;
+
+    height:18px;
+
+    border:2px solid #7A3FF2;
+
+    border-radius:50%;
+
+    margin-bottom:15px;
+
+}
+
+.icone-card{
+
+    width:42px;
+
+    height:42px;
+
+    margin-bottom:12px;
+
+}
+
+.tipo h4{
+
+    margin-bottom:10px;
+
+    font-size:16px;
+
+}
+
+.tipo p{
+
+    font-size:14px;
+
+    color:#666;
+
+    line-height:1.4;
+
+}
+
+button{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:linear-gradient(90deg,#7A3FF2,#A548FF);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+button:hover{
+
+    opacity:.9;
+
+}
+
+@media(max-width:600px){
+
+.container{
+
+    width:95%;
+
+    padding:30px 20px;
+
+}
+
+.tipos{
+
+    flex-direction:column;
+
+}
+
+}
