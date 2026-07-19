@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSintonia</title>
+    <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html" class="active">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cabecalho-aula">
+            <h1>Alfabetização em Braille</h1>
+            <p class="subtitulo-aula">Alfabetização em Braille</p>
+        </section>
+
+        <section class="aula-conteudo" aria-labelledby="titulo-video">
+            <h2 id="titulo-video" class="sr-only">Vídeo da aula</h2>
+
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="../assets/images/poster-recrutamento-inclusivo.jpg"
+                    aria-label="Vídeo da aula: Recrutamento inclusivo, como criar vagas inclusivas">
+                    <source src="../assets/videos/recrutamento-inclusivo.mp4" type="video/mp4">
+                    Seu navegador não é compatível com a exibição deste vídeo.
+                </video>
+            </div>
+
+            <aside class="modulo-conteudo" aria-labelledby="titulo-modulo">
+                <h2 id="titulo-modulo">Conteúdo de módulo</h2>
+                <ol class="lista-modulo" role="list">
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="1">
+                            1. História, Fundamentos e a Tecnologia do Braille
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="2">
+                            2. O Alfabeto Tátil e a Série Inicial
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo item-ativo" data-modulo="3" aria-pressed="true">
+                            3. Sinais Geradores, Pontuação e Números
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="4">
+                            4. Prática de Leitura, Escrita e Aplicação Profissional
+                        </button>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+
+        <section class="questoes-certificado" aria-labelledby="titulo-questoes">
+            <div class="cabecalho-questoes">
+                <div class="icone-questoes" aria-hidden="true">
+                    <img src="../assets/icons/icon-24.png" alt="">
+                </div>
+                <div>
+                    <h2 id="titulo-questoes">Questões para certificado</h2>
+                    <p>Responda as questões abaixo para concluir o curso e emitir seu certificado</p>
+                </div>
+            </div>
+
+            <form id="formQuestoes" novalidate>
+                <fieldset class="questao">
+                    <legend>1. Qual é a estrutura básica que compõe a unidade fundamental do sistema Braille?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Uma matriz composta por oito pontos dispostos em quatro colunas verticais.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Uma cela de seis pontos em relevo, disposta em duas colunas de três pontos cada.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Uma linha contínua de pontos horizontais que varia de acordo com o tamanho da letra.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Um conjunto de quatro linhas e quatro colunas de pontos táteis para cada caractere.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>2. No sistema Braille, como são representados os algarismos numéricos (de 1 a 0) na escrita
+                        padrão?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Através de símbolos totalmente novos e independentes que não se parecem com as letras do
+                        alfabeto.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Utilizando um sinal gerador ou prefixo numérico que antecede as letras de A a J.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Repetindo a mesma letra do alfabeto duas vezes seguidas na mesma cela.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Usando os pontos inferiores da cela braille combinados com traços horizontais.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>3. Ao utilizar a reglete tradicional e o punção para escrever em Braille, qual é a principal
+                        diferença operacional em relação à leitura?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) A escrita deve ser feita da esquerda para a direita, exatamente igual à leitura tátil.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) A escrita é realizada de cima para baixo, sem a necessidade de respeitar as margens da folha.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) A escrita é feita da direita para a esquerda (de forma espelhada), pois o papel será virado
+                        para ser lido da esquerda para a direita.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) A escrita com reglete dispensa o uso de pontos em relevo, utilizando apenas tinta invisível.
+                    </label>
+                </fieldset>
+
+                <p id="avisoQuestoes" class="aviso-questoes" role="alert" aria-live="polite" hidden>
+                    Responda todas as questões antes de finalizar.
+                </p>
+
+                <button type="submit" class="btn-enviar">Enviar respostas e finalizar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+        const itensModulo = document.querySelectorAll('.item-modulo');
+        itensModulo.forEach((item) => {
+            item.addEventListener('click', () => {
+                itensModulo.forEach((outroItem) => {
+                    outroItem.classList.remove('item-ativo');
+                    outroItem.setAttribute('aria-pressed', 'false');
+                });
+                item.classList.add('item-ativo');
+                item.setAttribute('aria-pressed', 'true');
+            });
+        });
+
+        const formQuestoes = document.getElementById('formQuestoes');
+        const avisoQuestoes = document.getElementById('avisoQuestoes');
+        formQuestoes.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
+                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
+            );
+
+            if (!perguntasRespondidas) {
+                avisoQuestoes.hidden = false;
+                avisoQuestoes.focus();
+                return;
+            }
+            avisoQuestoes.hidden = true;
+            window.location.href = './cursos.html';
+        });
+    </script>
+</body>
+
+</html>

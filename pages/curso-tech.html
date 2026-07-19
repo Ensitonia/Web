@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSintonia</title>
+    <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html" class="active">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cabecalho-aula">
+            <h1>Tecnologias Assistivas no Dia a Dia</h1>
+            <p class="subtitulo-aula">Amplie a autonomia, conheça ferramentas inovadoras e promova a inclusão por meio
+                da tecnologia.</p>
+        </section>
+
+        <section class="aula-conteudo" aria-labelledby="titulo-video">
+            <h2 id="titulo-video" class="sr-only">Vídeo da aula</h2>
+
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="../assets/images/poster-recrutamento-inclusivo.jpg"
+                    aria-label="Vídeo da aula: Recrutamento inclusivo, como criar vagas inclusivas">
+                    <source src="../assets/videos/recrutamento-inclusivo.mp4" type="video/mp4">
+                    Seu navegador não é compatível com a exibição deste vídeo.
+                </video>
+            </div>
+
+            <aside class="modulo-conteudo" aria-labelledby="titulo-modulo">
+                <h2 id="titulo-modulo">Conteúdo de módulo</h2>
+                <ol class="lista-modulo" role="list">
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="1">
+                            1. Fundamentos e Classificação das Tecnologias Assistivas (TA)
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="2">
+                            2. TA para Comunicação e Acesso ao Computador
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo item-ativo" data-modulo="3" aria-pressed="true">
+                            3. Mobilidade, Autonomia e Adaptações Físicas
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="4">
+                            4. Implementação, Manutenção e Cultura de Acessibilidade
+                        </button>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+
+        <section class="questoes-certificado" aria-labelledby="titulo-questoes">
+            <div class="cabecalho-questoes">
+                <div class="icone-questoes" aria-hidden="true">
+                    <img src="../assets/icons/icon-24.png" alt="">
+                </div>
+                <div>
+                    <h2 id="titulo-questoes">Questões para certificado</h2>
+                    <p>Responda as questões abaixo para concluir o curso e emitir seu certificado</p>
+                </div>
+            </div>
+
+            <form id="formQuestoes" novalidate>
+                <fieldset class="questao">
+                    <legend>1. Como as Tecnologias Assistivas (TA) são conceituadas no contexto da inclusão e da
+                        autonomia da pessoa com deficiência?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Apenas como softwares de inteligência artificial de uso exclusivo em grandes corporações de
+                        tecnologia.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Como recursos, metodologias, estratégias e produtos que ampliam ou facilitam a habilidade
+                        funcional e a autonomia de pessoas com deficiência ou mobilidade reduzida.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Como exames médicos obrigatórios realizados anualmente para atestar a perda auditiva ou
+                        visual.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Como dispositivos restritos exclusivamente ao ambiente de reabilitação hospitalar, sem uso
+                        prático no cotidiano.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>2. Para um usuário com deficiência motora severa nos membros superiores que não consegue
+                        utilizar o mouse ou o teclado convencional, qual solução de Tecnologia Assistiva é comumente
+                        empregada para o acesso ao computador?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) O uso obrigatório de impressoras braille conectadas via cabo serial.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Sistemas de rastreamento ocular (eye-tracking), acionadores adaptados (switches) ou comandos
+                        de voz.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) A substituição completa do computador por cadernos de anotações em papel texturizado.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) A remoção de todos os atalhos visuais do sistema operacional.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>3. Ao introduzir uma nova Tecnologia Assistiva na rotina de um usuário ou ambiente
+                        corporativo, qual é uma diretriz fundamental para garantir o sucesso da implementação?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Realizar o treinamento e a adaptação de forma gradual, respeitando o ritmo de familiarização
+                        com o recurso para evitar frustrações.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Instalar o equipamento de surpresa para testar a resiliência imediata do colaborador.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Dispensar qualquer tipo de suporte técnico após a entrega do dispositivo.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Utilizar a tecnologia de forma restrita apenas nos primeiros dias e depois abandoná-la.
+                    </label>
+                </fieldset>
+
+                <p id="avisoQuestoes" class="aviso-questoes" role="alert" aria-live="polite" hidden>
+                    Responda todas as questões antes de finalizar.
+                </p>
+
+                <button type="submit" class="btn-enviar">Enviar respostas e finalizar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+        const itensModulo = document.querySelectorAll('.item-modulo');
+        itensModulo.forEach((item) => {
+            item.addEventListener('click', () => {
+                itensModulo.forEach((outroItem) => {
+                    outroItem.classList.remove('item-ativo');
+                    outroItem.setAttribute('aria-pressed', 'false');
+                });
+                item.classList.add('item-ativo');
+                item.setAttribute('aria-pressed', 'true');
+            });
+        });
+
+        const formQuestoes = document.getElementById('formQuestoes');
+        const avisoQuestoes = document.getElementById('avisoQuestoes');
+        formQuestoes.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
+                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
+            );
+
+            if (!perguntasRespondidas) {
+                avisoQuestoes.hidden = false;
+                avisoQuestoes.focus();
+                return;
+            }
+            avisoQuestoes.hidden = true;
+            window.location.href = './cursos.html';
+        });
+    </script>
+</body>
+
+</html>

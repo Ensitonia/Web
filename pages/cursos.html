@@ -1,27 +1,363 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnSitonia</title>
+    <title>EnSintonia - Cursos e Vagas</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/curso.css">
+    <link rel="stylesheet" href="../assets/css/assinatura.css">
 </head>
+
 <body>
     <header>
-        <img src="../assets/images/logo.png" alt="Logo do site">
-        <nav>
-            <a href="../index.html">Início</a>
-            <a href="./cursos.html">Cursos</a>
-            <a href="./vagas.html">Vagas</a>
-            <a href="./para-empresas.html">Para Empresa</a>
-            <a href="./sobre-nós.html">Sobre Nós</a>
-        </nav>
-        <div>
-            <a href="">Entrar</a>
-            <a href="">Cadastrar-Se</a>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
         </div>
-        
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
     </header>
-    
+
+    <main>
+        <section class="hero container bg-light-purple-box">
+            <div class="hero-content">
+                <h1>Cursos para todos,<br><span class="text-purple">oportunidades</span> para cada um.</h1>
+                <p>Aprenda no seu ritmo com conteúdos acessíveis, inclusivos e feitos para transformar vidas.</p>
+                <p class="mt-auto text-dark">Profissionais e Empresas</p>
+            </div>
+            <div class="hero-card">
+                <div class="hero-card-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F6C523" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="icon-img-small">
+                        <polygon points="2 20 22 20 19 6 15 10 12 4 9 10 5 6 2 20"></polygon>
+                    </svg>
+                    <h3>Assinantes EnSintonia</h3>
+                </div>
+                <p>Acesse cursos exclusivos, trilhas avançadas e conteúdos premium.</p>
+                <a href="./assinaturas.html" class="btn-square-outline">Ver cursos exclusivos →</a>
+            </div>
+        </section>
+
+        <section class="cursos-section container">
+            <div class="section-title">
+                <div class="icon-circle icon-purple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Cursos</h2>
+                    <p>Aprenda no seu ritmo com conteúdos acessíveis e inclusivos</p>
+                </div>
+            </div>
+
+            <div class="cursos-grid">
+                <a href="./curso-braille.html" class="curso-card">
+                    <img src="../assets/images/braille.png" alt="Braille" class="curso-img">
+                    <div class="curso-info">
+                        <h4>Alfabetização em Braille</h4>
+                        <div class="curso-meta">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>16h</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./curso-tdah.html" class="curso-card">
+                    <img src="../assets/images/tdah.png" alt="TDAH" class="curso-img">
+                    <div class="curso-info">
+                        <h4>Estratégias de Aprendizagem para TDAH</h4>
+                        <div class="curso-meta">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>16h</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./curso-tea.html" class="curso-card">
+                    <img src="../assets/images/tea.png" alt="TEA" class="curso-img">
+                    <div class="curso-info">
+                        <h4>Comunicação e Interação para Pessoas com TEA</h4>
+                        <div class="curso-meta">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>16h</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./curso-tech.html" class="curso-card">
+                    <img src="../assets/images/tech.png" alt="Tecnologias Assistivas" class="curso-img">
+                    <div class="curso-info">
+                        <h4>Tecnologias Assistivas no Dia a Dia</h4>
+                        <div class="curso-meta">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            <span>16h</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="beneficios-section container bg-light-purple-box">
+            <h3 class="text-center">Inclusão gera impacto. Juntos, vamos mais longe.</h3>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <div class="icon-circle icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h5>Educação acessível</h5>
+                    <p>Cursos pensados para todas as pessoas.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icon-circle icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h5>Oportunidades reais</h5>
+                    <p>Conectamos talentos a empresas inclusivas.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icon-circle icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h5>Desenvolvimento contínuo</h5>
+                    <p>Aprendizado que transforma habilidades em futuro.</p>
+                </div>
+                <div class="beneficio-item">
+                    <div class="icon-circle icon-purple">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h5>Impacto social</h5>
+                    <p>Promovemos diversidade e igualdade de oportunidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="vagas-section container bg-light-purple-box">
+            <div class="section-title">
+                <div class="icon-circle icon-purple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        <circle cx="18" cy="18" r="3"></circle>
+                        <line x1="20.2" y1="20.2" x2="22" y2="22"></line>
+                    </svg>
+                </div>
+                <div>
+                    <h2>Vagas de Emprego</h2>
+                    <p>Encontre Oportunidades que combinam Com seu perfil.</p>
+                </div>
+            </div>
+
+            <div class="vagas-list">
+                <div class="vaga-card">
+                    <div class="vaga-info-principal">
+                        <div class="icon-square bg-purple">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 19 8 12 22 5 8 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <div class="vaga-textos">
+                            <h4>Auxiliar administrativo</h4>
+                            <p class="company">Instituto ...</p>
+                            <div class="vaga-meta">
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg> São Paulo, SP</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaga-status">
+                        <span class="badge badge-green">Efetivo</span>
+                        <span class="time">Publicado há 2h</span>
+                    </div>
+                </div>
+
+                <div class="vaga-card">
+                    <div class="vaga-info-principal">
+                        <div class="icon-square bg-yellow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="vaga-textos">
+                            <h4>Assistente de Marketing</h4>
+                            <p class="company">Comunica+</p>
+                            <div class="vaga-meta">
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg> Rio de Janeiro, RJ</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg> Híbrido</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaga-status">
+                        <span class="badge badge-blue">CLT</span>
+                        <span class="time">Publicado há 5h</span>
+                    </div>
+                </div>
+
+                <div class="vaga-card">
+                    <div class="vaga-info-principal">
+                        <div class="icon-square bg-green">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                                </path>
+                                <line x1="2" y1="22" x2="11" y2="13"></line>
+                            </svg>
+                        </div>
+                        <div class="vaga-textos">
+                            <h4>Analista de RH</h4>
+                            <p class="company">Verde Vida</p>
+                            <div class="vaga-meta">
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg> Curitiba, PR</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaga-status">
+                        <span class="badge badge-green">Efetivo</span>
+                        <span class="time">Publicado há 1d</span>
+                    </div>
+                </div>
+
+                <div class="vaga-card">
+                    <div class="vaga-info-principal">
+                        <div class="icon-square bg-red">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                            </svg>
+                        </div>
+                        <div class="vaga-textos">
+                            <h4>Professor(a) de Libras</h4>
+                            <p class="company">Escola Inclusiva</p>
+                            <div class="vaga-meta">
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg> Belo Horizonte, MG</span>
+                                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vaga-status">
+                        <span class="badge badge-yellow">Temporário</span>
+                        <span class="time">Publicado há 2d</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+    </script>
 </body>
+
 </html>

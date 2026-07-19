@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSintonia</title>
+    <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html" class="active">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cabecalho-aula">
+            <h1>Estratégias de Aprendizagem para TDAH</h1>
+            <p class="subtitulo-aula">Potencialize o foco, organize sua rotina e transforme a neurodiversidade em
+                produtividade sustentável.</p>
+        </section>
+
+        <section class="aula-conteudo" aria-labelledby="titulo-video">
+            <h2 id="titulo-video" class="sr-only">Vídeo da aula</h2>
+
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="../assets/images/poster-recrutamento-inclusivo.jpg"
+                    aria-label="Vídeo da aula: Recrutamento inclusivo, como criar vagas inclusivas">
+                    <source src="../assets/videos/recrutamento-inclusivo.mp4" type="video/mp4">
+                    Seu navegador não é compatível com a exibição deste vídeo.
+                </video>
+            </div>
+
+            <aside class="modulo-conteudo" aria-labelledby="titulo-modulo">
+                <h2 id="titulo-modulo">Conteúdo de módulo</h2>
+                <ol class="lista-modulo" role="list">
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="1">
+                            1. Neurobiologia do TDAH e Funcionamento Executivo
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="2">
+                            2. Ambiente, Foco e Gestão de Distrações
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo item-ativo" data-modulo="3" aria-pressed="true">
+                            3. Organização, Planejamento e Execução de Tarefas
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="4">
+                            4. Autorregulação, Energia e Autocuidado
+                        </button>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+
+        <section class="questoes-certificado" aria-labelledby="titulo-questoes">
+            <div class="cabecalho-questoes">
+                <div class="icone-questoes" aria-hidden="true">
+                    <img src="../assets/icons/icon-24.png" alt="">
+                </div>
+                <div>
+                    <h2 id="titulo-questoes">Questões para certificado</h2>
+                    <p>Responda as questões abaixo para concluir o curso e emitir seu certificado</p>
+                </div>
+            </div>
+
+            <form id="formQuestoes" novalidate>
+                <fieldset class="questao">
+                    <legend>1. No contexto do funcionamento neurobiológico do TDAH, qual é a principal razão pela qual
+                        pessoas com esse perfil frequentemente enfrentam dificuldades severas para iniciar tarefas
+                        rotineiras ou de longo prazo?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Falta absoluta de inteligência ou capacidade técnica para compreender o escopo do projeto.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Desregulação nos níveis de dopamina, o que dificulta a ativação do cérebro para atividades
+                        que não oferecem recompensa imediata, novidade ou urgência.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Uma lesão física permanente no córtex visual que impede a leitura de instruções textuais.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Preferência voluntária e consciente por acumular tarefas para o último dia do prazo.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>2. Para mitigar a chamada "cegueira temporal" e a dificuldade de estimar quanto tempo as
+                        tarefas demandam, qual estratégia prática é altamente recomendada para estudantes e
+                        profissionais com TDAH?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Evitar qualquer uso de relógios ou cronômetros para não gerar ansiedade com prazos.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Dividir o dia em blocos rígidos de 8 horas consecutivas de trabalho ininterrupto.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Utilizar cronômetros visuais ou temporizadores externos que tornem a passagem do tempo
+                        palpável e dividir grandes demandas em micrometas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Depender exclusivamente da memória de curto prazo para lembrar os horários dos compromissos.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>3. Ao lidar com episódios frequentes de procrastinação e paralisia executiva associados ao
+                        TDAH, qual postura tende a ser mais eficaz para restabelecer a produtividade de forma
+                        sustentável?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Aumentar a cobrança pessoal e punir-se com horas extras de trabalho até concluir a demanda.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Ignorar completamente a pendência por semanas até que o estresse extremo resolva o problema
+                        sozinho.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Praticar a autocompaixão aliada a técnicas de redução da barreira de entrada, focando em dar
+                        apenas o "primeiro menor passo possível" (como abrir o documento por 5 minutos).
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Delegar todas as decisões de vida para terceiros sem participar de nenhuma etapa do
+                        planejamento.
+                    </label>
+                </fieldset>
+
+                <p id="avisoQuestoes" class="aviso-questoes" role="alert" aria-live="polite" hidden>
+                    Responda todas as questões antes de finalizar.
+                </p>
+
+                <button type="submit" class="btn-enviar">Enviar respostas e finalizar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+        const itensModulo = document.querySelectorAll('.item-modulo');
+        itensModulo.forEach((item) => {
+            item.addEventListener('click', () => {
+                itensModulo.forEach((outroItem) => {
+                    outroItem.classList.remove('item-ativo');
+                    outroItem.setAttribute('aria-pressed', 'false');
+                });
+                item.classList.add('item-ativo');
+                item.setAttribute('aria-pressed', 'true');
+            });
+        });
+
+        const formQuestoes = document.getElementById('formQuestoes');
+        const avisoQuestoes = document.getElementById('avisoQuestoes');
+        formQuestoes.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
+                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
+            );
+
+            if (!perguntasRespondidas) {
+                avisoQuestoes.hidden = false;
+                avisoQuestoes.focus();
+                return;
+            }
+            avisoQuestoes.hidden = true;
+            window.location.href = './cursos.html';
+        });
+    </script>
+</body>
+
+</html>

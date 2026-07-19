@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSintonia</title>
+    <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="./index.html">Início</a>
+                <a href="./cursos.html" class="active">Cursos</a>
+                <a href="./vagas.html">Vagas</a>
+                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="./entrar.html" class="btn-login">Entrar</a>
+                <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cabecalho-aula">
+            <h1>Liderança Inclusiva</h1>
+            <p class="subtitulo-aula">Desenvolva lideranças conscientes e promova ambientes mais diversos.</p>
+        </section>
+
+        <section class="aula-conteudo" aria-labelledby="titulo-video">
+            <h2 id="titulo-video" class="sr-only">Vídeo da aula</h2>
+
+            <div class="video-wrapper">
+                <video controls preload="metadata" poster="../assets/images/poster-recrutamento-inclusivo.jpg"
+                    aria-label="Vídeo da aula: Recrutamento inclusivo, como criar vagas inclusivas">
+                    <source src="../assets/videos/recrutamento-inclusivo.mp4" type="video/mp4">
+                    Seu navegador não é compatível com a exibição deste vídeo.
+                </video>
+            </div>
+
+            <aside class="modulo-conteudo" aria-labelledby="titulo-modulo">
+                <h2 id="titulo-modulo">Conteúdo de módulo</h2>
+                <ol class="lista-modulo" role="list">
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="1">
+                            1. Fundamentos da Liderança Inclusiva e Viés Inconsciente.
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="2">
+                            2. Atração, Seleção e Contratação Diversas.
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo item-ativo" data-modulo="3" aria-pressed="true">
+                            3. Gestão de Equipes Plurais e Resolução de Conflitos.
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="item-modulo" data-modulo="4">
+                            4. Desenvolvimento de Carreiras e Métricas de Impacto.
+                        </button>
+                    </li>
+                </ol>
+            </aside>
+        </section>
+
+        <section class="questoes-certificado" aria-labelledby="titulo-questoes">
+            <div class="cabecalho-questoes">
+                <div class="icone-questoes" aria-hidden="true">
+                    <img src="../assets/icons/icon-24.png" alt="">
+                </div>
+                <div>
+                    <h2 id="titulo-questoes">Questões para certificado</h2>
+                    <p>Responda as questões abaixo para concluir o curso e emitir seu certificado</p>
+                </div>
+            </div>
+
+            <form id="formQuestoes" novalidate>
+                <fieldset class="questao">
+                    <legend>1. No contexto da liderança inclusiva, qual é a principal definição e objetivo da Segurança
+                        Psicológica em uma equipe?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Garantir que os colaboradores recebam benefícios de saúde mental e suporte psicológico
+                        individualizado pela empresa.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Criar um ambiente onde os membros da equipe se sintam seguros para expor ideias, fazer
+                        perguntas, apontar erros e ser autênticos sem medo de retaliação ou constrangimento.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Eliminar completamente qualquer tipo de conflito ou discussão técnica entre os integrantes do
+                        projeto.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao1" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Proteger a confidencialidade dos dados sensíveis dos funcionários conforme as normas de
+                        privacidade vigentes.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>2. Para mitigar vieses inconscientes durante processos de seleção e garantir um recrutamento
+                        mais diverso, qual prática deve ser adotada pelo gestor?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) Realizar entrevistas totalmente informais e sem roteiro prévio para avaliar a intuição e a
+                        "química" natural do candidato com a equipe.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) Utilizar descrições de vagas amplas e focar a avaliação em critérios subjetivos de
+                        similaridade cultural com os atuais líderes.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) Padronizar os critérios de avaliação e utilizar entrevistas estruturadas focadas
+                        exclusivamente em competências técnicas e comportamentais relevantes..
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao2" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) Omitir a necessidade de testes práticos para agilizar a contratação de perfis que já possuem
+                        indicações internas.
+                    </label>
+                </fieldset>
+
+                <fieldset class="questao">
+                    <legend>3. Qual é a principal diferença prática entre Mentoria (Mentoring) e Patrocínio
+                        (Sponsorship) no desenvolvimento de carreira de talentos sub-representados?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="a">
+                        <span class="circulo" aria-hidden="true"></span>
+                        A) A mentoria é focada apenas em aspectos técnicos de programação, enquanto o patrocínio envolve
+                        exclusivamente o pagamento de bônus salariais.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="b">
+                        <span class="circulo" aria-hidden="true"></span>
+                        B) O mentor apenas avalia o desempenho anual do funcionário, ao passo que o patrocinador assume
+                        a responsabilidade direta pelo recrutamento inicial.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="c">
+                        <span class="circulo" aria-hidden="true"></span>
+                        C) A mentoria oferece orientação, conselhos e desenvolvimento de habilidades, enquanto o
+                        patrocinador (geralmente um líder sênior) usa sua influência ativa para expor o profissional a
+                        projetos de alto impacto e oportunidades de promoção.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="questao3" value="d">
+                        <span class="circulo" aria-hidden="true"></span>
+                        D) O patrocínio é uma atividade restrita ao departamento de recursos humanos, enquanto a
+                        mentoria é feita exclusivamente por consultores externos.
+                    </label>
+                </fieldset>
+
+                <p id="avisoQuestoes" class="aviso-questoes" role="alert" aria-live="polite" hidden>
+                    Responda todas as questões antes de finalizar.
+                </p>
+
+                <button type="submit" class="btn-enviar">Enviar respostas e finalizar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+
+        const itensModulo = document.querySelectorAll('.item-modulo');
+        itensModulo.forEach((item) => {
+            item.addEventListener('click', () => {
+                itensModulo.forEach((outroItem) => {
+                    outroItem.classList.remove('item-ativo');
+                    outroItem.setAttribute('aria-pressed', 'false');
+                });
+                item.classList.add('item-ativo');
+                item.setAttribute('aria-pressed', 'true');
+            });
+        });
+
+        const formQuestoes = document.getElementById('formQuestoes');
+        const avisoQuestoes = document.getElementById('avisoQuestoes');
+        formQuestoes.addEventListener('submit', (evento) => {
+            evento.preventDefault();
+            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
+                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
+            );
+
+            if (!perguntasRespondidas) {
+                avisoQuestoes.hidden = false;
+                avisoQuestoes.focus();
+                return;
+            }
+            avisoQuestoes.hidden = true;
+            window.location.href = './cursos.html';
+        });
+    </script>
+</body>
+
+</html>
