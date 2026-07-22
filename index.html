@@ -4,72 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnSitonia</title>
+    <title>EnSintonia</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
-
 </head>
 
 <body>
     <header>
-        <img src="./assets/images/logo.png" alt="Logo do site">
-        <nav>
-            <a href="./index.html">Início</a>
-            <a href="./pages/cursos.html">Cursos</a>
-            <a href="./pages/vagas.html">Vagas</a>
-            <a href="./pages/para-empresas.html">Para Empresa</a>
-            <a href="./pages/sobre-nós.html">Sobre Nós</a>
-        </nav>
-        <div class="container-auth">
-            <a href="#" class="btn-entrar">Entrar</a>
-            <a href="#" class="btn-cadastrar">Cadastrar-Se</a>
+        <div class="logo">
+            <img class="img-logo" src="./assets/images/logo.png" alt="EnSintonia">
         </div>
 
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="index.html" class="active">Início</a>
+                <a href="./pages/cursos.html">Cursos</a>
+                <a href="./pages/vagas.html">Vagas</a>
+                <a href="./pages/para-empresas.html">Para Empresa</a>
+                <a href="./pages/sobre-nós.html">Sobre Nós</a>
+            </nav>
+            <div class="acoes-header">
+                <div class="icone-acessibilidade">
+                    <img src="./assets/icons/Web Accessibility.png" alt="Acessibilidade">
+                </div>
+                <a href="pages/entrar.html" class="btn-login">Entrar</a>
+                <a href="pages/cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-se</a>
+            </div>
+        </div>
     </header>
+
     <main>
         <section id="hero">
-            <div class="content">
-                <h1>Inclusão que transforma <span>vidas</span> e abre <span>caminhos.</span></h1>
-                <p>A EnSitonia é uma plataforma digital que conecta pessoas com deficiencia á educação, capacitação
-                    e oportudades reais de trabalho.</p>
-                <p>Aqui, inclusão não é discurso. È ação.</p>
-                <div class="btns">
-                    <a href="#" class="botao-azul">Criar minha conta </a>
-                    <a href="#">Sou empresa</a>
+            <div class="hero-wrapper">
+                <div class="content">
+                    <h1>Inclusão que <br>
+                        transforma <span class="destaque-roxo">vidas</span>
+                        <br> e abre
+                        <span class="destaque-roxo">caminhos.</span>
+                    </h1>
+                    <p>A EnSintonia é uma plataforma digital que conecta  <br>pessoas com deficiência à educação, 
+                        <br>capacitação e oportunidades reais de trabalho.</p>
+                    <p class="frase-forte">Aqui, inclusão não é discurso. É ação.</p>
+                    <div class="btns">
+                        <a href="pages/cadastrar-se.html" class="botao-azul">Criar minha conta</a>
+                        <a href="pages/para-empresas.html" class="botao-outline">Sou empresa</a>
+                    </div>
+                </div>
+                <div class="hero-imagem">
+                    <img src="./assets/images/img-1.svg" alt="Ilustração de pessoa sorrindo">
                 </div>
             </div>
-            <img src="./assets/images/img-1.svg" alt="">
-        </div>
         </section>
 
         <section class="cards-section">
-            <h2>O que você encontra na
-                <span>EnSitonia</span>
-            </h2>
-            
-                <div class="cards-container">
-                    <div class="card">
-                    <div class="icone roxo"></div>
-                    <h3>Cursos</h3>
-                    <p>Aprenda com cursos acessiveis, com legendas, Libras e
-                        audiodescrição.</p>
-                    <a href="./pages/cursos.html">Explorar cursos -></a>
-                    </div>
+            <h2>O que você encontra na <span class="destaque-roxo">EnSintonia</span></h2>
 
+            <div class="cards-container">
                 <div class="card">
-                    <div class="icone rosa"></div>
-                    <h3>Vagas</h3>
-                    <p>Encontre oportunidades em empresas que valorizam a
-                        inclusão.</p>
-                    <a href="./pages/vagas.html">Ver vagas-></a>
+                    <div class="icone roxo">
+                        <img src="./assets/icons/icon-1.svg" alt="">
+                    </div>
+                    <h3>Cursos</h3>
+                    <p>Aprenda com cursos acessíveis, com legendas, Libras e audiodescrição.</p>
+                    <a href="./pages/cursos.html">Explorar cursos →</a>
                 </div>
 
-            <div class="card">
-                <div class="icone azul"></div>
-                <h3>Para Empresas</h3>
-                <p>Treinamentos para contratar com iclusão e adaptar
-                    melhor as vagas</p>
-                <a href="./pages/para-empresas.html">Saber mais -></a>
+                <div class="card">
+                    <div class="icone rosa">
+                        <img src="./assets/icons/icon-2.svg" alt="">
+                    </div>
+                    <h3>Vagas</h3>
+                    <p>Encontre oportunidades em empresas que valorizam a inclusão.</p>
+                    <a href="./pages/vagas.html">Ver vagas →</a>
+                </div>
+
+                <div class="card">
+                    <div class="icone azul">
+                        <img src="./assets/icons/icon-3.svg" alt="">
+                    </div>
+                    <h3>Para Empresas</h3>
+                    <p>Treinamentos para contratar com inclusão e adaptar melhor as vagas.</p>
+                    <a href="./pages/para-empresas.html">Saber mais →</a>
+                </div>
             </div>
         </section>
 
@@ -77,116 +98,140 @@
             <h2>Como funciona?</h2>
             <div class="passos">
 
-            <div class="passo">
-
-            <div class="Circulo roxo"></div>
-            <div>
-                <h3>1. Cadastre-se</h3>
-                <p>Crie sua conta de forma
-       simples rápida.</p>
-            </div>
-            </div>
-
-            <div class="passo">
-                <div class="circulo verde"></div>
-                <div>
-                    <h3>2. Aprenda</h3>
-                    <p>Escolhas cursos e trilhas de aprendizagem</p>
+                <div class="passo">
+                    <div class="circulo roxo">
+                        <img src="./assets/icons/icon1-como-funciona.png" alt="Ícone cadastro">
+                    </div>
+                    <div>
+                        <h3>1. Cadastre-se</h3>
+                        <p>Crie sua conta de forma simples e rápida.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="passo">
-                <div class="circulo rosa"></div>
-                <div>
-                <h3>3. Desenvolva-se</h3>
-                <p>Aprimore suas habilidades e conquiste certificados</p>
+                <div class="passo">
+                    <div class="circulo verde">
+                        <img src="./assets/icons/icon2-como-funciona.png" alt="Ícone aprender">
+                    </div>
+                    <div>
+                        <h3>2. Aprenda</h3>
+                        <p>Escolha cursos e trilhas de aprendizagem.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="passo">
-                <div class="circulo amarelo"></div>
-                <div>
-                <h3>4. Candidate-se</h3>
-                <p>Encontre vagas e conecte-se com empresas inclusivas</p>
+                <div class="passo">
+                    <div class="circulo rosa">
+                        <img src="./assets/icons/icon3-como-funciona.png" alt="Ícone desenvolvimento">
+                    </div>
+                    <div>
+                        <h3>3. Desenvolva-se</h3>
+                        <p>Aprimore suas habilidades e conquiste certificados.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="passo">
-                <div class="circulo azul"></div>
-                <div>
-                <h3>5. Conquiste</h3>
-                <p>Transforme conhecimento em oportunidades</p>
-            </div>
+                <div class="passo">
+                    <div class="circulo amarelo">
+                        <img src="./assets/icons/icon-7.svg" alt="Ícone candidatura">
+                    </div>
+                    <div>
+                        <h3>4. Candidate-se</h3>
+                        <p>Encontre vagas e conecte-se com empresas inclusivas.</p>
+                    </div>
+                </div>
+
+                <div class="passo">
+                    <div class="circulo azul">
+                        <img src="./assets/icons/icon5-como-funciona.png" alt="Ícone conquista">
+                    </div>
+                    <div>
+                        <h3>5. Conquiste</h3>
+                        <p>Transforme conhecimento em oportunidades.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section class="empresa">
             <div class="texto">
                 <h4>PARA EMPRESAS</h4>
-                <h1>Inclusão tambem se aprende</h1>
+                <h1>Inclusão também se aprende</h1>
                 <p>
-                    Capacite sua empresa para contratar com mais inclusão 
-                    entendendo habilidades 
-                    necessidades e adaptações
+                    Capacite sua empresa para contratar com mais inclusão,
+                    entendendo habilidades, necessidades e adaptações.
                 </p>
 
                 <ul>
-                    <li>Treinamentos completos para equipes de RH</li>
-                    <li>Adaptação de vagas e processos</li>
-                    <li>Certificado Empresa Inclusiva</li>
+                    <li><span class="check">✓</span> Treinamentos completos para equipes de RH</li>
+                    <li><span class="check">✓</span> Adaptação de vagas e processos</li>
+                    <li><span class="check">✓</span> Certificado Empresa Inclusiva</li>
                 </ul>
 
-                <button>Quero saber mais</button>
+                <button class="botao-azul">Quero saber mais</button>
             </div>
 
             <div class="imagem">
-                <img src="assets/images/persona.png" alt="">
+                <img src="./assets/images/persona.png" alt="Ilustração de treinamento para empresas">
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-cool">
-                <img src="assets/images/logo.png" alt="EnSitonia"class="logo-footer">
+            <div class="footer-col footer-logo">
+                <img src="./assets/images/logo.png" alt="EnSintonia" class="logo-footer">
                 <p>
-                    Contruindo um futuro com mais respeito, igualdade e 
+                    Construindo um futuro com mais respeito, igualdade e
                     oportunidades para todos.
                 </p>
             </div>
 
             <div class="footer-col">
                 <h3>Navegação</h3>
-
-                <a href="#">Cursos</a>
-                <a href="#">Vagas</a>
+                <a href="./pages/cursos.html">Cursos</a>
+                <a href="./pages/vagas.html">Vagas</a>
             </div>
 
             <div class="footer-col">
                 <h3>Para Empresas</h3>
-
-                <a href="#">Treinamentos</a>
+                <a href="./pages/para-empresas.html">Treinamentos</a>
                 <a href="#">Como funciona</a>
                 <a href="#">Seja parceiro</a>
             </div>
 
             <div class="footer-col">
                 <h3>Ajuda</h3>
-
                 <a href="#">Perguntas frequentes</a>
                 <a href="#">Fale conosco</a>
-                <a href="#">Politica de privacidade</a>
+                <a href="#">Política de privacidade</a>
                 <a href="#">Termos de uso</a>
             </div>
 
+            <div class="footer-col">
+                <h3>Acessibilidade</h3>
+                <span>✓ Libras</span>
+                <span>✓ Audiodescrição</span>
+                <span>✓ Alto contraste</span>
+                <span>✓ Texto ampliado (A+)</span>
+            </div>
         </div>
 
         <div class="footer-copy">
-            <p>©2026 Ensitonia. Todos os direitos reservados.</p>
+            <p>©2026 EnSintonia. Todos os direitos reservados.</p>
         </div>
-
     </footer>
 
+
+
+    <script>
+        const botaoMenu = document.getElementById('menuHamburguer');
+        const menuMobile = document.getElementById('menuMobile');
+
+        botaoMenu.addEventListener('click', () => {
+            const aberto = menuMobile.classList.toggle('aberto');
+            botaoMenu.classList.toggle('ativo');
+            botaoMenu.setAttribute('aria-expanded', aberto);
+        });
+    </script>
 </body>
 
 </html>

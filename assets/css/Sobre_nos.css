@@ -24,21 +24,22 @@ a {
 
 
 header {
-    max-width: 1394px;
+     max-width: 1394px;
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 20px;
+    left: 20px;
+    right: 20px;
     height: 90px;
-    background: #FBFAF8;
+    background: #FEFCF8;
     border-radius: 62px;
     border: 1px solid #F1EBEB;
     z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 nav {
@@ -49,7 +50,7 @@ nav {
 
 nav a {
     color: #000;
-    font-size: 16px;
+    font-size: 20px;
     transition: color 0.2s ease;
 }
 
