@@ -1,135 +1,128 @@
 <!<!DOCTYPE html>
-<html lang="pt-br">
+    <html lang="pt-br">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="../assets/css/cadastro.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-    <title>Cadastro</title>
+    <body>
 
-    <link rel="stylesheet" href="../assets/css/cadastro.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<div class="container">
-
-    <h1>Crie sua conta</h1>
-
-    <p class="subtitulo">
-        Preencha os dados abaixo para começar.
-    </p>
-
-    <form>
-
-        <label for="nome">Nome completo</label>
-
-        <div class="campo">
-
-            <img src="../assets/icons/Test Account.svg" class="icone-input" alt="Nome">
-
-            <input
-            type="text"
-            id="nome"
-            placeholder="Digite seu nome completo">
-
-        </div>
-
-        <label for="email">E-mail</label>
-
-        <div class="campo">
-
-            <img src="../assets/icons/Email.svg" class="icone-input" alt="Email">
-
-            <input
-            type="email"
-            id="email"
-            placeholder="Digite seu e-mail">
-
-        </div>
-
-        <label for="senha">Senha</label>
-
-        <div class="campo">
-
-            <img src="../assets/icons/Lock.svg" class="icone-input" alt="Senha">
-
-            <input
-            type="password"
-            id="senha"
-            placeholder="Crie uma senha">
-
-        </div>
-
-        <label for="confirmar">Confirmar senha</label>
-
-        <div class="campo">
-
-            <img src="../assets/icons/Lock.svg" class="icone-input" alt="Confirmar senha">
-
-            <input
-            type="password"
-            id="confirmar"
-            placeholder="Confirme sua senha">
-
-        </div>
-
-        <h3>Tipo de conta</h3>
-
-        <div class="tipos">
-
-            <div class="tipo">
-
-                <div class="radio"></div>
-
-                <img src="../assets/icons/Graduation Cap.svg"
-                     class="icone-card"
-                     alt="Aprender">
-
-                <h4>Quero aprender</h4>
-
-                <p>
-                    Acesse cursos para desenvolver suas habilidades.
-                </p>
-
+        <!-- VLibras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
             </div>
+        </div>
 
-            <div class="tipo">
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
-                <div class="radio"></div>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
 
-                <img src="../assets/icons/Briefcase.svg"
-                     class="icone-card"
-                     alt="Empresa">
 
-                <h4>Quero divulgar vagas</h4>
+        <div class="container">
 
-                <p>
-                    Publique oportunidades e encontre talentos.
-                </p>
+            <h1>Crie sua conta</h1>
 
-            </div>
+            <p class="subtitulo">
+                Preencha os dados abaixo para começar.
+            </p>
+
+            <form>
+
+                <label for="nome">Nome completo</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Test Account.svg" class="icone-input" alt="Nome">
+
+                    <input type="text" id="nome" placeholder="Digite seu nome completo">
+
+                </div>
+
+                <label for="email">E-mail</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Email.svg" class="icone-input" alt="Email">
+
+                    <input type="email" id="email" placeholder="Digite seu e-mail">
+
+                </div>
+
+                <label for="senha">Senha</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Lock.svg" class="icone-input" alt="Senha">
+
+                    <input type="password" id="senha" placeholder="Crie uma senha">
+
+                </div>
+
+                <label for="confirmar">Confirmar senha</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Lock.svg" class="icone-input" alt="Confirmar senha">
+
+                    <input type="password" id="confirmar" placeholder="Confirme sua senha">
+
+                </div>
+
+                <h3>Tipo de conta</h3>
+
+                <div class="tipos">
+
+                    <div class="tipo">
+
+                        <div class="radio"></div>
+
+                        <img src="../assets/icons/Graduation Cap.svg" class="icone-card" alt="Aprender">
+
+                        <h4>Quero aprender</h4>
+
+                        <p>
+                            Acesse cursos para desenvolver suas habilidades.
+                        </p>
+
+                    </div>
+
+                    <div class="tipo">
+
+                        <div class="radio"></div>
+
+                        <img src="../assets/icons/Briefcase.svg" class="icone-card" alt="Empresa">
+
+                        <h4>Quero divulgar vagas</h4>
+
+                        <p>
+                            Publique oportunidades e encontre talentos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button type="submit">
+
+                    Cadastrar-se
+
+                </button>
+
+            </form>
 
         </div>
 
-        <button type="submit">
+    </body>
 
-            Cadastrar-se
-
-        </button>
-
-    </form>
-
-</div>
-
-</body>
-
-</html>
+    </html>

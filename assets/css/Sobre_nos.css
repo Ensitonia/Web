@@ -40,6 +40,7 @@ header {
     border: 1px solid #F1EBEB;
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    
 }
 
 nav {
@@ -148,7 +149,8 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 45px;
+    
+  
 }
 
 .texto-banner {

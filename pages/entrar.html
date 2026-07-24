@@ -9,7 +9,7 @@
     <title>Login</title>
 
     <link rel="stylesheet" href="../assets/css/login.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,20 @@
 </head>
 
 <body>
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
 
     <div class="container">
 
@@ -43,10 +57,7 @@
 
                 <img src="../assets/icons/Email.svg" class="icone-input" alt="Email">
 
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Digite seu e-mail">
+                <input type="email" id="email" placeholder="Digite seu e-mail">
 
             </div>
 
@@ -57,10 +68,7 @@
 
                 <img src="../assets/icons/Lock.svg" class="icone-input" alt="Senha">
 
-                <input
-                    type="password"
-                    id="senha"
-                    placeholder="Digite sua senha">
+                <input type="password" id="senha" placeholder="Digite sua senha">
 
                 <!-- Ícone do olho (opcional) -->
                 <img src="../assets/icons/Eye.svg" class="icone-olho" alt="Mostrar senha">
