@@ -26,7 +26,6 @@
     --raio-pill: 100px;
 }
 
-
 body {
     color: var(--cor-texto);
     background-color: #FEFCF8;
@@ -48,8 +47,6 @@ main {
     gap: 56px;
 }
 
-
-
 a {
     text-decoration: none;
 }
@@ -61,7 +58,7 @@ a {
 
 
 header {
-     max-width: 1394px;
+    max-width: 1394px;
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -82,7 +79,6 @@ header {
 nav {
     display: flex;
     gap: 27px;
-
 }
 
 nav a {
@@ -95,7 +91,7 @@ nav a:hover {
     color: #8B2CF5;
 }
 
-.active{
+.active {
     color: #8B2CF5;
 }
 
@@ -103,29 +99,6 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 40px;
-}
-
-.acoes-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-.icone-acessibilidade {
-     width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-}
-
-
-.icone-acessibilidade img {
-    width: 52px;
-    height: 42px;
 }
 
 .logo {
@@ -159,9 +132,17 @@ nav a:hover {
 .btn-cadastrar-se:hover {
     background: #7420dd;
 }
- .sobre{
+
+.acoes-conta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sobre {
     color: #8B2CF5;
- }
+}
+
 .menu-hamburguer {
     display: none;
     flex-direction: column;
@@ -182,6 +163,278 @@ nav a:hover {
     background: #1A1A1A;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+
+/* Botão de acessibilidade */
+
+.btn-acessibilidade {
+    position: fixed;
+
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 64px;
+    height: 64px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: linear-gradient(135deg, #8A3FFC, #6C2CF5);
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(138, 63, 252, .35);
+
+    transition: .3s;
+
+    z-index: 9999;
+}
+
+.btn-acessibilidade:hover {
+
+    transform: translateY(-50%) scale(1.08);
+
+    box-shadow: 0 16px 35px rgba(138, 63, 252, .45);
+
+}
+
+.btn-acessibilidade:active {
+
+    transform: translateY(-50%) scale(.95);
+
+    height: 55px;
+}
+
+
+/* Painel */
+
+.painel-acessibilidade {
+
+    position: fixed;
+
+    right: -360px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 320px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+
+    transition: .4s;
+
+    padding: 20px;
+
+    z-index: 9998;
+
+}
+
+.painel-acessibilidade.ativo {
+
+    right: 90px;
+
+}
+
+.topo-painel {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+.topo-painel h3 {
+
+    color: #7B2FF7;
+
+}
+
+.topo-painel button {
+
+    border: none;
+
+    background: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+}
+
+.item {
+
+    display: flex;
+
+    gap: 18px;
+
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.item:hover {
+
+    color: #7B2FF7;
+
+}
+
+.item i {
+
+    font-size: 22px;
+
+    width: 30px;
+
+    text-align: center;
+
+}
+
+.item strong {
+
+    display: block;
+
+}
+
+.item p {
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+[vw-access-button] {
+    display: none !important;
+}
+
+
+/* ===============================
+   Alto Contraste
+=================================== */
+
+body.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.alto-contraste header {
+    background-color: #000 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste nav a {
+    color: #fff !important;
+}
+
+body.alto-contraste .active {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste #hero,
+body.alto-contraste .como-funciona {
+    background-color: #000 !important;
+}
+
+body.alto-contraste .card,
+body.alto-contraste .empresa {
+    background-color: #111 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste p,
+body.alto-contraste .footer-col a,
+body.alto-contraste .footer-col span {
+    color: #eee !important;
+}
+
+body.alto-contraste .destaque-roxo {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .botao-azul,
+body.alto-contraste .btn-cadastrar-se {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .footer {
+    border-color: #fff !important;
+}
+
+body.alto-contraste .btn-login {
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+/* --- Botão e painel de acessibilidade --- */
+
+body.alto-contraste .btn-acessibilidade {
+    background: #FFD400 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+
+body.alto-contraste .painel-acessibilidade {
+    background: #000 !important;
+    border: 1px solid #FFD400;
+}
+
+body.alto-contraste .topo-painel h3 {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .topo-painel button {
+    color: #fff !important;
+}
+
+body.alto-contraste .item {
+    border-color: #333 !important;
+}
+
+body.alto-contraste .item strong,
+body.alto-contraste .item p {
+    color: #fff !important;
+}
+
+body.alto-contraste .item:hover {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .botao-outline {
+    color: #fff !important;
+    border-color: #fff !important;
+    background: transparent !important;
+}
+
+body.alto-contraste .botao-outline:hover {
+    color: #FFD400 !important;
+    border-color: #FFD400 !important;
 }
 
 
@@ -226,16 +479,11 @@ nav a:hover {
     color: var(--cor-texto);
 }
 
-
-
-
-
 #hero {
     background-color: var(--cor-secundaria);
     overflow: visible;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    border-radius: 28px;
+    align-items: center;
 }
 
 .hero-wrapper {
@@ -246,6 +494,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     gap: 32px;
+    border-radius: 60px;
 }
 
 #hero .content {
@@ -295,8 +544,6 @@ nav a:hover {
     max-height: 115%;
 }
 
-
-
 .cards-section {
     text-align: center;
 }
@@ -313,6 +560,7 @@ nav a:hover {
     justify-content: center;
     gap: 37px;
 }
+
 .card {
     display: flex;
     flex-direction: column;
@@ -321,8 +569,8 @@ nav a:hover {
     border: 1px solid #f0ecf6;
     border-radius: 10px;
     padding: 32px;
-    height: 268px ;
-    width: 225px ;
+    height: 268px;
+    width: 225px;
     box-shadow: 0 8px 24px rgba(139, 44, 245, 0.06);
 }
 
@@ -387,7 +635,6 @@ nav a:hover {
     color: var(--cor-azul);
     margin-top: 20px;
 }
-
 
 .como-funciona {
     background-color: var(--cor-secundaria);
@@ -458,8 +705,6 @@ nav a:hover {
     padding: 0 6px;
 }
 
-
-
 .empresa {
     display: flex;
     align-items: stretch;
@@ -491,7 +736,7 @@ nav a:hover {
     margin-bottom: 12px;
 }
 
-.empresa .texto > p {
+.empresa .texto>p {
     color: var(--cor-texto-suave);
     font-size: 14px;
     line-height: 1.6;
@@ -539,8 +784,6 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
 }
-
-
 
 .footer {
     padding: 36px 0 0;
@@ -600,8 +843,6 @@ nav a:hover {
 
 /* ---------- RESPONSIVO ---------- */
 
-
-
 @media (max-width: 900px) {
     .menu-hamburguer {
         display: flex;
@@ -631,15 +872,13 @@ nav a:hover {
         width: 100%;
     }
 
-    .acoes-header {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        margin-top: 20px;
+    .painel-acessibilidade {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #F1EBEB;
         width: 100%;
+        margin-top: 8px;
     }
-
-   
 
     .hero-wrapper {
         flex-direction: column;

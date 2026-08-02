@@ -21,8 +21,6 @@ a {
     max-width: 174px;
 }
 
-
-
 header {
      max-width: 1394px;
     margin: 0 auto;
@@ -58,6 +56,11 @@ nav a {
 nav a:hover {
     color: #8B2CF5;
 }
+
+.active{
+    color: #8B2CF5;
+}
+
 
 .menu-mobile {
     display: flex;
@@ -112,6 +115,8 @@ nav a:hover {
 .btn-cadastrar-se:hover {
     background: #7420dd;
 }
+
+
  .sobre{
     color: #8B2CF5;
  }

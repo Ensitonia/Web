@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnSintonia | Assinatura</title>
     <link rel="stylesheet" href="../assets/css/assinatura.css">
+    <link rel="stylesheet" href="../assets/css/botaoAc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -52,6 +54,63 @@
             </div>
         </div>
     </header>
+
+    <!-- Botão Flutuante de Acessibilidade -->
+    <button id="btnAcessibilidade" class="btn-acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <!-- Painel de Acessibilidade -->
+    <aside id="painelAcessibilidade" class="painel-acessibilidade">
+
+        <div class="topo-painel">
+            <h3>Acessibilidade</h3>
+            <button id="fecharPainel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="item" id="abrirLibras">
+            <i class="fa-solid fa-hands"></i>
+            <div>
+                <strong>Libras</strong>
+                <p>Ativar intérprete</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAltoContraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+            <div>
+                <strong>Alto Contraste</strong>
+                <p>Melhor visualização</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAumentarFonte">
+            <i class="fa-solid fa-a"></i>
+            <div>
+                <strong>Aumentar Fonte</strong>
+                <p>Texto maior</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnDiminuirFonte">
+            <i class="fa-solid fa-a" style="font-size: 14px;"></i>
+            <div>
+                <strong>Diminuir Fonte</strong>
+                <p>Texto menor</p>
+            </div>
+        </div>
+
+        <div class="item" id="itemAtalhos">
+            <i class="fa-solid fa-keyboard"></i>
+            <div>
+                <strong>Atalhos de Teclado</strong>
+                <p>Alt + C, +, -, L</p>
+            </div>
+        </div>
+
+    </aside>
 
     <section class="banner">
 
@@ -208,17 +267,7 @@
         <p>©2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
-    <script>
-        const botaoMenu = document.getElementById('menuHamburguer');
-        const menuMobile = document.getElementById('menuMobile');
-
-        botaoMenu.addEventListener('click', () => {
-            const aberto = menuMobile.classList.toggle('aberto');
-            botaoMenu.classList.toggle('ativo');
-            botaoMenu.setAttribute('aria-expanded', aberto);
-        });
-
-    </script>
+    <script src="../assets/js/script.js"></script>
 
 </body>
 

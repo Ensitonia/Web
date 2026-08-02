@@ -1,0 +1,648 @@
+/* ===============================
+   Botão de Acessibilidade
+=================================== */
+
+.btn-acessibilidade {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #8A3FFC, #6C2CF5);
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(138, 63, 252, .35);
+    transition: .3s;
+    z-index: 9999;
+}
+
+.btn-acessibilidade:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 16px 35px rgba(138, 63, 252, .45);
+}
+
+.btn-acessibilidade:active {
+    transform: translateY(-50%) scale(.95);
+    height: 55px;
+}
+
+/* ===============================
+   Painel de Acessibilidade
+=================================== */
+
+.painel-acessibilidade {
+    position: fixed;
+    right: -360px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .18);
+    transition: .4s;
+    padding: 20px;
+    z-index: 9998;
+}
+
+.painel-acessibilidade.ativo {
+    right: 90px;
+}
+
+.topo-painel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.topo-painel h3 {
+    color: #7B2FF7;
+}
+
+.topo-painel button {
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.item:hover {
+    color: #7B2FF7;
+}
+
+.item i {
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+}
+
+.item strong {
+    display: block;
+}
+
+.item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Esconde o botão nativo do widget VLibras (usamos o nosso próprio botão) */
+[vw-access-button] {
+    display: none !important;
+}
+
+/* ===============================
+   Badge "MODO ALTO CONTRASTE"
+=================================== */
+
+.badge-alto-contraste {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #FFD400;
+    color: #000;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    z-index: 10000;
+}
+
+body.alto-contraste .badge-alto-contraste {
+    display: block;
+}
+
+.bg-light-purple-box{
+    background-color: #f7efff;
+}
+
+/* ===============================
+   Alto Contraste (todas as páginas)
+=================================== */
+
+body.alto-contraste .bg-light-purple-box {
+    background-color: #000 !important;
+    border: 1px solid #fff !important;
+}
+
+body.alto-contraste {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+body.alto-contraste header {
+    background-color: #000 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste nav a {
+    color: #fff !important;
+}
+
+body.alto-contraste nav a:hover,
+body.alto-contraste .active {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .btn-login {
+    border-color: #fff !important;
+    color: #fff !important;
+}
+
+body.alto-contraste .btn-cadastrar-se {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .destaque-roxo {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste footer,
+body.alto-contraste .footer {
+    border-color: #fff !important;
+    color: #eee !important;
+}
+
+body.alto-contraste .footer-col a,
+body.alto-contraste .footer-col span {
+    color: #eee !important;
+}
+
+/* --- Botão e painel de acessibilidade --- */
+body.alto-contraste .btn-acessibilidade {
+    background: #FFD400 !important;
+    color: #000 !important;
+    box-shadow: none !important;
+}
+
+body.alto-contraste .painel-acessibilidade {
+    background: #000 !important;
+    border: 1px solid #FFD400;
+}
+
+body.alto-contraste .topo-painel h3 {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .topo-painel button {
+    color: #fff !important;
+    background: transparent !important;
+}
+
+body.alto-contraste .item {
+    border-color: #333 !important;
+}
+
+body.alto-contraste .item strong,
+body.alto-contraste .item p {
+    color: #fff !important;
+}
+
+body.alto-contraste .item:hover {
+    color: #FFD400 !important;
+}
+
+/* --- Página inicial (index) --- */
+body.alto-contraste #hero,
+body.alto-contraste .como-funciona {
+    background-color: #000 !important;
+}
+
+body.alto-contraste .card,
+body.alto-contraste .empresa {
+    background-color: #111 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste p {
+    color: #eee !important;
+}
+
+body.alto-contraste .botao-azul {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+/* --- Página de assinaturas --- */
+body.alto-contraste .banner {
+    background-color: #111 !important;
+    border: 1px solid #fff;
+}
+
+body.alto-contraste .subtitulo {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .texto-banner h1 {
+    color: #fff !important;
+}
+
+body.alto-contraste .texto-banner h1 span {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .texto-banner p {
+    color: #eee !important;
+}
+
+body.alto-contraste .titulo h2,
+body.alto-contraste .titulo2 h2 {
+    color: #fff !important;
+}
+
+body.alto-contraste .titulo p,
+body.alto-contraste .titulo2 p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .card-corporativo,
+body.alto-contraste .card-destaque {
+    background-color: #111 !important;
+    border: 1px solid #fff !important;
+}
+
+body.alto-contraste .card h3,
+body.alto-contraste .card-corporativo h3 {
+    color: #fff !important;
+}
+
+body.alto-contraste .card-destaque h3 {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .descricao,
+body.alto-contraste .card-destaque p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .preco span {
+    color: #fff !important;
+}
+
+body.alto-contraste .preco h1 {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste small {
+    color: #aaa !important;
+}
+
+body.alto-contraste li {
+    color: #eee !important;
+}
+
+body.alto-contraste button {
+    border-color: #FFD400 !important;
+    color: #FFD400 !important;
+    background-color: #000 !important;
+}
+
+body.alto-contraste button:hover {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .card-destaque button {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .faixa {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+/* --- Páginas de curso (curso-detalhe.css) --- */
+body.alto-contraste .cabecalho-aula h1 {
+    color: #fff !important;
+}
+
+body.alto-contraste .subtitulo-aula {
+    color: #ccc !important;
+}
+
+body.alto-contraste .video-wrapper {
+    border: 1px solid #fff;
+}
+
+body.alto-contraste .modulo-conteudo {
+    background-color: #111 !important;
+    border-color: #FFD400 !important;
+}
+
+body.alto-contraste .modulo-conteudo h2 {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .item-modulo {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #FFD400 !important;
+}
+
+body.alto-contraste .item-modulo:hover {
+    border-color: #fff !important;
+}
+
+body.alto-contraste .item-modulo.item-ativo {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+    border-color: #FFD400 !important;
+}
+
+body.alto-contraste .questoes-certificado {
+    background-color: #111 !important;
+    border: 1px solid #fff !important;
+}
+
+body.alto-contraste .icone-questoes {
+    background-color: #FFD400 !important;
+}
+
+body.alto-contraste .icone-questoes img {
+    filter: brightness(0) invert(0) !important;
+}
+
+body.alto-contraste .cabecalho-questoes h2 {
+    color: #fff !important;
+}
+
+body.alto-contraste .cabecalho-questoes p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .questao {
+    border-color: #fff !important;
+}
+
+body.alto-contraste .questao legend {
+    color: #fff !important;
+}
+
+body.alto-contraste .opcao {
+    color: #eee !important;
+}
+
+body.alto-contraste .opcao:hover {
+    background-color: #1a1a1a !important;
+}
+
+body.alto-contraste .circulo {
+    border-color: #fff !important;
+}
+
+body.alto-contraste .circulo::after {
+    background-color: #FFD400 !important;
+}
+
+body.alto-contraste .opcao input[type="radio"]:checked + .circulo {
+    border-color: #FFD400 !important;
+}
+
+body.alto-contraste .aviso-questoes {
+    color: #ff6b6b !important;
+}
+
+body.alto-contraste .btn-enviar {
+    background-color: #FFD400 !important;
+    color: #000 !important;
+}
+
+body.alto-contraste .btn-enviar:hover {
+    background-color: #fff !important;
+}
+
+/* --- Página Sobre Nós --- */
+body.alto-contraste section.cards > div {
+    background-color: #111 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste section.cards h4 {
+    color: #fff !important;
+}
+
+body.alto-contraste section.cards p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .missão {
+    background-color: #111 !important;
+    border-color: #fff !important;
+}
+
+body.alto-contraste .missão h3 {
+    color: #fff !important;
+}
+
+body.alto-contraste .missão p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .historia {
+    background-color: #111 !important;
+}
+
+body.alto-contraste .historia h2 {
+    color: #FFD400 !important;
+}
+
+body.alto-contraste .historia p {
+    color: #ccc !important;
+}
+
+body.alto-contraste .historia p:last-child {
+    color: #FFD400 !important;
+}
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 900px) {
+    .painel-acessibilidade {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #F1EBEB;
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+/* ===============================
+   Reforços de Alto Contraste (acessibilidade)
+=================================== */
+
+body.alto-contraste a,
+body.alto-contraste button,
+body.alto-contraste input,
+body.alto-contraste .item-modulo,
+body.alto-contraste .card,
+body.alto-contraste .card-corporativo,
+body.alto-contraste .card-destaque {
+    outline: 1px solid transparent;
+}
+
+body.alto-contraste a:focus-visible,
+body.alto-contraste button:focus-visible,
+body.alto-contraste input:focus-visible,
+body.alto-contraste .item-modulo:focus-visible {
+    outline: 3px solid #FFD400 !important;
+    outline-offset: 3px !important;
+}
+
+body.alto-contraste footer a,
+body.alto-contraste .footer-col a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ===============================
+   CURSOS.HTML - ALTO CONTRASTE
+================================== */
+
+/* Banner */
+
+body.alto-contraste .banner{
+    background:#111 !important;
+    border:1px solid #444 !important;
+}
+
+/* Texto */
+
+body.alto-contraste .banner h1{
+    color:#fff !important;
+}
+
+body.alto-contraste .banner span{
+    color:#FFD400 !important;
+}
+
+body.alto-contraste .banner p{
+    color:#fff !important;
+}
+
+/* Card da direita */
+
+body.alto-contraste .banner .card,
+body.alto-contraste .assinantes,
+body.alto-contraste .premium{
+    background:#111 !important;
+    color:#fff !important;
+    border:1px solid #444 !important;
+}
+
+/* Card "Assinantes EnSintonia" (hero-card) — mantém o fundo branco de destaque */
+
+body.alto-contraste .hero-card {
+    background: #fff !important;
+    color: #000 !important;
+    border: none !important;
+}
+
+body.alto-contraste .hero-card h3 {
+    color: #000 !important;
+}
+
+body.alto-contraste .hero-card p {
+    color: #333 !important;
+}
+
+body.alto-contraste .btn-square-outline {
+    color: #8B2CF5 !important;
+    border-color: #8B2CF5 !important;
+}
+
+body.alto-contraste .btn-square-outline:hover {
+    background: #8B2CF5 !important;
+    color: #fff !important;
+}
+
+/* Todos os títulos */
+
+body.alto-contraste h2,
+body.alto-contraste h3,
+body.alto-contraste h4{
+    color:#fff !important;
+}
+
+/* Todos os parágrafos */
+
+body.alto-contraste p{
+    color:#ddd !important;
+}
+
+/* Cards dos cursos */
+
+body.alto-contraste .curso,
+body.alto-contraste .card-curso,
+body.alto-contraste .curso-card {
+    background:#111 !important;
+    border: none !important;
+}
+
+body.alto-contraste .curso-card,
+body.alto-contraste .curso-card h4 {
+    color: #fff !important;
+}
+
+body.alto-contraste .curso-meta,
+body.alto-contraste .company,
+body.alto-contraste .vaga-meta,
+body.alto-contraste .time {
+    color: #ccc !important;
+}
+
+/* Banner (hero) das páginas de Cursos/Vagas/Para Empresas */
+
+body.alto-contraste .hero-content h1,
+body.alto-contraste .hero-content p {
+    color: #fff !important;
+}
+
+body.alto-contraste .text-purple {
+    color: #FFD400 !important;
+}
+
+/* Rodapé */
+
+body.alto-contraste footer {
+    color: #fff !important;
+    border-color: #444 !important;
+}
+
+/* Botões */
+
+body.alto-contraste button,
+body.alto-contraste .btn{
+    background:#FFD400 !important;
+    color:#000 !important;
+}
+
+/* Links */
+
+body.alto-contraste a{
+    color:#fff;
+}
+
+body.alto-contraste a:hover{
+    color:#FFD400;
+}

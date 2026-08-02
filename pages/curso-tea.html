@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnSintonia</title>
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
+    <link rel="stylesheet" href="../assets/css/botaoAc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -52,6 +54,64 @@
             </div>
         </div>
     </header>
+
+    <!-- Botão Flutuante de Acessibilidade -->
+    <button id="btnAcessibilidade" class="btn-acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <!-- Painel de Acessibilidade -->
+    <aside id="painelAcessibilidade" class="painel-acessibilidade">
+
+        <div class="topo-painel">
+            <h3>Acessibilidade</h3>
+            <button id="fecharPainel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="item" id="abrirLibras">
+            <i class="fa-solid fa-hands"></i>
+            <div>
+                <strong>Libras</strong>
+                <p>Ativar intérprete</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAltoContraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+            <div>
+                <strong>Alto Contraste</strong>
+                <p>Melhor visualização</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAumentarFonte">
+            <i class="fa-solid fa-a"></i>
+            <div>
+                <strong>Aumentar Fonte</strong>
+                <p>Texto maior</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnDiminuirFonte">
+            <i class="fa-solid fa-a" style="font-size: 14px;"></i>
+            <div>
+                <strong>Diminuir Fonte</strong>
+                <p>Texto menor</p>
+            </div>
+        </div>
+
+        <div class="item" id="itemAtalhos">
+            <i class="fa-solid fa-keyboard"></i>
+            <div>
+                <strong>Atalhos de Teclado</strong>
+                <p>Alt + C, +, -, L</p>
+            </div>
+        </div>
+
+    </aside>
+
     <main>
         <section class="cabecalho-aula">
             <h1>Comunicação e Interação para Pessoas com TEA</h1>
@@ -201,6 +261,7 @@
         <p>@2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
     <script>
+        // ===== Menu Hambúrguer =====
         const botaoMenu = document.getElementById('menuHamburguer');
         const menuMobile = document.getElementById('menuMobile');
 
@@ -209,6 +270,8 @@
             botaoMenu.classList.toggle('ativo');
             botaoMenu.setAttribute('aria-expanded', aberto);
         });
+
+        // ===== Módulos do curso =====
         const itensModulo = document.querySelectorAll('.item-modulo');
         itensModulo.forEach((item) => {
             item.addEventListener('click', () => {
@@ -221,6 +284,7 @@
             });
         });
 
+        // ===== Formulário de questões =====
         const formQuestoes = document.getElementById('formQuestoes');
         const avisoQuestoes = document.getElementById('avisoQuestoes');
         formQuestoes.addEventListener('submit', (evento) => {
@@ -237,6 +301,212 @@
             avisoQuestoes.hidden = true;
             window.location.href = './cursos.html';
         });
+
+        // ===============================
+        // Painel de Acessibilidade
+        // ===============================
+        const btnAcessibilidade = document.getElementById('btnAcessibilidade');
+        const painelAcessibilidade = document.getElementById('painelAcessibilidade');
+        const fecharPainel = document.getElementById('fecharPainel');
+
+        btnAcessibilidade.addEventListener('click', () => {
+            painelAcessibilidade.classList.toggle('ativo');
+        });
+
+        fecharPainel.addEventListener('click', () => {
+            painelAcessibilidade.classList.remove('ativo');
+        });
+
+        document.addEventListener('click', (e) => {
+            const cliqueForaDoPainel = !painelAcessibilidade.contains(e.target) && !btnAcessibilidade.contains(e.target);
+            if (cliqueForaDoPainel && painelAcessibilidade.classList.contains('ativo')) {
+                painelAcessibilidade.classList.remove('ativo');
+            }
+        });
+
+        // ===============================
+        // Integração VLibras
+        // ===============================
+        function aguardarVLibras(callback, tentativas = 0) {
+            const botaoNativo = document.querySelector('div[vw-access-button]');
+            if (botaoNativo) {
+                callback(botaoNativo);
+            } else if (tentativas < 50) {
+                setTimeout(() => aguardarVLibras(callback, tentativas + 1), 100);
+            }
+        }
+
+        const itemAbrirLibras = document.getElementById('abrirLibras');
+
+        if (itemAbrirLibras) {
+            itemAbrirLibras.addEventListener('click', () => {
+                aguardarVLibras((botaoNativo) => {
+                    botaoNativo.click();
+                    if (painelAcessibilidade) {
+                        painelAcessibilidade.classList.remove('ativo');
+                    }
+                });
+            });
+        }
+
+        document.addEventListener('click', function (e) {
+            const fecharClicado = e.target.closest('[vw-plugin-wrapper] .close-btn, [action="close"], .vpw-actions [action="close"]');
+            if (fecharClicado && btnAcessibilidade) {
+                btnAcessibilidade.style.display = 'flex';
+            }
+        }, true);
+
+        // ===============================
+        // Alto contraste
+        // ===============================
+        const btnAltoContraste = document.getElementById("btnAltoContraste");
+
+        function alternarContraste() {
+            document.body.classList.toggle("alto-contraste");
+            const ativo = document.body.classList.contains("alto-contraste");
+            localStorage.setItem("altoContraste", ativo ? "1" : "0");
+        }
+
+        if (btnAltoContraste) {
+            btnAltoContraste.addEventListener("click", alternarContraste);
+        }
+
+        // ===============================
+        // Aumentar e diminuir fonte
+        // ===============================
+        const TAMANHO_PADRAO = 16;
+        const TAMANHO_MAXIMO = 24;
+        const TAMANHO_MINIMO = 12;
+        let tamanho = TAMANHO_PADRAO;
+
+        function aplicarTamanhoFonte() {
+            const escala = (tamanho / TAMANHO_PADRAO) * 100;
+            document.body.style.zoom = escala + "%";
+        }
+
+        function aumentarFonte() {
+            if (tamanho < TAMANHO_MAXIMO) {
+                tamanho += 2;
+                aplicarTamanhoFonte();
+            }
+        }
+
+        function diminuirFonte() {
+            if (tamanho > TAMANHO_MINIMO) {
+                tamanho -= 2;
+                aplicarTamanhoFonte();
+            }
+        }
+
+        const btnAumentarFonte = document.getElementById("btnAumentarFonte");
+        const btnDiminuirFonte = document.getElementById("btnDiminuirFonte");
+
+        if (btnAumentarFonte) {
+            btnAumentarFonte.addEventListener("click", aumentarFonte);
+        }
+        if (btnDiminuirFonte) {
+            btnDiminuirFonte.addEventListener("click", diminuirFonte);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            if (localStorage.getItem("altoContraste") === "1") {
+                document.body.classList.add("alto-contraste");
+            }
+        });
+
+        // ===============================
+        // Atalhos de teclado
+        // ===============================
+        function mostrarAtalhos() {
+            alert(
+                "Atalhos disponíveis:\n\n" +
+                "Alt + A — Abrir/fechar painel de acessibilidade\n" +
+                "Alt + C — Alternar alto contraste\n" +
+                "Alt + (+) — Aumentar fonte\n" +
+                "Alt + (-) — Diminuir fonte\n" +
+                "Alt + L — Abrir intérprete de Libras\n" +
+                "Alt + → — Próximo botão/link da página\n" +
+                "Alt + ← — Botão/link anterior\n" +
+                "Alt + K — Mostrar esta lista de atalhos"
+            );
+        }
+
+        const itemAtalhos = document.getElementById("itemAtalhos");
+
+        if (itemAtalhos) {
+            itemAtalhos.addEventListener("click", mostrarAtalhos);
+        }
+
+        document.addEventListener("keydown", (e) => {
+            if (!e.altKey) return;
+
+            switch (e.key.toLowerCase()) {
+                case "k":
+                    e.preventDefault();
+                    mostrarAtalhos();
+                    break;
+                case "arrowright":
+                    e.preventDefault();
+                    moverFoco("proximo");
+                    break;
+                case "arrowleft":
+                    e.preventDefault();
+                    moverFoco("anterior");
+                    break;
+                case "a":
+                    e.preventDefault();
+                    painelAcessibilidade.classList.toggle("ativo");
+                    break;
+                case "c":
+                    e.preventDefault();
+                    alternarContraste();
+                    break;
+                case "+":
+                case "=":
+                    e.preventDefault();
+                    aumentarFonte();
+                    break;
+                case "-":
+                    e.preventDefault();
+                    diminuirFonte();
+                    break;
+                case "l":
+                    e.preventDefault();
+                    if (itemAbrirLibras) {
+                        itemAbrirLibras.click();
+                    }
+                    break;
+            }
+        });
+
+        // ===============================
+        // Navegação por botões/links (Alt + Seta)
+        // ===============================
+        function elementosFocaveis() {
+            const seletor = 'a[href], button, input, [tabindex]:not([tabindex="-1"])';
+            return Array.from(document.querySelectorAll(seletor)).filter(el => {
+                return el.offsetParent !== null;
+            });
+        }
+
+        function moverFoco(direcao) {
+            const elementos = elementosFocaveis();
+            if (elementos.length === 0) return;
+
+            const indiceAtual = elementos.indexOf(document.activeElement);
+            let proximoIndice;
+
+            if (indiceAtual === -1) {
+                proximoIndice = direcao === "proximo" ? 0 : elementos.length - 1;
+            } else {
+                proximoIndice = direcao === "proximo"
+                    ? (indiceAtual + 1) % elementos.length
+                    : (indiceAtual - 1 + elementos.length) % elementos.length;
+            }
+
+            elementos[proximoIndice].focus();
+            elementos[proximoIndice].scrollIntoView({ behavior: "smooth", block: "center" });
+        }
     </script>
 </body>
 
