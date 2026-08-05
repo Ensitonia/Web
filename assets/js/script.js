@@ -1,5 +1,4 @@
 
-// Menu Hambúrguer
 
 const botaoMenu = document.getElementById("menuHamburguer");
 const menuMobile = document.getElementById("menuMobile");
