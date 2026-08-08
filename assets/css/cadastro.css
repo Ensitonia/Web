@@ -296,3 +296,8 @@ body.alto-contraste .tipo p {
 body.alto-contraste .radio {
     border-color: #FFD400 !important;
 }
+
+.tipo.selecionado {
+    border: 2px solid #795EC9;
+    background-color: #F3E7FA;
+}

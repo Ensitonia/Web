@@ -7,6 +7,7 @@
     <title>EnSintonia</title>
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
+     <link rel="stylesheet" href="../assets/css/perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -229,24 +230,24 @@
                 item.setAttribute('aria-pressed', 'true');
             });
         });
-
-        const formQuestoes = document.getElementById('formQuestoes');
-        const avisoQuestoes = document.getElementById('avisoQuestoes');
-        formQuestoes.addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
-                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
-            );
-
-            if (!perguntasRespondidas) {
-                avisoQuestoes.hidden = false;
-                avisoQuestoes.focus();
-                return;
-            }
-            avisoQuestoes.hidden = true;
-            window.location.href = './cursos.html';
-        });
     </script>
+    <script>
+        window.configQuiz = {
+            nomeCurso: "Liderança Inclusiva: Times que Transformam",
+            cargaHoraria: "8 horas",
+            notaMinima: 70,
+            gabarito: {
+                questao1: "b",
+                questao2: "c",
+                questao3: "c"
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="../assets/js/certificado.js"></script>
+    <script type="module" src="../assets/js/quiz-certificado.js"></script>
+    <script type="module" src="../assets/js/headerAuth.js"></script>
 </body>
 
 </html>

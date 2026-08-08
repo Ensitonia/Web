@@ -7,6 +7,7 @@
     <title>EnSintonia</title>
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
+     <link rel="stylesheet" href="../assets/css/perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -285,24 +286,6 @@
             });
         });
 
-        // ===== Formulário de questões =====
-        const formQuestoes = document.getElementById('formQuestoes');
-        const avisoQuestoes = document.getElementById('avisoQuestoes');
-        formQuestoes.addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
-                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
-            );
-
-            if (!perguntasRespondidas) {
-                avisoQuestoes.hidden = false;
-                avisoQuestoes.focus();
-                return;
-            }
-            avisoQuestoes.hidden = true;
-            window.location.href = './cursos.html';
-        });
-
         // ===============================
         // Painel de Acessibilidade
         // ===============================
@@ -509,6 +492,23 @@
             elementos[proximoIndice].scrollIntoView({ behavior: "smooth", block: "center" });
         }
     </script>
+    <script>
+        window.configQuiz = {
+            nomeCurso: "Tecnologias Assistivas no Dia a Dia",
+            cargaHoraria: "4 horas",
+            notaMinima: 70,
+            gabarito: {
+                questao1: "b",
+                questao2: "b",
+                questao3: "a"
+            }
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script type="module" src="../assets/js/certificado.js"></script>
+    <script type="module" src="../assets/js/quiz-certificado.js"></script>
+    <script type="module" src="../assets/js/headerAuth.js"></script>
 </body>
 
 </html>

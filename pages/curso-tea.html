@@ -7,6 +7,7 @@
     <title>EnSintonia</title>
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -25,7 +26,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
+
     <header>
         <div class="logo">
             <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
@@ -284,24 +285,6 @@
             });
         });
 
-        // ===== Formulário de questões =====
-        const formQuestoes = document.getElementById('formQuestoes');
-        const avisoQuestoes = document.getElementById('avisoQuestoes');
-        formQuestoes.addEventListener('submit', (evento) => {
-            evento.preventDefault();
-            const perguntasRespondidas = ['questao1', 'questao2', 'questao3'].every(
-                (nome) => formQuestoes.querySelector(`input[name="${nome}"]:checked`)
-            );
-
-            if (!perguntasRespondidas) {
-                avisoQuestoes.hidden = false;
-                avisoQuestoes.focus();
-                return;
-            }
-            avisoQuestoes.hidden = true;
-            window.location.href = './cursos.html';
-        });
-
         // ===============================
         // Painel de Acessibilidade
         // ===============================
@@ -508,6 +491,22 @@
             elementos[proximoIndice].scrollIntoView({ behavior: "smooth", block: "center" });
         }
     </script>
-</body>
+    <script>
+        window.configQuiz = {
+            nomeCurso: "Comunicação e Interação para Pessoas com TEA",
+            cargaHoraria: "4 horas",
+            notaMinima: 70,
+            gabarito: {
+                questao1: "b",
+                questao2: "c",
+                questao3: "b"
+            }
+        };
+    </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script type="module" src="../assets/js/certificado.js"></script>
+<script type="module" src="../assets/js/quiz-certificado.js"></script>
+<script type="module" src="../assets/js/headerAuth.js"></script>
 
 </html>

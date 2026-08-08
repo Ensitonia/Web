@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <!-- VLibras -->
+ 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -35,12 +35,12 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <!-- Botão Flutuante de Acessibilidade -->
+   
     <button id="btnAcessibilidade" class="btn-acessibilidade">
         <i class="fa-solid fa-universal-access"></i>
     </button>
 
-    <!-- Painel de Acessibilidade -->
+   
     <aside id="painelAcessibilidade" class="painel-acessibilidade">
 
         <div class="topo-painel">
@@ -107,7 +107,7 @@
         </p>
 
         <!-- Formulário -->
-        <form>
+        <form id="loginForm">
 
             <!-- E-mail -->
             <label for="email">E-mail</label>
@@ -136,7 +136,7 @@
 
             <!-- Esqueci a senha -->
             <p class="esqueci">
-                <a href="#">Esqueceu sua senha?</a>
+                <a href="esqueci-senha.html">Esqueceu sua senha?</a>
             </p>
 
             <!-- Botão -->
@@ -151,7 +151,7 @@
 
             Não tem uma conta?
 
-            <a href="./pages/cadastrar-se.html">
+            <a href="../pages/cadastrar-se.html">
                 Cadastre-se
             </a>
 
@@ -159,6 +159,7 @@
 
     </div>
 
+    <script type="module" src="../assets/js/login.js"></script>
     <script src="../assets/js/script.js"></script>
 
 </body>
