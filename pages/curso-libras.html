@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
      <link rel="stylesheet" href="../assets/css/perfil.css">
+     <link rel="stylesheet" href="../assets/css/modo-noturno.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -43,13 +44,10 @@
                 <a href="../index.html">Início</a>
                 <a href="../pages/cursos.html" class="active">Cursos</a>
                 <a href="../pages/cursos.html">Vagas</a>
-                <a href="../pages/para-empresas.html">Para Empresas</a>
+                <a href="../pages/para-empresas.html">Empresas</a>
                 <a href="../pages/sobre-nós.html">Sobre nós</a>
             </nav>
             <div class="acoes-header">
-                <div class="icone-acessibilidade">
-                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
-                </div>
                 <a href="../pages/entrar.html" class="btn-login">Entrar</a>
                 <a href="../pages/cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
             </div>
@@ -256,28 +254,7 @@
         <p>@2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
-   <script>
-        const botaoMenu = document.getElementById('menuHamburguer');
-        const menuMobile = document.getElementById('menuMobile');
-
-        botaoMenu.addEventListener('click', () => {
-            const aberto = menuMobile.classList.toggle('aberto');
-            botaoMenu.classList.toggle('ativo');
-            botaoMenu.setAttribute('aria-expanded', aberto);
-        });
-
-        const itensModulo = document.querySelectorAll('.item-modulo');
-        itensModulo.forEach((item) => {
-            item.addEventListener('click', () => {
-                itensModulo.forEach((outroItem) => {
-                    outroItem.classList.remove('item-ativo');
-                    outroItem.setAttribute('aria-pressed', 'false');
-                });
-                item.classList.add('item-ativo');
-                item.setAttribute('aria-pressed', 'true');
-            });
-        });
-    </script>
+    <script src="../assets/js/script.js"></script>
     <script>
         window.configQuiz = {
             nomeCurso: "Libras no Ambiente Corporativo",

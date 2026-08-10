@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
      <link rel="stylesheet" href="../assets/css/perfil.css">
+     <link rel="stylesheet" href="../assets/css/modo-noturno.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -42,18 +43,73 @@
                  <a href="../index.html">Início</a>
                 <a href="../pages/cursos.html" class="active">Cursos</a>
                 <a href="../pages/cursos.html">Vagas</a>
-                <a href="../pages/para-empresas.html">Para Empresas</a>
+                <a href="../pages/para-empresas.html">Empresas</a>
                 <a href="../pages/sobre-nós.html">Sobre nós</a>
             </nav>
             <div class="acoes-header">
-                <div class="icone-acessibilidade">
-                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
-                </div>
                 <a href="../pages/entrar.html" class="btn-login">Entrar</a>
                 <a href="../pages/cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
             </div>
         </div>
     </header>
+
+      <!-- Botão Flutuante de Acessibilidade -->
+    <button id="btnAcessibilidade" class="btn-acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <!-- Painel de Acessibilidade -->
+    <aside id="painelAcessibilidade" class="painel-acessibilidade">
+
+        <div class="topo-painel">
+            <h3>Acessibilidade</h3>
+            <button id="fecharPainel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="item" id="abrirLibras">
+            <i class="fa-solid fa-hands"></i>
+            <div>
+                <strong>Libras</strong>
+                <p>Ativar intérprete</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAltoContraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+            <div>
+                <strong>Alto Contraste</strong>
+                <p>Melhor visualização</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAumentarFonte">
+            <i class="fa-solid fa-a"></i>
+            <div>
+                <strong>Aumentar Fonte</strong>
+                <p>Texto maior</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnDiminuirFonte">
+            <i class="fa-solid fa-a" style="font-size: 14px;"></i>
+            <div>
+                <strong>Diminuir Fonte</strong>
+                <p>Texto menor</p>
+            </div>
+        </div>
+
+        <div class="item" id="itemAtalhos">
+            <i class="fa-solid fa-keyboard"></i>
+            <div>
+                <strong>Atalhos de Teclado</strong>
+                <p>Alt + C, +, -, L</p>
+            </div>
+        </div>
+
+    </aside>
+
     <main>
         <section class="cabecalho-aula">
             <h1>Liderança Inclusiva</h1>
@@ -209,16 +265,9 @@
     <footer>
         <p>@2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
+
+    <script src="../assets/js/script.js"></script>
     <script>
-        const botaoMenu = document.getElementById('menuHamburguer');
-        const menuMobile = document.getElementById('menuMobile');
-
-        botaoMenu.addEventListener('click', () => {
-            const aberto = menuMobile.classList.toggle('aberto');
-            botaoMenu.classList.toggle('ativo');
-            botaoMenu.setAttribute('aria-expanded', aberto);
-        });
-
         const itensModulo = document.querySelectorAll('.item-modulo');
         itensModulo.forEach((item) => {
             item.addEventListener('click', () => {

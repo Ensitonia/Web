@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/curso-detalhe.css">
     <link rel="stylesheet" href="../assets/css/botaoAc.css">
      <link rel="stylesheet" href="../assets/css/perfil.css">
+     <link rel="stylesheet" href="../assets/css/modo-noturno.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
@@ -42,13 +43,10 @@
                 <a href="./index.html">Início</a>
                 <a href="./cursos.html" class="active">Cursos</a>
                 <a href="./vagas.html">Vagas</a>
-                <a href="./para-empresas.html">Para Empresas</a>
+                <a href="./para-empresas.html">Empresas</a>
                 <a href="./sobre-nós.html">Sobre nós</a>
             </nav>
             <div class="acoes-header">
-                <div class="icone-acessibilidade">
-                    <img src="../assets/icons/Web Accessibility.png" alt="Acessibilidade">
-                </div>
                 <a href="./entrar.html" class="btn-login">Entrar</a>
                 <a href="./cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
             </div>
@@ -106,7 +104,7 @@
             <i class="fa-solid fa-keyboard"></i>
             <div>
                 <strong>Atalhos de Teclado</strong>
-                <p>Alt + C, +, -, L</p>
+                <p>Alt + C, +, -, L, N</p>
             </div>
         </div>
 
@@ -355,6 +353,61 @@
             btnAltoContraste.addEventListener("click", alternarContraste);
         }
 
+
+        // ===============================
+        // Modo noturno
+        // ===============================
+        function alternarModoNoturno(forcar) {
+            const ativo = typeof forcar === "boolean"
+                ? forcar
+                : !document.body.classList.contains("modo-noturno");
+
+            document.body.classList.toggle("modo-noturno", ativo);
+            localStorage.setItem("modoNoturno", ativo ? "1" : "0");
+            atualizarIconeModoNoturno();
+        }
+
+        function atualizarIconeModoNoturno() {
+            const botao = document.getElementById("btnModoNoturno");
+            if (!botao) return;
+
+            const ativo = document.body.classList.contains("modo-noturno");
+            botao.innerHTML = ativo
+                ? '<i class="fa-solid fa-sun"></i>'
+                : '<i class="fa-solid fa-moon"></i>';
+            botao.setAttribute("aria-label", ativo ? "Desativar modo noturno" : "Ativar modo noturno");
+        }
+
+        function criarBotaoModoNoturno() {
+            if (document.getElementById("btnModoNoturno")) return;
+
+            const areaAcoes =
+                document.querySelector(".acoes-header") ||
+                document.querySelector(".menu-mobile > div:last-child");
+
+            if (!areaAcoes) return;
+
+            areaAcoes.style.display = "flex";
+            areaAcoes.style.alignItems = "center";
+            areaAcoes.style.flexWrap = "nowrap";
+            if (!areaAcoes.style.gap) {
+                areaAcoes.style.gap = "12px";
+            }
+
+            const botao = document.createElement("button");
+            botao.type = "button";
+            botao.id = "btnModoNoturno";
+            botao.className = "btn-modo-noturno";
+
+            areaAcoes.insertBefore(botao, areaAcoes.firstChild);
+
+            botao.addEventListener("click", () => alternarModoNoturno());
+
+            atualizarIconeModoNoturno();
+        }
+
+        criarBotaoModoNoturno();
+
         // ===============================
         // Aumentar e diminuir fonte
         // ===============================
@@ -395,6 +448,10 @@
         document.addEventListener("DOMContentLoaded", () => {
             if (localStorage.getItem("altoContraste") === "1") {
                 document.body.classList.add("alto-contraste");
+            }
+            if (localStorage.getItem("modoNoturno") === "1") {
+                document.body.classList.add("modo-noturno");
+                atualizarIconeModoNoturno();
             }
         });
 
@@ -444,6 +501,10 @@
                 case "c":
                     e.preventDefault();
                     alternarContraste();
+                    break;
+                case "n":
+                    e.preventDefault();
+                    alternarModoNoturno();
                     break;
                 case "+":
                 case "=":

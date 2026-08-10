@@ -37,13 +37,24 @@ function selecionarTipo(tipo, elemento) {
     elemento.classList.add("selecionado");
 }
 
-document.getElementById("aprendiz").addEventListener("click", function () {
-    selecionarTipo("aprendiz", this);
-});
+const elAprendiz = document.getElementById("aprendiz");
+const elEmpresa = document.getElementById("empresa");
 
-document.getElementById("empresa").addEventListener("click", function () {
-    selecionarTipo("empresa", this);
-});
+if (elAprendiz) {
+    elAprendiz.addEventListener("click", function () {
+        selecionarTipo("aprendiz", this);
+    });
+} else {
+    console.error("Elemento #aprendiz não encontrado na página.");
+}
+
+if (elEmpresa) {
+    elEmpresa.addEventListener("click", function () {
+        selecionarTipo("empresa", this);
+    });
+} else {
+    console.error("Elemento #empresa não encontrado na página.");
+}
 
 const form = document.querySelector("form");
 

@@ -1,5 +1,3 @@
-
-
 const botaoMenu = document.getElementById("menuHamburguer");
 const menuMobile = document.getElementById("menuMobile");
 
@@ -98,6 +96,62 @@ if (btnAltoContraste) {
 }
 
 
+// Modo noturno
+
+
+function alternarModoNoturno(forcar) {
+    const ativo = typeof forcar === "boolean"
+        ? forcar
+        : !document.body.classList.contains("modo-noturno");
+
+    document.body.classList.toggle("modo-noturno", ativo);
+    localStorage.setItem("modoNoturno", ativo ? "1" : "0");
+    atualizarIconeModoNoturno();
+}
+
+function atualizarIconeModoNoturno() {
+    const botao = document.getElementById("btnModoNoturno");
+    if (!botao) return;
+
+    const ativo = document.body.classList.contains("modo-noturno");
+    botao.innerHTML = ativo
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+    botao.setAttribute("aria-label", ativo ? "Desativar modo noturno" : "Ativar modo noturno");
+}
+
+function criarBotaoModoNoturno() {
+    if (document.getElementById("btnModoNoturno")) return;
+
+    const areaAcoes =
+        document.querySelector(".acoes-header") ||
+        document.querySelector(".menu-mobile > div:last-child");
+
+    if (!areaAcoes) return;
+
+    // Garante que o container fique alinhado numa linha só, verticalmente centralizado
+    areaAcoes.style.display = "flex";
+    areaAcoes.style.alignItems = "center";
+    areaAcoes.style.flexWrap = "nowrap";
+    if (!areaAcoes.style.gap) {
+        areaAcoes.style.gap = "12px";
+    }
+
+    const botao = document.createElement("button");
+    botao.type = "button";
+    botao.id = "btnModoNoturno";
+    botao.className = "btn-modo-noturno";
+
+    areaAcoes.insertBefore(botao, areaAcoes.firstChild);
+
+    botao.addEventListener("click", () => alternarModoNoturno());
+
+    atualizarIconeModoNoturno();
+}
+
+criarBotaoModoNoturno();
+
+
 // Aumentar e diminuir fonte
 
 
@@ -141,11 +195,22 @@ if (btnDiminuirFonte) {
 // Reaplica preferências salvas ao carregar a página
 
 
-document.addEventListener("DOMContentLoaded", () => {
+function aplicarPreferenciasSalvas() {
     if (localStorage.getItem("altoContraste") === "1") {
         document.body.classList.add("alto-contraste");
     }
-});
+
+    if (localStorage.getItem("modoNoturno") === "1") {
+        document.body.classList.add("modo-noturno");
+        atualizarIconeModoNoturno();
+    }
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", aplicarPreferenciasSalvas);
+} else {
+    aplicarPreferenciasSalvas();
+}
 
 
 // Atalhos de teclado
@@ -156,6 +221,7 @@ function mostrarAtalhos() {
         "Atalhos disponíveis:\n\n" +
         "Alt + A — Abrir/fechar painel de acessibilidade\n" +
         "Alt + C — Alternar alto contraste\n" +
+        "Alt + N — Alternar modo noturno\n" +
         "Alt + (+) — Aumentar fonte\n" +
         "Alt + (-) — Diminuir fonte\n" +
         "Alt + L — Abrir intérprete de Libras\n" +
@@ -199,6 +265,11 @@ document.addEventListener("keydown", (e) => {
         case "c":
             e.preventDefault();
             alternarContraste();
+            break;
+
+        case "n":
+            e.preventDefault();
+            alternarModoNoturno();
             break;
 
         case "+":
