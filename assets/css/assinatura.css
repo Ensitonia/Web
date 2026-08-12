@@ -10,7 +10,7 @@
 body {
     background-color: #FBFAF8;
     color: #000;
-    padding-top: 90px;
+    padding-top: 120px;
 }
 
 .img-logo {
@@ -30,27 +30,36 @@ header {
     align-items: center;
     position: fixed;
     top: 20px;
-    left: 0;
-    right: 0;
+    left: 20px;
+    right: 20px;
     height: 90px;
-    background: #FBFAF8;
-    border-radius: 62px;
-    border: 1px solid #F1EBEB;
+    background: #FEFCF8;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 100;
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 nav {
     display: flex;
     gap: 27px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav a {
-    color: #1A1A1A;
+    color: #000;
     font-size: 20px;
     transition: color 0.2s ease;
 }
 
 nav a:hover {
+    color: #8B2CF5;
+}
+
+.active {
     color: #8B2CF5;
 }
 
@@ -462,6 +471,8 @@ footer {
         align-items: flex-start;
         width: 100%;
         gap: 16px;
+        position: static;
+        transform: none;
     }
 
     nav a {

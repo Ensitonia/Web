@@ -10,7 +10,7 @@
 body {
     background-color: #FBFAF8;
     color: #000;
-    padding-top: 90px;
+    padding-top: 120px;
 }
 
 a {
@@ -34,17 +34,20 @@ header {
     right: 20px;
     height: 90px;
     background: #FEFCF8;
-    border-radius: 62px;
-    border: 1px solid #F1EBEB;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
     
 }
 
 nav {
     display: flex;
     gap: 27px;
-
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav a {
@@ -248,18 +251,27 @@ section.cards p {
 
 }
 
-article {
+
+.missao-historia-wrapper {
     max-width: 1360px;
     width: 94%;
     margin: 0 auto 56px;
-    padding: 0 43px;
     display: flex;
-    gap: 0px;
+    gap: 0;
     align-items: stretch;
 }
 
+.missao-historia-wrapper article {
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+}
+
 .missão {
-    width: 646px;
+    flex: 0.75;
     display: flex;
     align-items: center;
     gap: 22px;
@@ -267,7 +279,6 @@ article {
     border: 1px solid #D3D3D3;
     border-radius: 10px;
     background: #fff;
-
 }
 
 .missão,
@@ -309,7 +320,8 @@ article {
 }
 
 .historia {
-    width: 50%;
+    flex: 1.25;
+    /* mantém o resto igual */
     background: #F5EDFF;
     border-radius: 10px;
     padding: 36px;
@@ -349,7 +361,7 @@ article {
     }
 
     body {
-        padding-top: 70px;
+        padding-top: 100px;
     }
 
     .img-logo {
@@ -382,6 +394,8 @@ article {
         flex-direction: column;
         gap: 18px;
         width: 100%;
+        position: static;
+        transform: none;
     }
 
     .acoes-header {
@@ -455,26 +469,16 @@ article {
         height: 56px;
     }
 
-    article {
-        padding: 0 20px;
-        margin-bottom: 32px;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
+    .missao-historia-wrapper {
+        width: 92%;
+        flex-direction: column;
         gap: 12px;
-        scrollbar-width: none;
+        padding: 0;
     }
 
-    article::-webkit-scrollbar {
-        display: none;
-    }
-
-    .missão,
-    .historia {
-        flex: 0 0 85%;
-        scroll-snap-align: center;
+    .missao-historia-wrapper article {
+        display: block;
+        width: 100%;
     }
 
     .missão {

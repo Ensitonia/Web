@@ -29,6 +29,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto-escuro);
     line-height: 1.5;
+    padding-top: 150px;
 }
 
 a {
@@ -65,10 +66,20 @@ input:focus-visible {
 header {
     max-width: 1394px;
     margin: 0 auto;
-    padding: 10px 40px; 
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 90px;
+    background: #FEFCF8;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .img-logo {
@@ -78,7 +89,11 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 32px; 
+    gap: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav a {
@@ -180,7 +195,7 @@ nav a.active {
 
 .cabecalho-aula {
     max-width: 1200px;
-    margin: 48px auto 32px;
+    margin: 0 auto 32px;
     padding: 0 64px;
 }
 
@@ -421,6 +436,19 @@ footer {
     header {
         padding: 12px 18px;
         position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        border-radius: 18px;
+    }
+
+    body {
+        padding-top: 20px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
     }
 
     .img-logo {

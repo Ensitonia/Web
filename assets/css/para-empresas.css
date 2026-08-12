@@ -44,11 +44,16 @@ header {
     right: 20px;
     height: 90px;
     background: #FEFCF8;
-    border-radius: 62px;
-    border: 1px solid #F1EBEB;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
     
+}
+
+
+main {
+    padding-top: 120px;
 }
 
 .img-logo {
@@ -58,6 +63,10 @@ header {
 nav {
     display: flex;
     gap: 27px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav a {
@@ -478,6 +487,16 @@ footer {
     header {
         padding: 12px 18px;
         position: relative;
+    }
+
+    /* Header volta a ser relative no mobile, então não precisa do respiro extra */
+    main {
+        padding-top: 20px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
     }
 
     .img-logo {

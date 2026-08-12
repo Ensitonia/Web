@@ -23,14 +23,33 @@ a {
 header {
     max-width: 1394px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 90px;
+    background: #FEFCF8;
+    border-radius: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+
+main {
+    padding-top: 100x;
 }
 
 nav {
     display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 nav a {
@@ -259,6 +278,8 @@ nav a.active {
     margin-bottom: 4px;
 }
 
+/* ===== Estilos específicos da seção de Cursos ===== */
+
 .cursos-section {
     margin-bottom: 60px;
 }
@@ -288,11 +309,8 @@ nav a.active {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s;
-}
-
-.curso-card{
     color: #000;
+    transition: transform 0.2s;
 }
 
 .curso-card:hover {
@@ -354,101 +372,6 @@ nav a.active {
     gap: 12px;
 }
 
-.vagas-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.vaga-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border: 1px solid #E5E5E5;
-}
-
-@media (min-width: 768px) {
-    .vaga-card {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.vaga-info-principal {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-}
-
-.vaga-textos {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.company {
-    font-size: 14px;
-    color: #666;
-}
-
-.vaga-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    font-size: 13px;
-    color: #666;
-}
-
-.vaga-meta span {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.vaga-status {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-@media (min-width: 768px) {
-    .vaga-status {
-        align-items: flex-end;
-    }
-}
-
-.badge {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.badge-green {
-    background: #e6f9f0;
-    color: #10b981;
-}
-
-.badge-blue {
-    background: #e0f2fe;
-    color: #0ea5e9;
-}
-
-.badge-yellow {
-    background: #fef3c7;
-    color: #d97706;
-}
-
-.time {
-    font-size: 12px;
-    color: #666;
-}
-
 footer {
     text-align: center;
     padding: 24px 0;
@@ -462,6 +385,19 @@ footer {
     header {
         padding: 12px 18px;
         position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        border-radius: 18px;
+    }
+
+    main {
+        padding-top: 20px;
+    }
+
+    nav {
+        position: static;
+        transform: none;
     }
 
     .img-logo {

@@ -1,0 +1,536 @@
+/* ===== Página de Vagas — estilos exclusivos (não afeta outras páginas) ===== */
+
+.vg-hero {
+    background: linear-gradient(135deg, #8B2CF5 0%, #6d1fd1 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    margin-top: 10px;
+    margin-bottom: 32px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.vg-hero::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.vg-hero::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    right: 140px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgba(246, 197, 35, 0.15);
+}
+
+.vg-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+}
+
+.vg-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.vg-eyebrow .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #F6C523;
+}
+
+.vg-hero h1 {
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.vg-hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 0;
+}
+
+.vg-stats {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 36px;
+}
+
+.vg-stat {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    padding: 16px 18px;
+    backdrop-filter: blur(4px);
+}
+
+.vg-stat strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: #F6C523;
+    margin-bottom: 4px;
+}
+
+.vg-stat span {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.4;
+}
+
+/* Barra de filtros */
+.vg-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 28px;
+}
+
+.vg-busca {
+    flex: 1 1 240px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #FBFAF8;
+    border: 1px solid #E5E5E5;
+    border-radius: 10px;
+    padding: 10px 14px;
+    color: #666;
+}
+
+.vg-busca i {
+    color: #8B2CF5;
+    font-size: 14px;
+}
+
+.vg-busca input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    width: 100%;
+}
+
+.vg-select {
+    flex: 0 1 170px;
+    border: 1px solid #E5E5E5;
+    background: #FBFAF8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238B2CF5' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 12px center;
+    border-radius: 10px;
+    padding: 10px 34px 10px 14px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1A1A1A;
+    appearance: none;
+    cursor: pointer;
+}
+
+.vg-select:focus,
+.vg-busca:focus-within {
+    border-color: #8B2CF5;
+}
+
+.vg-btn-filtrar {
+    background: #8B2CF5;
+    color: #fff;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    flex: 0 0 auto;
+}
+
+.vg-btn-filtrar:hover {
+    background: #7420dd;
+}
+
+/* Contagem de resultados */
+.vg-resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #666;
+    font-size: 14px;
+}
+
+.vg-resultados strong {
+    color: #1A1A1A;
+}
+
+.vg-ordenar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #8B2CF5;
+    font-weight: 600;
+}
+
+/* Cards de vaga */
+.vg-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.vg-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 22px;
+    padding-left: 26px;
+    border-left: 4px solid var(--vg-accent, #8B2CF5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vg-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(139, 44, 245, 0.12);
+}
+
+@media (min-width: 768px) {
+    .vg-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.vg-card-principal {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.vg-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    background: var(--vg-accent, #8B2CF5);
+}
+
+.vg-textos h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 3px;
+}
+
+.vg-textos .vg-empresa {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.vg-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vg-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #F5EDFF;
+    color: #6d1fd1;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.vg-tag i {
+    font-size: 11px;
+}
+
+.vg-card-lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .vg-card-lateral {
+        align-items: flex-end;
+    }
+}
+
+.vg-card-lateral .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.vg-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vg-salvar {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+    background: #fff;
+    color: #8B2CF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.vg-salvar:hover {
+    background: #F5EDFF;
+    border-color: #8B2CF5;
+}
+
+.vg-candidatar {
+    background: #8B2CF5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.vg-candidatar:hover {
+    background: #7420dd;
+}
+
+/* Badge por tipo (movido de style.css) */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-green {
+    background: #e6f9f0;
+    color: #10b981;
+}
+
+.badge-blue {
+    background: #e0f2fe;
+    color: #0ea5e9;
+}
+
+.badge-yellow {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.time {
+    font-size: 12px;
+    color: #666;
+}
+
+/* ===== Card antigo de vaga (movido de style.css) =====
+   Mantido caso outras páginas (ex: preview de vagas na home)
+   ainda usem essa estrutura em vez do .vg-card novo. */
+
+.vagas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vaga-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #E5E5E5;
+}
+
+@media (min-width: 768px) {
+    .vaga-card {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.vaga-info-principal {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.vaga-textos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.company {
+    font-size: 14px;
+    color: #666;
+}
+
+.vaga-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #666;
+}
+
+.vaga-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.vaga-status {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .vaga-status {
+        align-items: flex-end;
+    }
+}
+
+/* CTA final */
+.vg-cta-final {
+    margin-top: 36px;
+    background: #F5EDFF;
+    border-radius: 20px;
+    padding: 36px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.vg-cta-final .icon-circle {
+    width: 56px;
+    height: 56px;
+}
+
+.vg-cta-final h3 {
+    font-size: 22px;
+    color: #1A1A1A;
+}
+
+.vg-cta-final p {
+    color: #555;
+    max-width: 480px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.vg-cta-final .btn-square-outline {
+    background: #8B2CF5;
+    color: #fff;
+    border-radius: 10px;
+    padding: 12px 26px;
+}
+
+.vg-cta-final .btn-square-outline:hover {
+    background: #7420dd;
+}
+
+/* Responsivo */
+@media (max-width: 1023px) {
+    .vg-hero {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .vg-hero h1 {
+        font-size: 26px;
+    }
+
+    .vg-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .vg-filtros {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vg-select,
+    .vg-btn-filtrar {
+        flex: 1 1 auto;
+    }
+
+    .vg-resultados {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .vg-cta-final {
+        padding: 26px 20px;
+    }
+}

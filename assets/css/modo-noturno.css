@@ -57,7 +57,8 @@
 .modo-noturno .banner-solucoes,
 .modo-noturno .bg-light-purple-box,
 .modo-noturno .missão,
-.modo-noturno .historia {
+.modo-noturno .historia,
+.modo-noturno .vg-cta-final {
     background-color: #232323 !important;
     border-color: #3A3A3A !important;
 }
@@ -91,6 +92,75 @@
 .modo-noturno .text-purple,
 .modo-noturno .badge-text {
     color: #C9B6FA !important;
+}
+
+/* Ícone dentro do CTA final de vagas (fundo lilás claro fixo no CSS original) */
+.modo-noturno .icon-circle.icon-purple {
+    background-color: #2A1F3D !important;
+    color: #C9B6FA !important;
+}
+
+/* Tags de localidade/modalidade nos cards de vaga (fundo lilás claro fixo) */
+.modo-noturno .vg-tag {
+    background-color: #2A1F3D !important;
+    color: #C9B6FA !important;
+}
+
+/* Badges de tipo de contrato (fundo claro fixo, cada um com sua cor) */
+.modo-noturno .badge-green {
+    background-color: #123324 !important;
+    color: #34D399 !important;
+}
+
+.modo-noturno .badge-blue {
+    background-color: #0C2F45 !important;
+    color: #38BDF8 !important;
+}
+
+.modo-noturno .badge-yellow {
+    background-color: #3A2A05 !important;
+    color: #FBBF24 !important;
+}
+
+/* Hero de vagas: mantém o dourado de destaque nos números das estatísticas */
+.modo-noturno .vg-stat strong {
+    color: #F6C523 !important;
+}
+
+/* Campo de busca (.vg-busca): mantém fundo claro (não deve escurecer
+   como os outros inputs) e texto/placeholder/ícone roxos para contraste */
+.modo-noturno .vg-busca {
+    background-color: #FBFAF8 !important;
+    border-color: #E5E5E5 !important;
+}
+
+.modo-noturno .vg-busca input {
+    background-color: transparent !important;
+    color: #8B2CF5 !important;
+    border-color: transparent !important;
+}
+
+.modo-noturno .vg-busca input::placeholder {
+    color: #8B2CF5 !important;
+    opacity: 0.7;
+}
+
+.modo-noturno .vg-busca i {
+    color: #8B2CF5 !important;
+}
+
+/* Selects de filtro (localidade, modalidade, tipo de contrato):
+   mesmo tratamento — fundo claro + texto roxo */
+.modo-noturno .vg-select {
+    background-color: #FBFAF8 !important;
+    color: #8B2CF5 !important;
+    border-color: #E5E5E5 !important;
+}
+
+/* Opções dentro do dropdown do select (usa estilo nativo do navegador) */
+.modo-noturno .vg-select option {
+    background-color: #FFFFFF !important;
+    color: #8B2CF5 !important;
 }
 
 /* Itens do módulo do curso: o fundo continua claro (herdado do CSS

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnSintonia - Vagas</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/curso.css">
+    <link rel="stylesheet" href="../assets/css/botaoAc.css">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="stylesheet" href="../assets/css/vagas.css">
+    <link rel="stylesheet" href="../assets/css/modo-noturno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <header>
+        <div class="logo">
+            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+        </div>
+
+        <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-mobile" id="menuMobile">
+            <nav>
+                <a href="../index.html">Início</a>
+                <a href="../pages/cursos.html">Cursos</a>
+                <a href="../pages/vagas.html" class="active">Vagas</a>
+                <a href="../pages/para-empresas.html">Empresas</a>
+                <a href="../pages/sobre-nós.html">Sobre nós</a>
+            </nav>
+            <div class="acoes-header">
+                <a href="../pages/entrar.html" class="btn-login">Entrar</a>
+                <a href="../pages/cadastrar-se.html" class="btn-cadastrar-se">Cadastrar-Se</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Botão Flutuante de Acessibilidade -->
+    <button id="btnAcessibilidade" class="btn-acessibilidade">
+        <i class="fa-solid fa-universal-access"></i>
+    </button>
+
+    <!-- Painel de Acessibilidade -->
+    <aside id="painelAcessibilidade" class="painel-acessibilidade">
+
+        <div class="topo-painel">
+            <h3>Acessibilidade</h3>
+
+            <button id="fecharPainel">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="item" id="abrirLibras">
+            <i class="fa-solid fa-hands"></i>
+            <div>
+                <strong>Libras</strong>
+                <p>Ativar intérprete</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAltoContraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+            <div>
+                <strong>Alto Contraste</strong>
+                <p>Melhor visualização</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnAumentarFonte">
+            <i class="fa-solid fa-a"></i>
+            <div>
+                <strong>Aumentar Fonte</strong>
+                <p>Texto maior</p>
+            </div>
+        </div>
+
+        <div class="item" id="btnDiminuirFonte">
+            <i class="fa-solid fa-a" style="font-size: 14px;"></i>
+            <div>
+                <strong>Diminuir Fonte</strong>
+                <p>Texto menor</p>
+            </div>
+        </div>
+
+        <div class="item" id="itemAtalhos">
+            <i class="fa-solid fa-keyboard"></i>
+            <div>
+                <strong>Atalhos de Teclado</strong>
+                <p>Alt + C, +, -, L</p>
+            </div>
+        </div>
+
+    </aside>
+
+    <main>
+        <section class="container">
+
+            <!-- Hero da página de vagas -->
+            <div class="vg-hero">
+                <div class="vg-hero-content">
+                    <span class="vg-eyebrow"><span class="dot"></span> Vagas atualizadas todo dia</span>
+                    <h1>Encontre uma vaga que combina com quem você é.</h1>
+                    <p>Empresas parceiras comprometidas com acessibilidade e inclusão real, em vagas efetivas, CLT, temporárias, presenciais e remotas.</p>
+                </div>
+
+                <div class="vg-stats">
+                    <div class="vg-stat">
+                        <strong>120+</strong>
+                        <span>Vagas ativas agora</span>
+                    </div>
+                    <div class="vg-stat">
+                        <strong>45</strong>
+                        <span>Empresas parceiras inclusivas</span>
+                    </div>
+                    <div class="vg-stat">
+                        <strong>89%</strong>
+                        <span>De candidatos contratados em até 60 dias</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra de filtros -->
+            <div class="vg-filtros">
+                <div class="vg-busca">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Buscar por cargo ou empresa">
+                </div>
+
+                <select class="vg-select" aria-label="Filtrar por localização">
+                    <option>Todas as localidades</option>
+                    <option>São Paulo, SP</option>
+                    <option>Rio de Janeiro, RJ</option>
+                    <option>Curitiba, PR</option>
+                    <option>Belo Horizonte, MG</option>
+                </select>
+
+                <select class="vg-select" aria-label="Filtrar por modalidade">
+                    <option>Modalidade</option>
+                    <option>Presencial</option>
+                    <option>Híbrido</option>
+                    <option>Remoto</option>
+                </select>
+
+                <select class="vg-select" aria-label="Filtrar por tipo de contrato">
+                    <option>Tipo de contrato</option>
+                    <option>Efetivo</option>
+                    <option>CLT</option>
+                    <option>Temporário</option>
+                </select>
+
+                <button type="button" class="vg-btn-filtrar">Filtrar</button>
+            </div>
+
+            <div class="vg-resultados">
+                <span><strong>4</strong> vagas encontradas</span>
+                <span class="vg-ordenar"><i class="fa-solid fa-arrow-down-wide-short"></i> Mais recentes</span>
+            </div>
+
+            <!-- Lista de vagas -->
+            <div class="vg-lista">
+
+                <div class="vg-card" style="--vg-accent: #8B2CF5;">
+                    <div class="vg-card-principal">
+                        <div class="vg-avatar">IN</div>
+                        <div class="vg-textos">
+                            <h4>Auxiliar administrativo</h4>
+                            <p class="vg-empresa">Instituto ...</p>
+                            <div class="vg-tags">
+                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> São Paulo, SP</span>
+                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vg-card-lateral">
+                        <span class="badge badge-green">Efetivo</span>
+                        <span class="time">Publicado há 2h</span>
+                        <div class="vg-acoes">
+                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <button type="button" class="vg-candidatar">Candidatar-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vg-card" style="--vg-accent: #ffc107;">
+                    <div class="vg-card-principal">
+                        <div class="vg-avatar">C+</div>
+                        <div class="vg-textos">
+                            <h4>Assistente de Marketing</h4>
+                            <p class="vg-empresa">Comunica+</p>
+                            <div class="vg-tags">
+                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, RJ</span>
+                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Híbrido</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vg-card-lateral">
+                        <span class="badge badge-blue">CLT</span>
+                        <span class="time">Publicado há 5h</span>
+                        <div class="vg-acoes">
+                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <button type="button" class="vg-candidatar">Candidatar-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vg-card" style="--vg-accent: #20c997;">
+                    <div class="vg-card-principal">
+                        <div class="vg-avatar">VV</div>
+                        <div class="vg-textos">
+                            <h4>Analista de RH</h4>
+                            <p class="vg-empresa">Verde Vida</p>
+                            <div class="vg-tags">
+                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Curitiba, PR</span>
+                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vg-card-lateral">
+                        <span class="badge badge-green">Efetivo</span>
+                        <span class="time">Publicado há 1d</span>
+                        <div class="vg-acoes">
+                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <button type="button" class="vg-candidatar">Candidatar-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vg-card" style="--vg-accent: #ff6b6b;">
+                    <div class="vg-card-principal">
+                        <div class="vg-avatar">EI</div>
+                        <div class="vg-textos">
+                            <h4>Professor(a) de Libras</h4>
+                            <p class="vg-empresa">Escola Inclusiva</p>
+                            <div class="vg-tags">
+                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vg-card-lateral">
+                        <span class="badge badge-yellow">Temporário</span>
+                        <span class="time">Publicado há 2d</span>
+                        <div class="vg-acoes">
+                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </button>
+                            <button type="button" class="vg-candidatar">Candidatar-se</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA final -->
+            <div class="vg-cta-final">
+                <div class="icon-circle icon-purple">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 2 11 13"></path>
+                        <path d="M22 2 15 22l-4-9-9-4 20-7z"></path>
+                    </svg>
+                </div>
+                <h3>Não encontrou a vaga ideal?</h3>
+                <p>Cadastre-se gratuitamente e receba um aviso assim que surgir uma vaga com o seu perfil.</p>
+                <a href="./cadastrar-se.html" class="btn-square-outline">Criar meu perfil →</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+    <script type="module" src="../assets/js/headerAuth.js"></script>
+</body>
+
+</html>
