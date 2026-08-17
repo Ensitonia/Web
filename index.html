@@ -127,33 +127,43 @@
         <section class="cards-section">
             <h2>O que você encontra na <span class="destaque-roxo">EnSintonia</span></h2>
 
-            <div class="cards-container">
-                <div class="card">
-                    <div class="icone roxo">
-                        <img src="./assets/icons/icon-1.svg" alt="">
+            <div class="cards-carousel">
+                <button class="card-arrow prev" id="cardsPrev" aria-label="Card anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="cards-container" id="cardsContainer">
+                    <div class="card">
+                        <div class="icone roxo">
+                            <img src="./assets/icons/icon-1.svg" alt="">
+                        </div>
+                        <h3>Cursos</h3>
+                        <p>Aprenda com cursos acessíveis, com legendas, Libras e audiodescrição.</p>
+                        <a href="./pages/cursos.html">Explorar cursos →</a>
                     </div>
-                    <h3>Cursos</h3>
-                    <p>Aprenda com cursos acessíveis, com legendas, Libras e audiodescrição.</p>
-                    <a href="./pages/cursos.html">Explorar cursos →</a>
+
+                    <div class="card">
+                        <div class="icone rosa">
+                            <img src="./assets/icons/icon-2.svg" alt="">
+                        </div>
+                        <h3>Vagas</h3>
+                        <p>Encontre oportunidades em empresas que valorizam a inclusão.</p>
+                        <a href="./pages/vagas.html">Ver vagas →</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="icone azul">
+                            <img src="./assets/icons/icon-3.svg" alt="">
+                        </div>
+                        <h3>Para Empresas</h3>
+                        <p>Treinamentos para contratar com inclusão e adaptar melhor as vagas.</p>
+                        <a href="./pages/para-empresas.html">Saber mais →</a>
+                    </div>
                 </div>
 
-                <div class="card">
-                    <div class="icone rosa">
-                        <img src="./assets/icons/icon-2.svg" alt="">
-                    </div>
-                    <h3>Vagas</h3>
-                    <p>Encontre oportunidades em empresas que valorizam a inclusão.</p>
-                    <a href="./pages/vagas.html">Ver vagas →</a>
-                </div>
-
-                <div class="card">
-                    <div class="icone azul">
-                        <img src="./assets/icons/icon-3.svg" alt="">
-                    </div>
-                    <h3>Para Empresas</h3>
-                    <p>Treinamentos para contratar com inclusão e adaptar melhor as vagas.</p>
-                    <a href="./pages/para-empresas.html">Saber mais →</a>
-                </div>
+                <button class="card-arrow next" id="cardsNext" aria-label="Próximo card">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -249,32 +259,52 @@
             </div>
 
             <div class="footer-col">
-                <h3>Navegação</h3>
-                <a href="./pages/cursos.html">Cursos</a>
-                <a href="./pages/vagas.html">Vagas</a>
+                <h3 class="footer-col-titulo" tabindex="0" role="button" aria-expanded="false">
+                    Navegação
+                    <i class="fa-solid fa-chevron-down footer-col-icone" aria-hidden="true"></i>
+                </h3>
+                <div class="footer-col-conteudo">
+                    <a href="./pages/cursos.html">Cursos</a>
+                    <a href="./pages/vagas.html">Vagas</a>
+                </div>
             </div>
 
             <div class="footer-col">
-                <h3>Para Empresas</h3>
-                <a href="./pages/para-empresas.html">Treinamentos</a>
-                <a href="#">Como funciona</a>
-                <a href="#">Seja parceiro</a>
+                <h3 class="footer-col-titulo" tabindex="0" role="button" aria-expanded="false">
+                    Para Empresas
+                    <i class="fa-solid fa-chevron-down footer-col-icone" aria-hidden="true"></i>
+                </h3>
+                <div class="footer-col-conteudo">
+                    <a href="./pages/para-empresas.html">Treinamentos</a>
+                    <a href="#">Como funciona</a>
+                    <a href="#">Seja parceiro</a>
+                </div>
             </div>
 
             <div class="footer-col">
-                <h3>Ajuda</h3>
-                <a href="#">Perguntas frequentes</a>
-                <a href="#">Fale conosco</a>
-                <a href="#">Política de privacidade</a>
-                <a href="#">Termos de uso</a>
+                <h3 class="footer-col-titulo" tabindex="0" role="button" aria-expanded="false">
+                    Ajuda
+                    <i class="fa-solid fa-chevron-down footer-col-icone" aria-hidden="true"></i>
+                </h3>
+                <div class="footer-col-conteudo">
+                    <a href="#">Perguntas frequentes</a>
+                    <a href="#">Fale conosco</a>
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Termos de uso</a>
+                </div>
             </div>
 
             <div class="footer-col">
-                <h3>Acessibilidade</h3>
-                <span>✓ Libras</span>
-                <span>✓ Audiodescrição</span>
-                <span>✓ Alto contraste</span>
-                <span>✓ Texto ampliado (A+)</span>
+                <h3 class="footer-col-titulo" tabindex="0" role="button" aria-expanded="false">
+                    Acessibilidade
+                    <i class="fa-solid fa-chevron-down footer-col-icone" aria-hidden="true"></i>
+                </h3>
+                <div class="footer-col-conteudo">
+                    <span>✓ Libras</span>
+                    <span>✓ Audiodescrição</span>
+                    <span>✓ Alto contraste</span>
+                    <span>✓ Texto ampliado (A+)</span>
+                </div>
             </div>
         </div>
 

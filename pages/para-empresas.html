@@ -292,6 +292,19 @@
             </div>
         </section>
 
+        <!-- ===== CTA de adicionar vaga (só aparece pra conta empresa) ===== -->
+        <section class="container" id="secaoPublicarVaga" hidden>
+            <div class="publicar-vaga-cta bg-light-purple-box">
+                <div>
+                    <h3>Tem uma vaga inclusiva pra divulgar?</h3>
+                    <p>Publique agora e conecte sua empresa a talentos prontos pra fazer a diferença.</p>
+                </div>
+                <button type="button" id="btnAbrirModalVaga" class="btn-solid">
+                    <i class="fa-solid fa-plus"></i> Adicionar vaga
+                </button>
+            </div>
+        </section>
+
         <section class="banner-solucoes container bg-light-purple-box">
             <div class="banner-content">
                 <div class="icon-circle icon-purple icon-dark-purple">
@@ -330,15 +343,53 @@
         <p>@2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
+    <!-- ===== Modal de adicionar vaga ===== -->
+    <div id="modalVaga" class="modal-overlay" hidden>
+        <div class="modal-vaga">
+            <div class="modal-vaga-topo">
+                <h3>Publicar nova vaga</h3>
+                <button type="button" id="fecharModalVaga" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="formVaga">
+                <label for="vagaCargo">Cargo</label>
+                <input type="text" id="vagaCargo" required placeholder="Ex: Auxiliar administrativo">
+
+                <label for="vagaEmpresa">Empresa</label>
+                <input type="text" id="vagaEmpresa" required placeholder="Nome da empresa">
+
+                <label for="vagaLocalizacao">Localização</label>
+                <input type="text" id="vagaLocalizacao" required placeholder="Cidade, UF">
+
+                <label for="vagaModalidade">Modalidade</label>
+                <select id="vagaModalidade" required>
+                    <option value="">Selecione</option>
+                    <option value="Presencial">Presencial</option>
+                    <option value="Híbrido">Híbrido</option>
+                    <option value="Remoto">Remoto</option>
+                </select>
+
+                <label for="vagaTipo">Tipo de contrato</label>
+                <select id="vagaTipo" required>
+                    <option value="">Selecione</option>
+                    <option value="Efetivo">Efetivo</option>
+                    <option value="CLT">CLT</option>
+                    <option value="Temporário">Temporário</option>
+                </select>
+
+                <p id="erroVaga" class="aviso-vaga" hidden></p>
+
+                <button type="submit" class="btn-solid btn-publicar-vaga">Publicar vaga</button>
+            </form>
+        </div>
+    </div>
+
      <script src="../assets/js/script.js"></script>
-     <script>
-         window.acessoConfig = {
-             tipoPermitido: "empresa",
-             redirecionarPara: "cursos.html"
-         };
-     </script>
-     <script type="module" src="../assets/js/protegerAcesso.js"></script>
      <script type="module" src="../assets/js/headerAuth.js"></script>
+     <script type="module" src="../assets/js/protegerCursosEmpresa.js"></script>
+     <script type="module" src="../assets/js/publicar-vaga.js"></script>
 
 </body>
 

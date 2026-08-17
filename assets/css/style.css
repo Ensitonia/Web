@@ -26,11 +26,17 @@
     --raio-pill: 100px;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     color: var(--cor-texto);
     background-color: #FEFCF8;
     padding-top: 120px;
     overflow-x: hidden;
+    width: 100%;
 }
 
 img {
@@ -167,6 +173,19 @@ nav a:hover {
     background: #1A1A1A;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Anima o hamburguer para "X" quando o menu está aberto (aria-expanded é setado pelo script.js) */
+.menu-hamburguer[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 
@@ -335,6 +354,23 @@ nav a:hover {
 
 [vw-access-button] {
     display: none !important;
+}
+
+/* O wrapper do VLibras às vezes vira uma camada full-screen em telas
+   pequenas e bloqueia cliques no resto da página (ex: botão de
+   acessibilidade). Deixamos o wrapper "vazado" a cliques e liberamos
+   só o conteúdo interno dele quando realmente está em uso. */
+div[vw-plugin-wrapper] {
+    pointer-events: none;
+}
+
+div[vw-plugin-wrapper] * {
+    pointer-events: auto;
+}
+
+.btn-acessibilidade,
+.painel-acessibilidade {
+    z-index: 2147483000;
 }
 
 
@@ -563,6 +599,41 @@ body.alto-contraste .botao-outline:hover {
     grid-template-columns: repeat(3, 225px);
     justify-content: center;
     gap: 37px;
+}
+
+.cards-carousel {
+    position: relative;
+}
+
+.card-arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: none;
+    background: var(--cor-primaria);
+    color: #fff;
+    font-size: 13px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(139, 44, 245, .35);
+}
+
+.card-arrow:hover {
+    background: var(--cor-primaria-escura);
+}
+
+.card-arrow.prev {
+    left: -6px;
+}
+
+.card-arrow.next {
+    right: -6px;
 }
 
 .card {
@@ -845,9 +916,17 @@ body.alto-contraste .botao-outline:hover {
     font-size: 13px;
 }
 
-/* ---------- RESPONSIVO ---------- */
+/* ---------- RESPONSIVO (TABLET, até 900px) ---------- */
 
 @media (max-width: 900px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .img-logo {
+        max-width: 150px;
+    }
+
     .menu-hamburguer {
         display: flex;
     }
@@ -863,6 +942,7 @@ body.alto-contraste .botao-outline:hover {
         padding: 20px 24px 28px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 10;
+        border-radius: 0 0 16px 16px;
     }
 
     .menu-mobile.aberto {
@@ -879,41 +959,108 @@ body.alto-contraste .botao-outline:hover {
     }
 
     .painel-acessibilidade {
-        position: static;
-        box-shadow: none;
-        border: 1px solid #F1EBEB;
-        width: 100%;
-        margin-top: 8px;
+        width: min(320px, 88vw);
+        right: -100%;
+    }
+
+    .painel-acessibilidade.ativo {
+        right: 12px;
+    }
+
+    main {
+        gap: 40px;
     }
 
     .hero-wrapper {
         flex-direction: column;
         text-align: center;
+        padding: 40px 32px;
+        gap: 24px;
     }
 
     #hero .content {
         max-width: 100%;
     }
 
+    #hero h1 {
+        font-size: 30px;
+    }
+
     #hero .btns {
         justify-content: center;
     }
 
+    .hero-imagem {
+        width: 280px;
+        height: 280px;
+        margin-bottom: -30px;
+    }
+
     .cards-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
     }
 
     .passos {
         flex-direction: column;
-        gap: 28px;
+        gap: 0;
+        align-items: stretch;
+        max-width: 440px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .passos::before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        bottom: 32px;
+        left: 31px;
+        width: 0;
+        border-left: 2px dashed #d9c9f2;
+        z-index: 0;
+    }
+
+    .passo {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+        padding-bottom: 32px;
+    }
+
+    .passo:last-child {
+        padding-bottom: 0;
     }
 
     .passo:not(:last-child)::after {
         display: none;
     }
 
+    .circulo {
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 0;
+    }
+
+    .circulo img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .passo p {
+        padding: 0;
+    }
+
     .empresa {
         flex-direction: column;
+    }
+
+    .empresa .texto {
+        padding: 32px 28px;
+        text-align: center;
+        align-items: center;
     }
 
     .empresa .imagem {
@@ -922,5 +1069,197 @@ body.alto-contraste .botao-outline:hover {
 
     .footer-container {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ---------- RESPONSIVO (CELULAR, até 600px) ---------- */
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 16px;
+        gap: 32px;
+    }
+
+    header {
+        padding: 0 14px;
+    }
+
+    .img-logo {
+        max-width: 120px;
+    }
+
+    #hero h1 {
+        font-size: 25px;
+    }
+
+    #hero p {
+        font-size: 14px;
+    }
+
+    .hero-wrapper {
+        padding: 32px 20px;
+    }
+
+    .hero-imagem {
+        width: 190px;
+        height: 190px;
+        margin-bottom: -20px;
+    }
+
+    #hero .btns {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    #hero .btns a,
+    #hero .btns button {
+        width: auto;
+        text-align: center;
+        padding: 9px 16px;
+        font-size: 12.5px;
+    }
+
+    .card-arrow {
+        display: flex;
+    }
+
+    .cards-container {
+        display: flex;
+        grid-template-columns: unset;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 4px 30px 8px;
+        justify-content: flex-start;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .cards-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        flex: 0 0 78%;
+        width: auto;
+        height: auto;
+        min-height: 220px;
+        scroll-snap-align: center;
+    }
+
+    .empresa {
+        background: var(--cor-secundaria);
+        border-radius: 16px;
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .empresa .imagem {
+        display: none;
+    }
+
+    .empresa .texto {
+        padding: 0;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .empresa h4 {
+        font-size: 10.5px;
+        margin-bottom: 4px;
+    }
+
+    .empresa h1 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .empresa ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .empresa li {
+        background: #fff;
+        border: 1px solid #d9c9f2;
+        border-radius: var(--raio-pill);
+        padding: 6px 14px;
+        font-size: 11.5px;
+    }
+
+    .empresa .check {
+        display: none;
+    }
+
+    .empresa button {
+        align-self: flex-start;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        text-align: left;
+    }
+
+    .footer-logo {
+        text-align: center;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #f0ecf6;
+        margin-bottom: 4px;
+    }
+
+    .footer-logo p {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-col-titulo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 0;
+        padding: 15px 0;
+        border-top: 1px solid #f0ecf6;
+        cursor: pointer;
+    }
+
+    .footer-col-icone {
+        font-size: 12px;
+        color: #6b6774;
+        transition: transform .2s ease;
+        flex-shrink: 0;
+    }
+
+    .footer-col.aberto .footer-col-icone {
+        transform: rotate(180deg);
+        color: var(--cor-primaria);
+    }
+
+    .footer-col-conteudo {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 16px;
+    }
+
+    .footer-col.aberto .footer-col-conteudo {
+        display: flex;
+    }
+
+    .btn-acessibilidade {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        right: 12px;
+    }
+
+    .painel-acessibilidade.ativo {
+        right: 12px;
+        width: calc(100% - 24px);
     }
 }
