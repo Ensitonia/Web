@@ -1,7 +1,3 @@
-/* ===============================
-   Botão de Acessibilidade
-=================================== */
-
 .btn-acessibilidade {
     position: fixed;
     right: 20px;
@@ -102,14 +98,34 @@
     font-size: 14px;
 }
 
-/* Esconde o botão nativo do widget VLibras (usamos o nosso próprio botão) */
+
 [vw-access-button] {
     display: none !important;
 }
 
-/* ===============================
-   Badge "MODO ALTO CONTRASTE"
-=================================== */
+/* O wrapper do VLibras às vezes vira uma camada full-screen em telas
+   pequenas e bloqueia cliques no resto da página (ex: botão de
+   acessibilidade). Deixamos o wrapper "vazado" a cliques e liberamos
+   só o conteúdo interno dele quando realmente está em uso. */
+div[vw-plugin-wrapper] {
+    pointer-events: none;
+}
+
+div[vw-plugin-wrapper] * {
+    pointer-events: auto;
+}
+
+/* O widget do intérprete VLibras (avatar 3D) vem com tamanho fixo
+   grande. Encolhemos ele em telas pequenas usando a classe que o
+   próprio script do VLibras aplica ao contêiner do avatar. */
+@media (max-width: 600px) {
+    div[vw-plugin-wrapper] .vpw-container,
+    div[vw-plugin-wrapper] .vw-plugin-top-wrapper > div {
+        transform: scale(0.72);
+        transform-origin: bottom right;
+    }
+}
+
 
 .badge-alto-contraste {
     display: none;
@@ -134,9 +150,6 @@ body.alto-contraste .badge-alto-contraste {
     background-color: #f7efff;
 }
 
-/* ===============================
-   Alto Contraste (todas as páginas)
-=================================== */
 
 body.alto-contraste .bg-light-purple-box {
     background-color: #000 !important;
@@ -221,7 +234,7 @@ body.alto-contraste .item:hover {
     color: #FFD400 !important;
 }
 
-/* --- Página inicial (index) --- */
+
 body.alto-contraste #hero,
 body.alto-contraste .como-funciona {
     background-color: #000 !important;
@@ -242,7 +255,6 @@ body.alto-contraste .botao-azul {
     color: #000 !important;
 }
 
-/* --- Página de assinaturas --- */
 body.alto-contraste .banner {
     background-color: #111 !important;
     border: 1px solid #fff;
@@ -475,21 +487,61 @@ body.alto-contraste .historia p:last-child {
     color: #FFD400 !important;
 }
 
-/* ---------- RESPONSIVO ---------- */
-
 @media (max-width: 900px) {
     .painel-acessibilidade {
-        position: static;
-        box-shadow: none;
-        border: 1px solid #F1EBEB;
-        width: 100%;
-        margin-top: 8px;
+        width: min(280px, 78vw);
+        right: -100%;
+    }
+
+    .painel-acessibilidade.ativo {
+        right: 90px;
     }
 }
 
-/* ===============================
-   Reforços de Alto Contraste (acessibilidade)
-=================================== */
+@media (max-width: 600px) {
+    .btn-acessibilidade {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+        right: 12px;
+    }
+
+    .painel-acessibilidade {
+        width: min(240px, 68vw);
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .painel-acessibilidade.ativo {
+        right: 70px;
+    }
+
+    .topo-painel {
+        margin-bottom: 10px;
+    }
+
+    .topo-painel h3 {
+        font-size: 15px;
+    }
+
+    .item {
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .item i {
+        font-size: 17px;
+        width: 22px;
+    }
+
+    .item strong {
+        font-size: 13px;
+    }
+
+    .item p {
+        font-size: 11.5px;
+    }
+}
 
 body.alto-contraste a,
 body.alto-contraste button,
@@ -515,18 +567,14 @@ body.alto-contraste .footer-col a {
     text-underline-offset: 3px;
 }
 
-/* ===============================
-   CURSOS.HTML - ALTO CONTRASTE
-================================== */
 
-/* Banner */
 
 body.alto-contraste .banner{
     background:#111 !important;
     border:1px solid #444 !important;
 }
 
-/* Texto */
+
 
 body.alto-contraste .banner h1{
     color:#fff !important;
@@ -540,7 +588,7 @@ body.alto-contraste .banner p{
     color:#fff !important;
 }
 
-/* Card da direita */
+
 
 body.alto-contraste .banner .card,
 body.alto-contraste .assinantes,
@@ -550,7 +598,6 @@ body.alto-contraste .premium{
     border:1px solid #444 !important;
 }
 
-/* Card "Assinantes EnSintonia" (hero-card) — mantém o fundo branco de destaque */
 
 body.alto-contraste .hero-card {
     background: #fff !important;
@@ -576,7 +623,6 @@ body.alto-contraste .btn-square-outline:hover {
     color: #fff !important;
 }
 
-/* Todos os títulos */
 
 body.alto-contraste h2,
 body.alto-contraste h3,
@@ -611,7 +657,6 @@ body.alto-contraste .time {
     color: #ccc !important;
 }
 
-/* Banner (hero) das páginas de Cursos/Vagas/Para Empresas */
 
 body.alto-contraste .hero-content h1,
 body.alto-contraste .hero-content p {
@@ -622,14 +667,14 @@ body.alto-contraste .text-purple {
     color: #FFD400 !important;
 }
 
-/* Rodapé */
+
 
 body.alto-contraste footer {
     color: #fff !important;
     border-color: #444 !important;
 }
 
-/* Botões */
+
 
 body.alto-contraste button,
 body.alto-contraste .btn{
@@ -637,7 +682,7 @@ body.alto-contraste .btn{
     color:#000 !important;
 }
 
-/* Links */
+
 
 body.alto-contraste a{
     color:#fff;
@@ -645,4 +690,54 @@ body.alto-contraste a{
 
 body.alto-contraste a:hover{
     color:#FFD400;
+}
+
+
+.toast-ensintonia {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: linear-gradient(135deg, #8B2CF5, #6d1fd1);
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(139, 44, 245, 0.3);
+    z-index: 10001;
+    opacity: 0;
+    visibility: visible !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    max-width: 90vw;
+    pointer-events: none;
+}
+
+.toast-ensintonia.visivel {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.toast-ensintonia i {
+    font-size: 18px;
+    flex-shrink: 0;
+    color: #F6C523;
+}
+
+@media (max-width: 600px) {
+    .toast-ensintonia {
+        bottom: 16px;
+        width: calc(100% - 32px);
+        left: 16px;
+        right: 16px;
+        transform: translateY(20px);
+    }
+
+    .toast-ensintonia.visivel {
+        transform: translateY(0);
+    }
 }

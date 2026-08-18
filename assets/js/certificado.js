@@ -16,9 +16,7 @@ const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-/**
- * Busca o nome completo do usuário logado (Firestore, com fallback pro Auth).
- */
+
 async function buscarNomeUsuario() {
     const user = auth.currentUser;
     if (!user) return null;
@@ -37,10 +35,6 @@ async function buscarNomeUsuario() {
     return nome;
 }
 
-/**
- * Monta o markup HTML do certificado, com CSS embutido.
- * Renderizado fora da tela e depois convertido em imagem (html2canvas).
- */
 function montarHtmlCertificado(nome, nomeCurso, cargaHoraria, dataEmissao) {
     const container = document.createElement("div");
     container.id = "certificado-render";
@@ -297,9 +291,6 @@ function montarHtmlCertificado(nome, nomeCurso, cargaHoraria, dataEmissao) {
     return container;
 }
 
-/**
- * Tenta trocar o placeholder de logo pela imagem real, se ela existir.
- */
 function tentarInserirLogo(container, caminho) {
     return new Promise((resolve) => {
         const img = new Image();
@@ -313,13 +304,7 @@ function tentarInserirLogo(container, caminho) {
     });
 }
 
-/**
- * Gera e baixa o certificado em PDF, renderizando um HTML estilizado
- * (CSS) e convertendo em imagem via html2canvas.
- * Requer o script do html2canvas incluído na página (ver instruções).
- * @param {string} nomeCurso - Nome do curso a exibir no certificado.
- * @param {string} cargaHoraria - Ex: "6 horas".
- */
+
 export async function gerarCertificado(nomeCurso, cargaHoraria) {
 
     const nome = await buscarNomeUsuario();
@@ -337,7 +322,7 @@ export async function gerarCertificado(nomeCurso, cargaHoraria) {
     const dataEmissao = new Date().toLocaleDateString("pt-BR");
     const container = montarHtmlCertificado(nome, nomeCurso, cargaHoraria, dataEmissao);
 
-    // Tenta usar a logo real do site (ajuste o caminho se necessário)
+   
     await tentarInserirLogo(container, "../assets/images/logo.png");
 
     const canvas = await html2canvas(container.querySelector(".cert-card"), {

@@ -1,4 +1,4 @@
-// Importações
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import {
     getAuth,
@@ -10,7 +10,6 @@ import {
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
-// Configuração do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyCPfeeFtdmZSouMn4xLSJ78Kp_s8ie7W8I",
     authDomain: "ensintonia-77895.firebaseapp.com",
@@ -21,18 +20,18 @@ const firebaseConfig = {
     measurementId: "G-3606ETPKHW"
 };
 
-// Inicializa o Firebase
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Mapa de destino por tipo de conta
+
 const destinoPorTipo = {
     aprendiz: "cursos.html",
     empresa: "para-empresas.html"
 };
 
-// Login
+
 const form = document.querySelector("form");
 
 form.addEventListener("submit", async (e) => {

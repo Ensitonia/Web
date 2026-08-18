@@ -1,4 +1,4 @@
-/* ===== Botão de alternância no header ===== */
+
 .btn-modo-noturno {
     background: transparent !important;
     background-image: none !important;
@@ -25,12 +25,6 @@
     background-color: rgba(121, 94, 201, 0.15) !important;
 }
 
-/* ===== Base do modo noturno (genérica, funciona em qualquer página) ===== */
-
-/* Guarda-chuva: qualquer texto vira branco/claro no modo noturno.
-   As regras mais específicas abaixo (links, badges, botões cheios,
-   itens de módulo) sobrescrevem essa por serem mais específicas,
-   mantendo as cores de destaque da marca. */
 .modo-noturno,
 .modo-noturno * {
     color: #EDEDED !important;
@@ -80,33 +74,27 @@
     color: inherit !important;
 }
 
-/* Textos que já ficam sobre fundo colorido continuam brancos */
-.modo-noturno .btn-cadastrar-se,
 .modo-noturno .btn-solid,
 .modo-noturno .botao-azul {
     color: #FFFFFF !important;
 }
 
-/* Mantém o roxo/verde da marca como destaque, só escurece o resto */
 .modo-noturno .destaque-roxo,
 .modo-noturno .text-purple,
 .modo-noturno .badge-text {
     color: #C9B6FA !important;
 }
 
-/* Ícone dentro do CTA final de vagas (fundo lilás claro fixo no CSS original) */
 .modo-noturno .icon-circle.icon-purple {
     background-color: #2A1F3D !important;
     color: #C9B6FA !important;
 }
 
-/* Tags de localidade/modalidade nos cards de vaga (fundo lilás claro fixo) */
 .modo-noturno .vg-tag {
     background-color: #2A1F3D !important;
     color: #C9B6FA !important;
 }
 
-/* Badges de tipo de contrato (fundo claro fixo, cada um com sua cor) */
 .modo-noturno .badge-green {
     background-color: #123324 !important;
     color: #34D399 !important;
@@ -122,13 +110,10 @@
     color: #FBBF24 !important;
 }
 
-/* Hero de vagas: mantém o dourado de destaque nos números das estatísticas */
 .modo-noturno .vg-stat strong {
     color: #F6C523 !important;
 }
 
-/* Campo de busca (.vg-busca): mantém fundo claro (não deve escurecer
-   como os outros inputs) e texto/placeholder/ícone roxos para contraste */
 .modo-noturno .vg-busca {
     background-color: #FBFAF8 !important;
     border-color: #E5E5E5 !important;
@@ -149,23 +134,17 @@
     color: #8B2CF5 !important;
 }
 
-/* Selects de filtro (localidade, modalidade, tipo de contrato):
-   mesmo tratamento — fundo claro + texto roxo */
 .modo-noturno .vg-select {
     background-color: #FBFAF8 !important;
     color: #8B2CF5 !important;
     border-color: #E5E5E5 !important;
 }
 
-/* Opções dentro do dropdown do select (usa estilo nativo do navegador) */
 .modo-noturno .vg-select option {
     background-color: #FFFFFF !important;
     color: #8B2CF5 !important;
 }
 
-/* Itens do módulo do curso: o fundo continua claro (herdado do CSS
-   original), então o texto precisa ficar escuro para manter contraste.
-   O item ativo mantém texto branco porque o fundo dele é roxo sólido. */
 .modo-noturno .item-modulo {
     color: #1A1A1A !important;
 }

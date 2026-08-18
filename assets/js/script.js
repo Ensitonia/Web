@@ -320,3 +320,52 @@ function moverFoco(direcao) {
     elementos[proximoIndice].focus();
     elementos[proximoIndice].scrollIntoView({ behavior: "smooth", block: "center" });
 }
+
+
+// Carrossel dos cards (setinhas) — só tem efeito visual quando o CSS
+// ativa o scroll horizontal (mobile)
+
+const cardsContainer = document.getElementById("cardsContainer");
+const cardsPrev = document.getElementById("cardsPrev");
+const cardsNext = document.getElementById("cardsNext");
+
+if (cardsContainer && cardsPrev && cardsNext) {
+    const distanciaScroll = () => {
+        const primeiroCard = cardsContainer.querySelector(".card");
+        if (!primeiroCard) return 260;
+        const estilo = getComputedStyle(cardsContainer);
+        const gap = parseInt(estilo.columnGap || estilo.gap || "16", 10) || 16;
+        return primeiroCard.getBoundingClientRect().width + gap;
+    };
+
+    cardsPrev.addEventListener("click", () => {
+        cardsContainer.scrollBy({ left: -distanciaScroll(), behavior: "smooth" });
+    });
+
+    cardsNext.addEventListener("click", () => {
+        cardsContainer.scrollBy({ left: distanciaScroll(), behavior: "smooth" });
+    });
+}
+
+
+// Accordion do rodapé (mobile) — só tem efeito visual quando o CSS
+// esconde .footer-col-conteudo por padrão (breakpoint mobile)
+
+const acordeoesFooter = document.querySelectorAll(".footer-col-titulo");
+
+acordeoesFooter.forEach((titulo) => {
+    const abrirFechar = () => {
+        const coluna = titulo.closest(".footer-col");
+        const aberto = coluna.classList.toggle("aberto");
+        titulo.setAttribute("aria-expanded", aberto);
+    };
+
+    titulo.addEventListener("click", abrirFechar);
+
+    titulo.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            abrirFechar();
+        }
+    });
+});
