@@ -46,76 +46,74 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
 // Integração VLibras com o painel de acessibilidade
 
-function aguardarVLibras(callback, tentativas = 0) {
-    const botaoNativo = document.querySelector('#vlibras-access-wrapper, div[vw-access-button]');
+const itemAbrirLibras = document.getElementById("abrirLibras");
 
-    if (botaoNativo) {
-        callback(botaoNativo);
-    } else if (tentativas < 50) {
+function abrirInterpretadorVLibras(tentativas = 0) {
+    const funcaoAbrir = window.VLibrasWidget?.open;
+
+    if (typeof funcaoAbrir === "function") {
+        funcaoAbrir();
+
+        if (painelAcessibilidade) {
+            painelAcessibilidade.classList.remove("ativo");
+        }
+
+        return;
+    }
+
+    // Aguarda o script externo do VLibras terminar de carregar
+    if (tentativas < 50) {
         setTimeout(() => {
-            aguardarVLibras(callback, tentativas + 1);
+            abrirInterpretadorVLibras(tentativas + 1);
+        }, 100);
+
+        return;
+    }
+
+    console.error("Não foi possível carregar o VLibras.");
+}
+
+if (itemAbrirLibras) {
+    itemAbrirLibras.addEventListener("click", () => {
+        abrirInterpretadorVLibras();
+    });
+}
+
+
+// Esconde somente o botão padrão criado pelo VLibras
+
+function esconderBotaoPadraoVLibras(tentativas = 0) {
+    const botaoPadrao = document.getElementById(
+        "vlibras-access-wrapper"
+    );
+
+    if (botaoPadrao) {
+        botaoPadrao.style.setProperty(
+            "opacity",
+            "0",
+            "important"
+        );
+
+        botaoPadrao.style.setProperty(
+            "pointer-events",
+            "none",
+            "important"
+        );
+
+        return;
+    }
+
+    if (tentativas < 50) {
+        setTimeout(() => {
+            esconderBotaoPadraoVLibras(tentativas + 1);
         }, 100);
     }
 }
 
-// Mantém o botão nativo do VLibras invisível pro usuário sem mexer
-// em display, width ou height — o VLibras parece usar esses valores
-// internamente pra decidir se reage a um clique (foi por isso que a
-// tentativa anterior, encolhendo pra 1px, quebrou o clique em
-// "Libras"). Deixamos o tamanho/posição normais e só tornamos
-// transparente + bloqueado pro mouse do usuário; o clique disparado
-// via JavaScript (botaoNativo.click()) continua funcionando porque
-// .click() ignora pointer-events.
-// vlibras-plugin.js injeta um elemento próprio com
-// id="vlibras-access-wrapper" (não existe no HTML original, é criado
-// via JS) — é esse o ícone que ficava aparecendo.
-function esconderVisualmenteMasFuncional(el) {
-    el.style.setProperty("opacity", "0", "important");
-    el.style.setProperty("pointer-events", "none", "important");
-}
-
-function esconderBotaoNativoVLibrasParaSempre() {
-    setInterval(() => {
-        document.querySelectorAll('[vw-access-button], #vlibras-access-wrapper').forEach((el) => {
-            if (el.style.opacity !== "0") {
-                esconderVisualmenteMasFuncional(el);
-            }
-        });
-    }, 200);
-}
-
-esconderBotaoNativoVLibrasParaSempre();
-
-const itemAbrirLibras = document.getElementById('abrirLibras');
-
-// Também tenta esconder imediatamente (caso o botão já exista)
-aguardarVLibras(() => {});
-
-if (itemAbrirLibras) {
-    itemAbrirLibras.addEventListener('click', () => {
-        aguardarVLibras((botaoNativo) => {
-            const alvoClicavel =
-                botaoNativo.querySelector('button, [role="button"], a') || botaoNativo;
-            alvoClicavel.click();
-
-            if (painelAcessibilidade) {
-                painelAcessibilidade.classList.remove('ativo');
-            }
-        });
-    });
-}
-
-document.addEventListener('click', function (e) {
-    const fecharClicado = e.target.closest('[vw-plugin-wrapper] .close-btn, [action="close"], .vpw-actions [action="close"]');
-
-    if (fecharClicado && btnAcessibilidade) {
-        btnAcessibilidade.style.display = 'flex';
-    }
-}, true);
-
-// Alto contraste
+esconderBotaoPadraoVLibras();
 
 
 const btnAltoContraste = document.getElementById("btnAltoContraste");

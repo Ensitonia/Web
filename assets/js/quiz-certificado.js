@@ -1,22 +1,6 @@
 import { gerarCertificado } from "./certificado.js";
 
-/**
- * Cada página de curso deve declarar, ANTES deste script, algo como:
- *
- * <script>
- *   window.configQuiz = {
- *       nomeCurso: "Comunicação e Interação para Pessoas com TEA",
- *       cargaHoraria: "4 horas",
- *       notaMinima: 70, // % mínima de acertos
- *       gabarito: {
- *           questao1: "b",
- *           questao2: "c",
- *           questao3: "b"
- *       }
- *   };
- * </script>
- * <script type="module" src="../assets/js/quiz-certificado.js"></script>
- */
+
 
 const config = window.configQuiz;
 
