@@ -30,7 +30,7 @@
 
     <header>
         <div class="logo">
-            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+            <img class="img-logo" src="../assets/images/logo-clara-EnSintonia.png" alt="EnSintonia">
         </div>
 
         <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
@@ -128,7 +128,7 @@
                     <h3>Assinantes EnSintonia</h3>
                 </div>
                 <p>Acesse cursos exclusivos, trilhas avançadas e conteúdos premium.</p>
-                <a href="./assinaturas.html" class="btn-square-outline">Ver cursos exclusivos →</a>
+                <a href="./assinaturas.html" class="btn-square-outline">Ver <span class="texto-completo">cursos exclusivos </span>→</a>
             </div>
         </section>
 
@@ -147,66 +147,76 @@
                 </div>
             </div>
 
-            <div class="cursos-grid">
-                <a href="./curso-braille.html" class="curso-card">
-                    <img src="../assets/images/braille.png" alt="Braille" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Alfabetização em Braille</h4>
-                        <div class="curso-meta">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>16h</span>
-                        </div>
-                    </div>
-                </a>
+            <div class="cursos-carousel">
+                <button class="curso-arrow prev" id="cardsPrev" aria-label="Curso anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                <a href="./curso-tdah.html" class="curso-card">
-                    <img src="../assets/images/tdah.png" alt="TDAH" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Estratégias de Aprendizagem para TDAH</h4>
-                        <div class="curso-meta">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>16h</span>
+                <div class="cursos-grid" id="cardsContainer">
+                    <a href="./curso-braille.html" class="curso-card">
+                        <img src="../assets/images/braille.png" alt="Braille" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Alfabetização em Braille</h4>
+                            <div class="curso-meta">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>16h</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./curso-tea.html" class="curso-card">
-                    <img src="../assets/images/tea.png" alt="TEA" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Comunicação e Interação para Pessoas com TEA</h4>
-                        <div class="curso-meta">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>16h</span>
+                    <a href="./curso-tdah.html" class="curso-card">
+                        <img src="../assets/images/tdah.png" alt="TDAH" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Estratégias de Aprendizagem para TDAH</h4>
+                            <div class="curso-meta">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>16h</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./curso-tech.html" class="curso-card">
-                    <img src="../assets/images/tech.png" alt="Tecnologias Assistivas" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Tecnologias Assistivas no Dia a Dia</h4>
-                        <div class="curso-meta">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <span>16h</span>
+                    <a href="./curso-tea.html" class="curso-card">
+                        <img src="../assets/images/tea.png" alt="TEA" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Comunicação e Interação para Pessoas com TEA</h4>
+                            <div class="curso-meta">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>16h</span>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <a href="./curso-tech.html" class="curso-card">
+                        <img src="../assets/images/tech.png" alt="Tecnologias Assistivas" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Tecnologias Assistivas no Dia a Dia</h4>
+                            <div class="curso-meta">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>16h</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="curso-arrow next" id="cardsNext" aria-label="Próximo curso">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -266,7 +276,7 @@
     </main>
 
     <footer>
-        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+        <p>©2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
     <script src="../assets/js/script.js"></script>

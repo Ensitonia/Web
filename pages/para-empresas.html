@@ -31,7 +31,7 @@
 
     <header>
         <div class="logo">
-            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+            <img class="img-logo" src="../assets/images/logo-clara-EnSintonia.png" alt="EnSintonia">
         </div>
 
         <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
@@ -180,115 +180,124 @@
                 <p>Conteúdos selecionados para apoiar sua jornada de inclusão.</p>
             </div>
 
-            <div class="cursos-grid">
-                <a href="./curso-recrutamento.html" class="curso-card">
-                    <img src="../assets/images/curso-rh.png" alt="RH" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Contratação Inclusiva: Do Recrutamento à Admissão</h4>
-                        <p class="curso-desc">Aprenda como estruturar processos seletivos inclusivos e atrair talentos
-                            diversos.</p>
-                        <div class="curso-meta-flex">
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                                <span>6h</span>
-                            </div>
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                                </svg>
-                                <span>Intermediário</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+            <div class="cursos-carousel">
+                <button class="curso-arrow prev" id="empresasCardsPrev" aria-label="Curso anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                <a href="./curso-libras.html" class="curso-card">
-                    <img src="../assets/images/curso-libras.png" alt="Libras" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Libras no Ambiente Corporativo</h4>
-                        <p class="curso-desc">Introdução à Língua Brasileira de Sinais para melhorar a comunicação.</p>
-                        <div class="curso-meta-flex">
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                                <span>4h</span>
-                            </div>
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                                </svg>
-                                <span>Iniciante</span>
+                <div class="cursos-grid" id="empresasCardsContainer">
+                    <a href="./curso-recrutamento.html" class="curso-card">
+                        <img src="../assets/images/curso-rh.png" alt="RH" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Contratação Inclusiva: Do Recrutamento à Admissão</h4>
+                            <p class="curso-desc">Processos seletivos inclusivos para atrair talentos diversos.</p>
+                            <div class="curso-meta-flex">
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>6h</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                    <span>Intermediário</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./curso-acessibilidade.html" class="curso-card">
-                    <img src="../assets/images/curso-acessibilidade.png" alt="Acessibilidade" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Acessibilidade Digital: Sites e Sistemas Inclusivos</h4>
-                        <p class="curso-desc">Torne seus canais digitais acessíveis e em conformidade com as normas.</p>
-                        <div class="curso-meta-flex">
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                                <span>5h</span>
-                            </div>
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                                </svg>
-                                <span>Intermediário</span>
+                    <a href="./curso-libras.html" class="curso-card">
+                        <img src="../assets/images/curso-libras.png" alt="Libras" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Libras no Ambiente Corporativo</h4>
+                            <p class="curso-desc">Introdução à Libras para melhorar a comunicação.</p>
+                            <div class="curso-meta-flex">
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>4h</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                    <span>Iniciante</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <a href="./curso-lideranca.html" class="curso-card">
-                    <img src="../assets/images/curso-lideranca.png" alt="Liderança" class="curso-img">
-                    <div class="curso-info">
-                        <h4>Liderança Inclusiva: Times que Transformam</h4>
-                        <p class="curso-desc">Desenvolva lideranças conscientes e promova ambientes mais diversos.</p>
-                        <div class="curso-meta-flex">
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                                <span>8h</span>
-                            </div>
-                            <div class="meta-item">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="12" y1="20" x2="12" y2="10"></line>
-                                    <line x1="18" y1="20" x2="18" y2="4"></line>
-                                    <line x1="6" y1="20" x2="6" y2="14"></line>
-                                </svg>
-                                <span>Avançado</span>
+                    <a href="./curso-acessibilidade.html" class="curso-card">
+                        <img src="../assets/images/curso-acessibilidade.png" alt="Acessibilidade" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Acessibilidade Digital: Sites e Sistemas Inclusivos</h4>
+                            <p class="curso-desc">Canais digitais acessíveis e em conformidade com as normas.</p>
+                            <div class="curso-meta-flex">
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>5h</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                    <span>Intermediário</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <a href="./curso-lideranca.html" class="curso-card">
+                        <img src="../assets/images/curso-lideranca.png" alt="Liderança" class="curso-img">
+                        <div class="curso-info">
+                            <h4>Liderança Inclusiva: Times que Transformam</h4>
+                            <p class="curso-desc">Lideranças conscientes para ambientes mais diversos.</p>
+                            <div class="curso-meta-flex">
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>8h</span>
+                                </div>
+                                <div class="meta-item">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="20" x2="12" y2="10"></line>
+                                        <line x1="18" y1="20" x2="18" y2="4"></line>
+                                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                                    </svg>
+                                    <span>Avançado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="curso-arrow next" id="empresasCardsNext" aria-label="Próximo curso">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
         </section>
 
@@ -340,7 +349,7 @@
     </main>
 
     <footer>
-        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+        <p>©2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
     <!-- ===== Modal de adicionar vaga ===== -->
@@ -390,6 +399,7 @@
      <script type="module" src="../assets/js/headerAuth.js"></script>
      <script type="module" src="../assets/js/protegerCursosEmpresa.js"></script>
      <script type="module" src="../assets/js/publicar-vaga.js"></script>
+     <script src="../assets/js/carrossel-cursos-empresas.js"></script>
 
 </body>
 

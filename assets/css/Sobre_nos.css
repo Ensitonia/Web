@@ -145,6 +145,19 @@ nav a:hover {
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+/* Anima o hamburguer para "X" quando o menu está aberto — igual ao index */
+.menu-hamburguer[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
 
 
 .banner {
@@ -351,23 +364,17 @@ section.cards p {
     color: #8B2CF5;
 }
 
-@media (min-width:300px) and (max-width:1024px) {
+/* ===================================================
+   HEADER / MENU HAMBÚRGUER — igual ao index (style.css)
+   =================================================== */
+@media (max-width: 900px) {
     header {
-        position: fixed;
-        flex-wrap: nowrap;
-        justify-content: space-between;
         padding: 0 20px;
-        height: 70px;
-    }
-
-    body {
-        padding-top: 100px;
     }
 
     .img-logo {
-        max-width: 130px;
+        max-width: 150px;
     }
-
 
     .menu-hamburguer {
         display: flex;
@@ -384,6 +391,7 @@ section.cards p {
         padding: 20px 24px 28px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         z-index: 10;
+        border-radius: 0 0 16px 16px;
     }
 
     .menu-mobile.aberto {
@@ -391,6 +399,7 @@ section.cards p {
     }
 
     nav {
+        display: flex;
         flex-direction: column;
         gap: 18px;
         width: 100%;
@@ -399,21 +408,34 @@ section.cards p {
     }
 
     .acoes-header {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
-        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
         width: 100%;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0 14px;
     }
 
-   .icone-acessibilidade {
-        margin: 0;
+    .img-logo {
+        max-width: 120px;
     }
 
     .btn-login,
     .btn-cadastrar-se {
+        flex: 1;
         text-align: center;
     }
+}
+
+/* ===================================================
+   Demais ajustes responsivos da página Sobre Nós
+   =================================================== */
+@media (min-width:300px) and (max-width:1024px) {
 
     .banner {
         padding: 28px 22px;
@@ -520,3 +542,4 @@ section.cards p {
         line-height: 18px;
     }
 }
+

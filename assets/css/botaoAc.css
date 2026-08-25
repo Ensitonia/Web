@@ -741,3 +741,8 @@ body.alto-contraste a:hover{
         transform: translateY(0);
     }
 }
+
+/* Esconde o botão padrão do VLibras */
+div[vw-access-button] {
+    display: none !important;
+}

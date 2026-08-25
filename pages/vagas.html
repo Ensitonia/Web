@@ -31,7 +31,7 @@
 
     <header>
         <div class="logo">
-            <img class="img-logo" src="../assets/images/logo.png" alt="EnSintonia">
+            <img class="img-logo" src="../assets/images/logo-clara-EnSintonia.png" alt="EnSintonia">
         </div>
 
         <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
@@ -177,106 +177,120 @@
                 <span class="vg-ordenar"><i class="fa-solid fa-arrow-down-wide-short"></i> Mais recentes</span>
             </div>
 
-            <!-- Lista de vagas -->
-            <div class="vg-lista">
+            <!-- Lista de vagas em formato carrossel -->
+            <div class="vg-lista-wrapper">
 
-                <div class="vg-card" style="--vg-accent: #8B2CF5;">
-                    <div class="vg-card-principal">
-                        <div class="vg-avatar">IN</div>
-                        <div class="vg-textos">
-                            <h4>Auxiliar administrativo</h4>
-                            <p class="vg-empresa">Instituto ...</p>
-                            <div class="vg-tags">
-                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> São Paulo, SP</span>
-                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                <button type="button" class="vg-nav-btn vg-nav-prev" id="vgPrev" aria-label="Vaga anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div class="vg-lista" id="vgLista">
+
+                    <div class="vg-card" style="--vg-accent: #8B2CF5;">
+                        <div class="vg-card-principal">
+                            <div class="vg-avatar">IN</div>
+                            <div class="vg-textos">
+                                <h4>Auxiliar administrativo</h4>
+                                <p class="vg-empresa">Instituto ...</p>
+                                <div class="vg-tags">
+                                    <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> São Paulo, SP</span>
+                                    <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vg-card-lateral">
+                            <span class="badge badge-green">Efetivo</span>
+                            <span class="time">Publicado há 2h</span>
+                            <div class="vg-acoes">
+                                <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="vg-candidatar">Candidatar-se</button>
                             </div>
                         </div>
                     </div>
-                    <div class="vg-card-lateral">
-                        <span class="badge badge-green">Efetivo</span>
-                        <span class="time">Publicado há 2h</span>
-                        <div class="vg-acoes">
-                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="button" class="vg-candidatar">Candidatar-se</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="vg-card" style="--vg-accent: #ffc107;">
-                    <div class="vg-card-principal">
-                        <div class="vg-avatar">C+</div>
-                        <div class="vg-textos">
-                            <h4>Assistente de Marketing</h4>
-                            <p class="vg-empresa">Comunica+</p>
-                            <div class="vg-tags">
-                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, RJ</span>
-                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Híbrido</span>
+                    <div class="vg-card" style="--vg-accent: #ffc107;">
+                        <div class="vg-card-principal">
+                            <div class="vg-avatar">C+</div>
+                            <div class="vg-textos">
+                                <h4>Assistente de Marketing</h4>
+                                <p class="vg-empresa">Comunica+</p>
+                                <div class="vg-tags">
+                                    <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Rio de Janeiro, RJ</span>
+                                    <span class="vg-tag"><i class="fa-solid fa-building"></i> Híbrido</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vg-card-lateral">
+                            <span class="badge badge-blue">CLT</span>
+                            <span class="time">Publicado há 5h</span>
+                            <div class="vg-acoes">
+                                <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="vg-candidatar">Candidatar-se</button>
                             </div>
                         </div>
                     </div>
-                    <div class="vg-card-lateral">
-                        <span class="badge badge-blue">CLT</span>
-                        <span class="time">Publicado há 5h</span>
-                        <div class="vg-acoes">
-                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="button" class="vg-candidatar">Candidatar-se</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="vg-card" style="--vg-accent: #20c997;">
-                    <div class="vg-card-principal">
-                        <div class="vg-avatar">VV</div>
-                        <div class="vg-textos">
-                            <h4>Analista de RH</h4>
-                            <p class="vg-empresa">Verde Vida</p>
-                            <div class="vg-tags">
-                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Curitiba, PR</span>
-                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                    <div class="vg-card" style="--vg-accent: #20c997;">
+                        <div class="vg-card-principal">
+                            <div class="vg-avatar">VV</div>
+                            <div class="vg-textos">
+                                <h4>Analista de RH</h4>
+                                <p class="vg-empresa">Verde Vida</p>
+                                <div class="vg-tags">
+                                    <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Curitiba, PR</span>
+                                    <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vg-card-lateral">
+                            <span class="badge badge-green">Efetivo</span>
+                            <span class="time">Publicado há 1d</span>
+                            <div class="vg-acoes">
+                                <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="vg-candidatar">Candidatar-se</button>
                             </div>
                         </div>
                     </div>
-                    <div class="vg-card-lateral">
-                        <span class="badge badge-green">Efetivo</span>
-                        <span class="time">Publicado há 1d</span>
-                        <div class="vg-acoes">
-                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="button" class="vg-candidatar">Candidatar-se</button>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="vg-card" style="--vg-accent: #ff6b6b;">
-                    <div class="vg-card-principal">
-                        <div class="vg-avatar">EI</div>
-                        <div class="vg-textos">
-                            <h4>Professor(a) de Libras</h4>
-                            <p class="vg-empresa">Escola Inclusiva</p>
-                            <div class="vg-tags">
-                                <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
-                                <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                    <div class="vg-card" style="--vg-accent: #ff6b6b;">
+                        <div class="vg-card-principal">
+                            <div class="vg-avatar">EI</div>
+                            <div class="vg-textos">
+                                <h4>Professor(a) de Libras</h4>
+                                <p class="vg-empresa">Escola Inclusiva</p>
+                                <div class="vg-tags">
+                                    <span class="vg-tag"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</span>
+                                    <span class="vg-tag"><i class="fa-solid fa-building"></i> Presencial</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vg-card-lateral">
+                            <span class="badge badge-yellow">Temporário</span>
+                            <span class="time">Publicado há 2d</span>
+                            <div class="vg-acoes">
+                                <button type="button" class="vg-salvar" aria-label="Salvar vaga">
+                                    <i class="fa-regular fa-bookmark"></i>
+                                </button>
+                                <button type="button" class="vg-candidatar">Candidatar-se</button>
                             </div>
                         </div>
                     </div>
-                    <div class="vg-card-lateral">
-                        <span class="badge badge-yellow">Temporário</span>
-                        <span class="time">Publicado há 2d</span>
-                        <div class="vg-acoes">
-                            <button type="button" class="vg-salvar" aria-label="Salvar vaga">
-                                <i class="fa-regular fa-bookmark"></i>
-                            </button>
-                            <button type="button" class="vg-candidatar">Candidatar-se</button>
-                        </div>
-                    </div>
+
                 </div>
+
+                <button type="button" class="vg-nav-btn vg-nav-next" id="vgNext" aria-label="Próxima vaga">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
 
             </div>
+
+            <div class="vg-dots" id="vgDots"></div>
 
             <!-- CTA final -->
             <div class="vg-cta-final">
@@ -296,10 +310,11 @@
     </main>
 
     <footer>
-        <p>@2026 EnSintonia. Todos os direitos reservados</p>
+        <p>©2026 EnSintonia. Todos os direitos reservados</p>
     </footer>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/carrossel.js"></script>
     <script type="module" src="../assets/js/headerAuth.js"></script>
 </body>
 

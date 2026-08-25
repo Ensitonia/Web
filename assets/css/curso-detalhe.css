@@ -165,8 +165,8 @@ nav a.active {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 24px;
-    height: 18px;
+    width: 20px;
+    height: 14px;
     background: none;
     border: none;
     cursor: pointer;
@@ -180,17 +180,21 @@ nav a.active {
     height: 3px;
     background: var(--cor-texto-escuro);
     border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.menu-hamburguer.ativo span:nth-child(1) {
-    transform: translateY(7.5px) rotate(45deg);
+/* Anima o hamburguer para "X" quando o menu está aberto — igual ao index
+   (o script.js compartilhado alterna o atributo aria-expanded no botão) */
+.menu-hamburguer[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
 }
-.menu-hamburguer.ativo span:nth-child(2) {
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(2) {
     opacity: 0;
 }
-.menu-hamburguer.ativo span:nth-child(3) {
-    transform: translateY(-7.5px) rotate(-45deg);
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 .cabecalho-aula {
@@ -236,13 +240,13 @@ nav a.active {
 
 .modulo-conteudo {
     background-color: var(--cor-primaria-light);
-    border: 2px solid var(--cor-borda-roxa);
+    border: 2px solid #F6C523;
     border-radius: 16px;
     overflow: hidden;
 }
 
 .modulo-conteudo h2 {
-    background-color: var(--cor-borda-roxa);
+    background-color: #F6C523;
     color: var(--cor-texto-escuro);
     font-size: 1.1rem;
     font-weight: 700;
@@ -265,7 +269,7 @@ nav a.active {
     font-size: 0.95rem;
     color: var(--cor-texto-escuro);
     background-color: var(--cor-branco);
-    border: 2px solid var(--cor-borda-roxa);
+    border: 2px solid #F6C523;
     border-radius: 10px;
     padding: 14px 16px;
     cursor: pointer;
@@ -432,28 +436,16 @@ footer {
     border-top: 1px solid var(--cor-borda);
 }
 
-@media (max-width: 1023px) {
+/* ===================================================
+   HEADER / MENU HAMBÚRGUER — igual ao index (style.css)
+   =================================================== */
+@media (max-width: 900px) {
     header {
-        padding: 12px 18px;
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        border-radius: 18px;
-    }
-
-    body {
-        padding-top: 20px;
-    }
-
-    nav {
-        position: static;
-        transform: none;
+        padding: 0 20px;
     }
 
     .img-logo {
-        width: 120px;
-        max-width: 100%;
+        max-width: 150px;
     }
 
     .menu-hamburguer {
@@ -467,12 +459,11 @@ footer {
         left: 0;
         width: 100%;
         background: var(--cor-branco);
-        padding: 20px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-        z-index: 9999;
+        padding: 20px 24px 28px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        border-radius: 0 0 16px 16px;
     }
 
     .menu-mobile.aberto {
@@ -483,35 +474,41 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 18px;
         width: 100%;
-        gap: 16px;
-    }
-
-    nav a {
-        font-size: 16px;
-        text-align: left;
+        position: static;
+        transform: none;
     }
 
     .acoes-header {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
         width: 100%;
         gap: 12px;
     }
+}
 
-    .icone-acessibilidade {
-        margin: 0;
+@media (max-width: 600px) {
+    header {
+        padding: 0 14px;
+    }
+
+    .img-logo {
+        max-width: 120px;
     }
 
     .btn-login,
     .btn-cadastrar-se {
-        width: 100%;
+        flex: 1;
         text-align: center;
     }
 }
 
-@media (max-width: 900px) {
+/* ===================================================
+   Demais ajustes responsivos da página de Aula
+   =================================================== */
+@media (max-width: 1023px) {
     .aula-conteudo {
         grid-template-columns: 1fr;
     }

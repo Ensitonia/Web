@@ -16,7 +16,7 @@
 
     <header>
         <div class="logo">
-            <img class="img-logo" src="./assets/images/logo.png" alt="EnSintonia">
+            <img class="img-logo" src="./assets/images/logo-clara-EnSintonia.png" alt="EnSintonia">
         </div>
 
         <button class="menu-hamburguer" id="menuHamburguer" aria-label="Abrir menu" aria-expanded="false">
@@ -253,7 +253,7 @@
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-col footer-logo">
-                <img src="./assets/images/logo.png" alt="EnSintonia" class="logo-footer">
+                <img src="./assets/images/logo-clara-EnSintonia.png" alt="EnSintonia" class="logo-footer">
                 <p>
                     Construindo um futuro com mais respeito, igualdade e
                     oportunidades para todos.
@@ -319,8 +319,8 @@
 
     <script src="./assets/js/script.js"></script>
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
+    <div vw class="enabled" style="display:none !important;">
+        <div vw-access-button class="active" style="display:none !important;"></div>
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
@@ -328,7 +328,7 @@
      <script type="module" src="./assets/js/headerAuth.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        window.meuVLibras = new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 

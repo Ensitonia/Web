@@ -10,6 +10,9 @@
 body {
     background-color: #FBFAF8;
     color: #000;
+    padding-top: 120px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 a {
@@ -41,7 +44,12 @@ header {
 
 
 main {
-    padding-top: 100x;
+    padding-top: 0px;
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 nav {
@@ -138,6 +146,20 @@ nav a.active {
     background: #1A1A1A;
     border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Anima o hamburguer para "X" quando o menu está aberto (aria-expanded
+   é setado pelo script.js) — igual ao index */
+.menu-hamburguer[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
 }
 
 .container {
@@ -302,6 +324,41 @@ nav a.active {
     }
 }
 
+.cursos-carousel {
+    position: relative;
+}
+
+.curso-arrow {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: #8B2CF5;
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(139, 44, 245, .35);
+}
+
+.curso-arrow:hover {
+    background: #7420dd;
+}
+
+.curso-arrow.prev {
+    left: -6px;
+}
+
+.curso-arrow.next {
+    right: -6px;
+}
+
 .curso-card {
     background: #fff;
     border: 1px solid #E5E5E5;
@@ -381,28 +438,16 @@ footer {
     margin-top: 15px;
 }
 
-@media (min-width:300px) and (max-width:1023px) {
+/* ===================================================
+   HEADER / MENU HAMBÚRGUER — igual ao index (style.css)
+   =================================================== */
+@media (max-width: 900px) {
     header {
-        padding: 12px 18px;
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        border-radius: 18px;
-    }
-
-    main {
-        padding-top: 20px;
-    }
-
-    nav {
-        position: static;
-        transform: none;
+        padding: 0 20px;
     }
 
     .img-logo {
-        width: 120px;
-        max-width: 100%;
+        max-width: 150px;
     }
 
     .menu-hamburguer {
@@ -416,12 +461,11 @@ footer {
         left: 0;
         width: 100%;
         background: #fff;
-        padding: 20px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-        z-index: 9999;
+        padding: 20px 24px 28px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        border-radius: 0 0 16px 16px;
     }
 
     .menu-mobile.aberto {
@@ -431,40 +475,47 @@ footer {
     nav {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        gap: 18px;
         width: 100%;
-        gap: 16px;
-    }
-
-    nav a {
-        font-size: 16px;
-        text-align: left;
+        position: static;
+        transform: none;
     }
 
     .acoes-header {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
         width: 100%;
         gap: 12px;
     }
+}
 
-    .icone-acessibilidade {
-        margin: 0;
+@media (max-width: 600px) {
+    header {
+        padding: 0 14px;
+    }
+
+    .img-logo {
+        max-width: 120px;
     }
 
     .btn-login,
     .btn-cadastrar-se {
-        width: 100%;
+        flex: 1;
         text-align: center;
     }
+}
 
+/* ===================================================
+   Demais ajustes responsivos da página de Cursos
+   =================================================== */
+@media (min-width: 300px) and (max-width: 1023px) {
     .container {
-        padding: 0 18px;
+        padding: 0 28px;
     }
 
     .bg-light-purple-box {
-        padding: 22px;
+        padding: 28px 24px;
         border-radius: 18px;
         margin-bottom: 20px;
     }
@@ -473,5 +524,165 @@ footer {
         margin-top: 30px;
         padding: 18px;
         font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cursos-section .section-title {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .cursos-section .section-title .icon-circle {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    .cursos-section .section-title .icon-circle svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .cursos-section .section-title h2 {
+        font-size: 17px;
+        margin-bottom: 2px;
+    }
+
+    .cursos-section .section-title p {
+        font-size: 12px;
+    }
+
+    .curso-img {
+        height: auto !important;
+        aspect-ratio: 16 / 9 !important;
+        object-fit: cover !important;
+    }
+
+    .curso-info {
+        padding: 10px !important;
+        gap: 6px !important;
+    }
+
+    .curso-info h4 {
+        font-size: 12.5px !important;
+        line-height: 1.25;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .curso-meta {
+        font-size: 11px !important;
+        margin-top: 0 !important;
+    }
+
+    .hero-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .hero-card-header {
+        flex: 1;
+        min-width: 0;
+        gap: 8px;
+    }
+
+    .hero-card-header svg {
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+    }
+
+    .hero-card-header h3 {
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .hero-card > p {
+        display: none;
+    }
+
+    .hero-card .btn-square-outline {
+        border: none;
+        padding: 0;
+        font-size: 11.5px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .hero-card .btn-square-outline:hover {
+        background: none;
+        color: #7420dd;
+    }
+
+    .hero-card .btn-square-outline .texto-completo {
+        display: none;
+    }
+    .curso-arrow {
+        display: flex;
+    }
+
+    .cursos-grid {
+        display: flex !important;
+        grid-template-columns: unset !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 4px 30px 8px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .cursos-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .curso-card {
+        flex: 0 0 68% !important;
+        width: auto !important;
+        scroll-snap-align: center;
+    }
+
+    .beneficios-section h3 {
+        font-size: 18px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px 14px !important;
+    }
+
+    .beneficio-item {
+        gap: 8px !important;
+    }
+
+    .beneficio-item .icon-circle {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    .beneficio-item .icon-circle svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .beneficio-item h5 {
+        font-size: 12.5px !important;
+        margin: 0 !important;
+    }
+
+    .beneficio-item p {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
     }
 }

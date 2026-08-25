@@ -48,22 +48,57 @@ document.addEventListener('click', (e) => {
 
 // Integração VLibras com o painel de acessibilidade
 
-
 function aguardarVLibras(callback, tentativas = 0) {
-    const botaoNativo = document.querySelector('div[vw-access-button]');
+    const botaoNativo = document.querySelector('#vlibras-access-wrapper, div[vw-access-button]');
+
     if (botaoNativo) {
         callback(botaoNativo);
     } else if (tentativas < 50) {
-        setTimeout(() => aguardarVLibras(callback, tentativas + 1), 100);
+        setTimeout(() => {
+            aguardarVLibras(callback, tentativas + 1);
+        }, 100);
     }
 }
 
+// Mantém o botão nativo do VLibras invisível pro usuário sem mexer
+// em display, width ou height — o VLibras parece usar esses valores
+// internamente pra decidir se reage a um clique (foi por isso que a
+// tentativa anterior, encolhendo pra 1px, quebrou o clique em
+// "Libras"). Deixamos o tamanho/posição normais e só tornamos
+// transparente + bloqueado pro mouse do usuário; o clique disparado
+// via JavaScript (botaoNativo.click()) continua funcionando porque
+// .click() ignora pointer-events.
+// vlibras-plugin.js injeta um elemento próprio com
+// id="vlibras-access-wrapper" (não existe no HTML original, é criado
+// via JS) — é esse o ícone que ficava aparecendo.
+function esconderVisualmenteMasFuncional(el) {
+    el.style.setProperty("opacity", "0", "important");
+    el.style.setProperty("pointer-events", "none", "important");
+}
+
+function esconderBotaoNativoVLibrasParaSempre() {
+    setInterval(() => {
+        document.querySelectorAll('[vw-access-button], #vlibras-access-wrapper').forEach((el) => {
+            if (el.style.opacity !== "0") {
+                esconderVisualmenteMasFuncional(el);
+            }
+        });
+    }, 200);
+}
+
+esconderBotaoNativoVLibrasParaSempre();
+
 const itemAbrirLibras = document.getElementById('abrirLibras');
+
+// Também tenta esconder imediatamente (caso o botão já exista)
+aguardarVLibras(() => {});
 
 if (itemAbrirLibras) {
     itemAbrirLibras.addEventListener('click', () => {
         aguardarVLibras((botaoNativo) => {
-            botaoNativo.click();
+            const alvoClicavel =
+                botaoNativo.querySelector('button, [role="button"], a') || botaoNativo;
+            alvoClicavel.click();
 
             if (painelAcessibilidade) {
                 painelAcessibilidade.classList.remove('ativo');
@@ -331,7 +366,7 @@ const cardsNext = document.getElementById("cardsNext");
 
 if (cardsContainer && cardsPrev && cardsNext) {
     const distanciaScroll = () => {
-        const primeiroCard = cardsContainer.querySelector(".card");
+        const primeiroCard = cardsContainer.querySelector(".card, .curso-card");
         if (!primeiroCard) return 260;
         const estilo = getComputedStyle(cardsContainer);
         const gap = parseInt(estilo.columnGap || estilo.gap || "16", 10) || 16;
