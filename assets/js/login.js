@@ -1,4 +1,3 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import {
     getAuth,
@@ -33,13 +32,36 @@ const destinoPorTipo = {
 
 
 const form = document.querySelector("form");
+const aceitarPolitica = document.getElementById("aceitarPolitica");
+const mensagemErro = document.getElementById("mensagemErro");
+
+function mostrarErro(texto) {
+    mensagemErro.textContent = texto;
+    mensagemErro.hidden = false;
+    mensagemErro.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function esconderErro() {
+    mensagemErro.hidden = true;
+}
 
 form.addEventListener("submit", async (e) => {
 
     e.preventDefault();
+    esconderErro();
 
     const email = document.getElementById("email").value.trim();
     const senha = document.getElementById("senha").value;
+
+    if (email === "" || senha === "") {
+        mostrarErro("Preencha todos os campos obrigatórios.");
+        return;
+    }
+
+    if (!aceitarPolitica.checked) {
+        mostrarErro("Você precisa aceitar a Política de Privacidade para continuar.");
+        return;
+    }
 
     try {
 
@@ -50,7 +72,7 @@ form.addEventListener("submit", async (e) => {
         const usuarioSnap = await getDoc(usuarioRef);
 
         if (!usuarioSnap.exists()) {
-            alert("Login realizado, mas não encontramos seus dados de cadastro.");
+            mostrarErro("Login realizado, mas não encontramos seus dados de cadastro.");
             window.location.href = "../index.html";
             return;
         }
@@ -63,11 +85,11 @@ form.addEventListener("submit", async (e) => {
     } catch (erro) {
 
         if (erro.code === "auth/invalid-credential" || erro.code === "auth/wrong-password") {
-            alert("E-mail ou senha incorretos.");
+            mostrarErro("E-mail ou senha incorretos.");
         } else if (erro.code === "auth/user-not-found") {
-            alert("Não encontramos uma conta com esse e-mail.");
+            mostrarErro("Não encontramos uma conta com esse e-mail.");
         } else {
-            alert("Erro: " + erro.message);
+            mostrarErro("Erro: " + erro.message);
         }
 
     }

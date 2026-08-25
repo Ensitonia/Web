@@ -107,6 +107,8 @@
             Faça login para acessar sua conta.
         </p>
 
+        <p class="mensagem-erro" id="mensagemErro" hidden></p>
+
         <!-- Formulário -->
         <form id="loginForm">
 
@@ -133,10 +135,15 @@
               
             </div>
 
-            <!-- Esqueci a senha -->
-            <p class="esqueci">
-                <a href="esqueci-senha.html">Esqueceu sua senha?</a>
-            </p>
+            <!-- Política de privacidade + Esqueci a senha -->
+            <div class="linha-opcoes">
+                <label class="checkbox-privacidade" for="aceitarPolitica">
+                    <input type="checkbox" id="aceitarPolitica">
+                    <span>Aceito a <a href="./politica-privacidadede.html" target="_blank">Política de Privacidade</a></span>
+                </label>
+
+                <a href="esqueci-senha.html" class="esqueci">Esqueceu sua senha?</a>
+            </div>
 
             <!-- Botão -->
             <button type="submit">
