@@ -364,6 +364,10 @@ section.cards p {
     color: #8B2CF5;
 }
 
+.missao-historia-dots {
+    display: none;
+}
+
 /* ===================================================
    HEADER / MENU HAMBÚRGUER — igual ao index (style.css)
    =================================================== */
@@ -423,12 +427,6 @@ section.cards p {
 
     .img-logo {
         max-width: 120px;
-    }
-
-    .btn-login,
-    .btn-cadastrar-se {
-        flex: 1;
-        text-align: center;
     }
 }
 
@@ -492,15 +490,49 @@ section.cards p {
     }
 
     .missao-historia-wrapper {
-        width: 92%;
-        flex-direction: column;
-        gap: 12px;
-        padding: 0;
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 14px;
+        padding: 4px 16px 10px;
+        margin: 0;
+    }
+
+    .missao-historia-wrapper::-webkit-scrollbar {
+        display: none;
     }
 
     .missao-historia-wrapper article {
         display: block;
+        flex: 0 0 100%;
         width: 100%;
+        scroll-snap-align: start;
+    }
+
+    .missao-historia-dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+    }
+
+    .missao-historia-dots span {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #E0D5F5;
+        cursor: pointer;
+        transition: background 0.2s ease, width 0.2s ease;
+    }
+
+    .missao-historia-dots span.active {
+        background: #8B2CF5;
+        width: 18px;
+        border-radius: 4px;
     }
 
     .missão {
@@ -542,4 +574,3 @@ section.cards p {
         line-height: 18px;
     }
 }
-

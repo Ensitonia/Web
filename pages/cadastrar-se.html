@@ -96,6 +96,8 @@
             Preencha os dados abaixo para começar.
         </p>
 
+        <p class="mensagem-erro" id="mensagemErro" hidden></p>
+
         <form>
 
             <label for="nome">Nome completo</label>
@@ -166,6 +168,30 @@
                     <p>
                         Publique oportunidades e encontre talentos.
                     </p>
+
+                </div>
+
+            </div>
+
+            <div class="campos-empresa" id="camposEmpresa" hidden>
+
+                <label for="nomeEmpresa">Nome da empresa</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Briefcase.svg" class="icone-input" alt="Empresa">
+
+                    <input type="text" id="nomeEmpresa" placeholder="Digite o nome da empresa">
+
+                </div>
+
+                <label for="cnpj">CNPJ</label>
+
+                <div class="campo">
+
+                    <img src="../assets/icons/Briefcase.svg" class="icone-input" alt="CNPJ">
+
+                    <input type="text" id="cnpj" placeholder="00.000.000/0000-00" maxlength="18" inputmode="numeric">
 
                 </div>
 

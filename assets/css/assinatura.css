@@ -415,6 +415,19 @@ li img {
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
+/* Anima o hamburguer para "X" quando o menu está aberto — igual ao index */
+.menu-hamburguer[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-hamburguer[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
 footer {
     text-align: center;
     padding: 24px 0;
@@ -424,22 +437,16 @@ footer {
     margin-top: 15px;
 }
 
-
-@media (min-width:300px) and (max-width:1023px) {
-
+/* ===================================================
+   HEADER / MENU HAMBÚRGUER — igual ao index (style.css)
+   =================================================== */
+@media (max-width: 900px) {
     header {
-        padding: 12px 18px;
-        position: fixed;
-        height: auto;
-    }
-
-    body {
-        padding-top: 80px;
+        padding: 0 20px;
     }
 
     .img-logo {
-        width: 120px;
-        max-width: 100%;
+        max-width: 150px;
     }
 
     .menu-hamburguer {
@@ -453,12 +460,11 @@ footer {
         left: 0;
         width: 100%;
         background: #fff;
-        padding: 20px;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
-        z-index: 9999;
+        padding: 20px 24px 28px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        border-radius: 0 0 16px 16px;
     }
 
     .menu-mobile.aberto {
@@ -469,36 +475,35 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        gap: 18px;
         width: 100%;
-        gap: 16px;
         position: static;
         transform: none;
     }
 
-    nav a {
-        font-size: 16px;
-        text-align: left;
-    }
-
     .acoes-header {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
         width: 100%;
         gap: 12px;
     }
+}
 
-    .icone-acessibilidade {
-        margin: 0;
+@media (max-width: 600px) {
+    header {
+        padding: 0 14px;
     }
 
-    .btn-login,
-    .btn-cadastrar-se {
-        width: 100%;
-        text-align: center;
+    .img-logo {
+        max-width: 120px;
     }
+}
 
-
+/* ===================================================
+   Demais ajustes responsivos da página de Assinaturas
+   =================================================== */
+@media (min-width:300px) and (max-width:1023px) {
 
     .banner {
         width: 92%;

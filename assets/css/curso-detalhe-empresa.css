@@ -497,12 +497,6 @@ footer {
     .img-logo {
         max-width: 120px;
     }
-
-    .btn-login,
-    .btn-cadastrar-se {
-        flex: 1;
-        text-align: center;
-    }
 }
 
 /* ===================================================
